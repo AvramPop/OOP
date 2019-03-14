@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/lab3.dir/main.c.o CMakeFiles/lab3.dir/FileRepository.c.o CMakeFiles/lab3.dir/File.c.o CMakeFiles/lab3.dir/Console.c.o  -o lab3 

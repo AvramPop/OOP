@@ -1,0 +1,17 @@
+add 1166, new, plain, 1999
+add 132, old, letter, 1955
+add 142, destroyed, plain, 2000
+add 100, new, plain, 1959
+add 22, sortof, a4, 2036
+add 124, new, letter, 1888
+add 128, new, plain2, 1999
+add 128, dani, dani, 1999
+list
+update 100, aa, aa, 8
+list
+list aa
+delete 142
+delete 132
+list
+list plain
+exit

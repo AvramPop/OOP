@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Console.c
+stdio.h
+-
+stdlib.h
+-
+Console.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Console.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Console.h
+FileRepository.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileRepository.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileRepository.h
+File.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
+string.h
+-
+stdbool.h
+-
+
