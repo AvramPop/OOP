@@ -70,18 +70,18 @@ CMakeFiles/lab3.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab3.dir/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/main.c -o CMakeFiles/lab3.dir/main.c.s
 
-CMakeFiles/lab3.dir/FileRepository.c.o: CMakeFiles/lab3.dir/flags.make
-CMakeFiles/lab3.dir/FileRepository.c.o: ../FileRepository.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/lab3.dir/FileRepository.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab3.dir/FileRepository.c.o   -c /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileRepository.c
+CMakeFiles/lab3.dir/Vector.c.o: CMakeFiles/lab3.dir/flags.make
+CMakeFiles/lab3.dir/Vector.c.o: ../Vector.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/lab3.dir/Vector.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab3.dir/Vector.c.o   -c /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.c
 
-CMakeFiles/lab3.dir/FileRepository.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab3.dir/FileRepository.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileRepository.c > CMakeFiles/lab3.dir/FileRepository.c.i
+CMakeFiles/lab3.dir/Vector.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab3.dir/Vector.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.c > CMakeFiles/lab3.dir/Vector.c.i
 
-CMakeFiles/lab3.dir/FileRepository.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab3.dir/FileRepository.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileRepository.c -o CMakeFiles/lab3.dir/FileRepository.c.s
+CMakeFiles/lab3.dir/Vector.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab3.dir/Vector.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.c -o CMakeFiles/lab3.dir/Vector.c.s
 
 CMakeFiles/lab3.dir/File.c.o: CMakeFiles/lab3.dir/flags.make
 CMakeFiles/lab3.dir/File.c.o: ../File.c
@@ -109,23 +109,38 @@ CMakeFiles/lab3.dir/Console.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab3.dir/Console.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Console.c -o CMakeFiles/lab3.dir/Console.c.s
 
+CMakeFiles/lab3.dir/FileService.c.o: CMakeFiles/lab3.dir/flags.make
+CMakeFiles/lab3.dir/FileService.c.o: ../FileService.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/lab3.dir/FileService.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab3.dir/FileService.c.o   -c /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileService.c
+
+CMakeFiles/lab3.dir/FileService.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab3.dir/FileService.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileService.c > CMakeFiles/lab3.dir/FileService.c.i
+
+CMakeFiles/lab3.dir/FileService.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab3.dir/FileService.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileService.c -o CMakeFiles/lab3.dir/FileService.c.s
+
 # Object files for target lab3
 lab3_OBJECTS = \
 "CMakeFiles/lab3.dir/main.c.o" \
-"CMakeFiles/lab3.dir/FileRepository.c.o" \
+"CMakeFiles/lab3.dir/Vector.c.o" \
 "CMakeFiles/lab3.dir/File.c.o" \
-"CMakeFiles/lab3.dir/Console.c.o"
+"CMakeFiles/lab3.dir/Console.c.o" \
+"CMakeFiles/lab3.dir/FileService.c.o"
 
 # External object files for target lab3
 lab3_EXTERNAL_OBJECTS =
 
 lab3: CMakeFiles/lab3.dir/main.c.o
-lab3: CMakeFiles/lab3.dir/FileRepository.c.o
+lab3: CMakeFiles/lab3.dir/Vector.c.o
 lab3: CMakeFiles/lab3.dir/File.c.o
 lab3: CMakeFiles/lab3.dir/Console.c.o
+lab3: CMakeFiles/lab3.dir/FileService.c.o
 lab3: CMakeFiles/lab3.dir/build.make
 lab3: CMakeFiles/lab3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable lab3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable lab3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lab3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

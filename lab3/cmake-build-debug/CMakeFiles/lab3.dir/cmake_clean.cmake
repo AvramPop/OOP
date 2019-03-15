@@ -1,8 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lab3.dir/main.c.o"
-  "CMakeFiles/lab3.dir/FileRepository.c.o"
+  "CMakeFiles/lab3.dir/Vector.c.o"
   "CMakeFiles/lab3.dir/File.c.o"
   "CMakeFiles/lab3.dir/Console.c.o"
+  "CMakeFiles/lab3.dir/FileService.c.o"
   "lab3.pdb"
   "lab3"
 )

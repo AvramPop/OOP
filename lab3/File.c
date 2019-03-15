@@ -7,61 +7,63 @@
 #include <stdlib.h>
 #include "File.h"
 
-File newFile(int archiveCatalogNumber, char *stateOfDeterioration, char *fileType, int yearOfCreation){
-    File file;
-    file.archiveCatalogNumber = archiveCatalogNumber;
-    file.yearOfCreation = yearOfCreation;
-    strcpy(file.stateOfDeterioration, stateOfDeterioration);
-    strcpy(file.fileType, fileType);
+void toString(File* file, char* string){
+    char temporaryString[100];
+    strcpy(string, "File #");
+    sprintf(temporaryString, "%d", file->archiveCatalogNumber);
+    strcat(string, temporaryString);
+    strcat(string, " state:");
+    strcat(string, file->stateOfDeterioration);
+    strcat(string, " type:");
+    strcat(string, file->fileType);
+    strcat(string, " year:");
+    sprintf(temporaryString, "%d", file->yearOfCreation);
+    strcat(string, temporaryString);
+    strcat(string, "\n");
+}
+
+void toPlainString(File* file, char* string){
+    char temporaryString[100];
+    strcpy(string, "");
+    sprintf(temporaryString, "%d", file->archiveCatalogNumber);
+    strcat(string, temporaryString);
+    strcat(string, " ");
+    strcat(string, file->stateOfDeterioration);
+    strcat(string, " ");
+    strcat(string, file->fileType);
+    strcat(string, " ");
+    sprintf(temporaryString, "%d", file->yearOfCreation);
+    strcat(string, temporaryString);
+    strcat(string, "\n");
+}
+
+File* createFile(int archiveCatalogNumber, char* stateOfDeterioration, char* fileType, int yearOfCreation){
+    File* file = (File*) malloc(sizeof(File));
+    file->stateOfDeterioration = (char*)malloc(sizeof(char) * (strlen(stateOfDeterioration) + 1));
+    strcpy(file->stateOfDeterioration, stateOfDeterioration);
+    file->fileType = (char*)malloc(sizeof(char) * (strlen(fileType) + 1));
+    strcpy(file->fileType, fileType);
+
+    file->archiveCatalogNumber = archiveCatalogNumber;
+    file->yearOfCreation = yearOfCreation;
+
     return file;
 }
 
-int getArchiveCatalogNumber(File file){
-    return file.archiveCatalogNumber;
+void destroyFile(File* file){
+    if (file == NULL) return;
+    FREE(file->stateOfDeterioration);
+    FREE(file->fileType);
+    FREE(file);
 }
 
-char *getStateOfDeterioration(File file){
-    return file.stateOfDeterioration;
-}
-
-char *getFileType(File file){
-    return file.fileType;
-}
-
-int getYearOfCreation(File file){
-    return file.yearOfCreation;
-}
-
-char *toString(File file){
-    char* fileAsString = (char*)malloc(sizeof(char)*1000);
-    char temporaryString[100];
-    strcpy(fileAsString, "File #");
-    sprintf(temporaryString, "%d", file.archiveCatalogNumber);
-    strcat(fileAsString, temporaryString);
-    strcat(fileAsString, " state:");
-    strcat(fileAsString, file.stateOfDeterioration);
-    strcat(fileAsString, " type:");
-    strcat(fileAsString, file.fileType);
-    strcat(fileAsString, " year:");
-    sprintf(temporaryString, "%d", file.yearOfCreation);
-    strcat(fileAsString, temporaryString);
-    strcat(fileAsString, "\n");
-    return fileAsString;
-}
-
-char *toStringPlain(File file){
-    char* fileAsString = (char*)malloc(sizeof(char)*1000);
-    char temporaryString[100];
-    strcpy(fileAsString, "");
-    sprintf(temporaryString, "%d", file.archiveCatalogNumber);
-    strcat(fileAsString, temporaryString);
-    strcat(fileAsString, " ");
-    strcat(fileAsString, file.stateOfDeterioration);
-    strcat(fileAsString, " ");
-    strcat(fileAsString, file.fileType);
-    strcat(fileAsString, " ");
-    sprintf(temporaryString, "%d", file.yearOfCreation);
-    strcat(fileAsString, temporaryString);
-    strcat(fileAsString, "\n");
-    return fileAsString;
+File* copyFile(File* file){
+    File* fileCopy = (File*) malloc(sizeof(File));
+    fileCopy->stateOfDeterioration = (char*) malloc(sizeof(char) * (strlen(file->stateOfDeterioration) + 1));
+    strcpy(fileCopy->stateOfDeterioration, file->stateOfDeterioration);
+    fileCopy->fileType = (char*) malloc(sizeof(char) * (strlen(file->fileType) + 1));
+    strcpy(fileCopy->fileType, file->fileType);
+    fileCopy->archiveCatalogNumber = file->archiveCatalogNumber;
+    fileCopy->yearOfCreation = file->yearOfCreation;
+    return fileCopy;
 }

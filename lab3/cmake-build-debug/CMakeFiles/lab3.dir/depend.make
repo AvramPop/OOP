@@ -4,17 +4,23 @@
 CMakeFiles/lab3.dir/Console.c.o: ../Console.c
 CMakeFiles/lab3.dir/Console.c.o: ../Console.h
 CMakeFiles/lab3.dir/Console.c.o: ../File.h
-CMakeFiles/lab3.dir/Console.c.o: ../FileRepository.h
+CMakeFiles/lab3.dir/Console.c.o: ../FlieService.h
+CMakeFiles/lab3.dir/Console.c.o: ../Vector.h
 
 CMakeFiles/lab3.dir/File.c.o: ../File.c
 CMakeFiles/lab3.dir/File.c.o: ../File.h
 
-CMakeFiles/lab3.dir/FileRepository.c.o: ../File.h
-CMakeFiles/lab3.dir/FileRepository.c.o: ../FileRepository.c
-CMakeFiles/lab3.dir/FileRepository.c.o: ../FileRepository.h
+CMakeFiles/lab3.dir/FileService.c.o: ../File.h
+CMakeFiles/lab3.dir/FileService.c.o: ../FileService.c
+CMakeFiles/lab3.dir/FileService.c.o: ../Vector.h
+
+CMakeFiles/lab3.dir/Vector.c.o: ../File.h
+CMakeFiles/lab3.dir/Vector.c.o: ../Vector.c
+CMakeFiles/lab3.dir/Vector.c.o: ../Vector.h
 
 CMakeFiles/lab3.dir/main.c.o: ../Console.h
 CMakeFiles/lab3.dir/main.c.o: ../File.h
-CMakeFiles/lab3.dir/main.c.o: ../FileRepository.h
+CMakeFiles/lab3.dir/main.c.o: ../FlieService.h
+CMakeFiles/lab3.dir/main.c.o: ../Vector.h
 CMakeFiles/lab3.dir/main.c.o: ../main.c
 

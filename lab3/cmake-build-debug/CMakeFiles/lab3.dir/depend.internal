@@ -5,16 +5,22 @@ CMakeFiles/lab3.dir/Console.c.o
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Console.c
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Console.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
- /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileRepository.h
+ /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FlieService.h
+ /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.h
 CMakeFiles/lab3.dir/File.c.o
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.c
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
-CMakeFiles/lab3.dir/FileRepository.c.o
+CMakeFiles/lab3.dir/FileService.c.o
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
- /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileRepository.c
- /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileRepository.h
+ /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileService.c
+ /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.h
+CMakeFiles/lab3.dir/Vector.c.o
+ /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
+ /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.c
+ /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.h
 CMakeFiles/lab3.dir/main.c.o
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Console.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
- /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileRepository.h
+ /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FlieService.h
+ /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/main.c

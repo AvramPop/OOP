@@ -4,23 +4,22 @@
 
 #ifndef LAB3_FILE_H
 #define LAB3_FILE_H
+#define FREE(ptr) do{ \
+    free((ptr));      \
+    (ptr) = NULL;     \
+  }while(0)
 
-typedef struct {
+typedef struct{
+    char* stateOfDeterioration;
+    char* fileType;
     int archiveCatalogNumber;
-    char stateOfDeterioration[30];
-    char fileType[30];
     int yearOfCreation;
 } File;
 
-/**
- * Generate new file with given data
- */
-File newFile(int archiveCatalogNumber, char *stateOfDeterioration, char *fileType, int yearOfCreation);
-int getArchiveCatalogNumber(File file);
-char* getStateOfDeterioration(File file);
-char* getFileType(File file);
-int getYearOfCreation(File file);
-char* toString(File file);
-char* toStringPlain(File file);
+File* createFile(int archiveCatalogNumber, char* stateOfDeterioration, char* fileType, int yearOfCreation);
+void destroyFile(File* file);
+File* copyFile(File* file);
+void toString(File* file, char* string);
+void toPlainString(File* file, char* string);
 
 #endif //LAB3_FILE_H

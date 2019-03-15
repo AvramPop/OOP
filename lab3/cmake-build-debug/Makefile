@@ -177,32 +177,59 @@ File.c.s:
 	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/File.c.s
 .PHONY : File.c.s
 
-FileRepository.o: FileRepository.c.o
+FileService.o: FileService.c.o
 
-.PHONY : FileRepository.o
+.PHONY : FileService.o
 
 # target to build an object file
-FileRepository.c.o:
-	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/FileRepository.c.o
-.PHONY : FileRepository.c.o
+FileService.c.o:
+	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/FileService.c.o
+.PHONY : FileService.c.o
 
-FileRepository.i: FileRepository.c.i
+FileService.i: FileService.c.i
 
-.PHONY : FileRepository.i
+.PHONY : FileService.i
 
 # target to preprocess a source file
-FileRepository.c.i:
-	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/FileRepository.c.i
-.PHONY : FileRepository.c.i
+FileService.c.i:
+	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/FileService.c.i
+.PHONY : FileService.c.i
 
-FileRepository.s: FileRepository.c.s
+FileService.s: FileService.c.s
 
-.PHONY : FileRepository.s
+.PHONY : FileService.s
 
 # target to generate assembly for a file
-FileRepository.c.s:
-	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/FileRepository.c.s
-.PHONY : FileRepository.c.s
+FileService.c.s:
+	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/FileService.c.s
+.PHONY : FileService.c.s
+
+Vector.o: Vector.c.o
+
+.PHONY : Vector.o
+
+# target to build an object file
+Vector.c.o:
+	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/Vector.c.o
+.PHONY : Vector.c.o
+
+Vector.i: Vector.c.i
+
+.PHONY : Vector.i
+
+# target to preprocess a source file
+Vector.c.i:
+	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/Vector.c.i
+.PHONY : Vector.c.i
+
+Vector.s: Vector.c.s
+
+.PHONY : Vector.s
+
+# target to generate assembly for a file
+Vector.c.s:
+	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/Vector.c.s
+.PHONY : Vector.c.s
 
 main.o: main.c.o
 
@@ -246,9 +273,12 @@ help:
 	@echo "... File.o"
 	@echo "... File.i"
 	@echo "... File.s"
-	@echo "... FileRepository.o"
-	@echo "... FileRepository.i"
-	@echo "... FileRepository.s"
+	@echo "... FileService.o"
+	@echo "... FileService.i"
+	@echo "... FileService.s"
+	@echo "... Vector.o"
+	@echo "... Vector.i"
+	@echo "... Vector.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
