@@ -12,6 +12,9 @@ typedef struct {
     int yearOfCreation;
 } File;
 
+/**
+ * Generate new file with given data
+ */
 File newFile(int archiveCatalogNumber, char *stateOfDeterioration, char *fileType, int yearOfCreation);
 int getArchiveCatalogNumber(File file);
 char* getStateOfDeterioration(File file);

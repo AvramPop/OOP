@@ -60,12 +60,11 @@ void UIListOfType(FileRepository fileRepository, char* type){
 }
 
 void UIList(FileRepository fileRepository, char* currentToken){
-    char* token;
-    token = strtok(NULL, " ");
-    if(token == NULL){
+    currentToken = strtok(NULL, " ");
+    if(currentToken == NULL){
         UIListAll(fileRepository);
     } else {
-        UIListOfType(fileRepository, token);
+        UIListOfType(fileRepository, currentToken);
     }
 }
 

@@ -18,7 +18,25 @@ Console.h
 FileRepository.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileRepository.h
 
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.c
+string.h
+-
+stdio.h
+-
+stdlib.h
+-
+File.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileRepository.c
+stdio.h
+-
+File.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
+FileRepository.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileRepository.h
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileRepository.h
 File.h
@@ -27,4 +45,16 @@ string.h
 -
 stdbool.h
 -
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/main.c
+stdio.h
+-
+string.h
+-
+File.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
+FileRepository.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileRepository.h
+Console.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Console.h
 
