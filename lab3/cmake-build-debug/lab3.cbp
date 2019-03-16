@@ -96,6 +96,12 @@
 		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FlieService.h">
 			<Option target="lab3"/>
 		</Unit>
+		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Test.c">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Test.h">
+			<Option target="lab3"/>
+		</Unit>
 		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.c">
 			<Option target="lab3"/>
 		</Unit>

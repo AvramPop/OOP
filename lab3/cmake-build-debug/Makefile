@@ -204,6 +204,33 @@ FileService.c.s:
 	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/FileService.c.s
 .PHONY : FileService.c.s
 
+Test.o: Test.c.o
+
+.PHONY : Test.o
+
+# target to build an object file
+Test.c.o:
+	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/Test.c.o
+.PHONY : Test.c.o
+
+Test.i: Test.c.i
+
+.PHONY : Test.i
+
+# target to preprocess a source file
+Test.c.i:
+	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/Test.c.i
+.PHONY : Test.c.i
+
+Test.s: Test.c.s
+
+.PHONY : Test.s
+
+# target to generate assembly for a file
+Test.c.s:
+	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/Test.c.s
+.PHONY : Test.c.s
+
 Vector.o: Vector.c.o
 
 .PHONY : Vector.o
@@ -276,6 +303,9 @@ help:
 	@echo "... FileService.o"
 	@echo "... FileService.i"
 	@echo "... FileService.s"
+	@echo "... Test.o"
+	@echo "... Test.i"
+	@echo "... Test.s"
 	@echo "... Vector.o"
 	@echo "... Vector.i"
 	@echo "... Vector.s"

@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/lab3.dir/File.c.o"
   "CMakeFiles/lab3.dir/Console.c.o"
   "CMakeFiles/lab3.dir/FileService.c.o"
+  "CMakeFiles/lab3.dir/Test.c.o"
   "lab3.pdb"
   "lab3"
 )

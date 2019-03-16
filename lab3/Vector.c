@@ -7,17 +7,6 @@
 #include "File.h"
 #include "Vector.h"
 
-//FileRepository* getFilesOfType(FileRepository* fileRepository, char* type){
-//    FileRepository* newRepository = newFileRepository(fileRepository->size);
-//    int i, indexInTemporaryList = 0;
-//    for(i = 0; i < fileRepository->size; i++){
-//        if(strcmp(fileRepository->repository[i]->fileType, type) == 0){
-//            newRepository->repository[indexInTemporaryList++] = copyFile(fileRepository->repository[i]);
-//        }
-//    }
-//    return newRepository;
-//}
-
 Vector* createVector(int initialCapacity, CopyFunction copyFunction, DestroyFunction destroyFunction){
     Vector* vector = (Vector*) malloc(sizeof(Vector));
     vector->capacity = initialCapacity;

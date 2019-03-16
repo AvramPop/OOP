@@ -12,4 +12,5 @@ void removeFile(Vector* fileRepository, int archiveCatalogNumber);
 bool hasFileWithCatalogNumber(Vector* fileRepository, int archiveCatalogNumber);
 Vector* getFilesOfType(Vector *fileRepository, char *type);
 Vector* getFilesBeforeYearSorted(Vector *fileRepository, int year);
+bool hasFileWithCatalogNumber(Vector *fileRepository, int archiveCatalogNumber);
 #endif //LAB3_FLIESERVICE_H

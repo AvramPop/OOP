@@ -6,41 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Console.c
-stdio.h
--
-stdlib.h
--
-Console.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Console.h
-FlieService.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FlieService.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
 
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Console.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FlieService.h
 Vector.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.h
 
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
-
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileService.c
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Test.c
+stdio.h
+-
+assert.h
+-
 Vector.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.h
 FlieService.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FlieService.h
-
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FlieService.h
-Vector.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.h
-
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.c
-stdio.h
--
-stdlib.h
--
-File.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
-Vector.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.h
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.h
 File.h
@@ -49,18 +29,4 @@ string.h
 -
 stdbool.h
 -
-
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/main.c
-stdio.h
--
-string.h
--
-File.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
-Vector.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.h
-Console.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Console.h
-FlieService.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FlieService.h
 

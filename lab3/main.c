@@ -4,10 +4,11 @@
 #include "Vector.h"
 #include "Console.h"
 #include "FlieService.h"
+#include "Test.h"
 
 int main(){
-    //todo write tests
-    Vector* fileRepository = createVector(10, &copyFile, &destroyFile); //todo test resize
+    test(); //todo don't upload with this!
+    Vector* fileRepository = createVector(10, &copyFile, &destroyFile);
     Vector* history = createVector(10, &copyVector, &destroyVector);
     runConsole(fileRepository, history);
     destroyVector(history);
