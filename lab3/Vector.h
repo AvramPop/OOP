@@ -26,6 +26,8 @@ void destroyVector(Vector* vector);
 
 void addToVector(Vector* vector, Object objectToAdd);
 
+void removeAllFromIndex(Vector* vector, int index);
+
 void removeFromVector(Vector* vector, int index);
 
 void updateAtIndex(Vector* vector, int index, Object newObject);

@@ -12,6 +12,7 @@ CMakeFiles/lab3.dir/File.c.o: ../File.h
 
 CMakeFiles/lab3.dir/FileService.c.o: ../File.h
 CMakeFiles/lab3.dir/FileService.c.o: ../FileService.c
+CMakeFiles/lab3.dir/FileService.c.o: ../FlieService.h
 CMakeFiles/lab3.dir/FileService.c.o: ../Vector.h
 
 CMakeFiles/lab3.dir/Vector.c.o: ../File.h

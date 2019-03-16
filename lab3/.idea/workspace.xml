@@ -12,37 +12,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bacd4c6-7d2a-4c87-b437-180c9d40a250" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FileService.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlieService.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vector.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vector.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Console.c" beforeDir="false" afterPath="$PROJECT_DIR$/Console.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Console.h" beforeDir="false" afterPath="$PROJECT_DIR$/Console.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/File.c" beforeDir="false" afterPath="$PROJECT_DIR$/File.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/File.h" beforeDir="false" afterPath="$PROJECT_DIR$/File.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileRepository.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileRepository.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileService.c" beforeDir="false" afterPath="$PROJECT_DIR$/FileService.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlieService.h" beforeDir="false" afterPath="$PROJECT_DIR$/FlieService.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vector.c" beforeDir="false" afterPath="$PROJECT_DIR$/Vector.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vector.h" beforeDir="false" afterPath="$PROJECT_DIR$/Vector.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/Console.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/Console.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/File.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/File.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/FileRepository.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/FileService.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/FileService.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab3.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/lab3" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lab3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lab3.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lab3.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sem2/DynamicVector.c" beforeDir="false" afterPath="$PROJECT_DIR$/../sem2/DynamicVector.c" afterDir="false" />
@@ -89,20 +71,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/File.h">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Console.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/File.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+            <state relative-caret-position="65">
+              <caret line="44" column="81" selection-start-line="44" selection-start-column="81" selection-end-line="44" selection-end-column="81" />
+              <folding>
+                <element signature="e#38#56#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vector.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-432">
-              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+            <state relative-caret-position="560">
+              <caret line="93" column="40" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
               <folding>
                 <element signature="e#37#55#0" expanded="true" />
               </folding>
@@ -122,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vector.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+            <state relative-caret-position="468">
+              <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
               <folding>
                 <element signature="e#98#115#0" expanded="true" />
               </folding>
@@ -132,34 +108,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.c">
+        <entry file="file://$PROJECT_DIR$/input.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Console.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="55" column="53" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
-              <folding>
-                <element signature="e#38#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Console.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="322">
+              <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -167,17 +119,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FileService.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="23" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FlieService.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="286">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="e#38#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -212,26 +158,26 @@
         <option value="$PROJECT_DIR$/FileScanner.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/FileRepository.c" />
-        <option value="$PROJECT_DIR$/input.txt" />
         <option value="$PROJECT_DIR$/FileRepository.h" />
-        <option value="$PROJECT_DIR$/Vector.c" />
-        <option value="$PROJECT_DIR$/Console.h" />
-        <option value="$PROJECT_DIR$/Vector.h" />
         <option value="$PROJECT_DIR$/File.c" />
         <option value="$PROJECT_DIR$/File.h" />
-        <option value="$PROJECT_DIR$/main.c" />
-        <option value="$PROJECT_DIR$/FileService.c" />
         <option value="$PROJECT_DIR$/FlieService.h" />
+        <option value="$PROJECT_DIR$/FileService.c" />
+        <option value="$PROJECT_DIR$/Console.h" />
+        <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/input.txt" />
+        <option value="$PROJECT_DIR$/Vector.h" />
+        <option value="$PROJECT_DIR$/Vector.c" />
         <option value="$PROJECT_DIR$/Console.c" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1610" />
-    <option name="y" value="359" />
-    <option name="width" value="1016" />
-    <option name="height" value="574" />
+    <option name="x" value="1489" />
+    <option name="y" value="108" />
+    <option name="width" value="1006" />
+    <option name="height" value="572" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -239,7 +185,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -251,6 +196,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -392,29 +338,30 @@
       <workItem from="1552570998082" duration="616000" />
       <workItem from="1552594183320" duration="1279000" />
       <workItem from="1552637185193" duration="12156000" />
-      <workItem from="1552668983166" duration="7838000" />
+      <workItem from="1552668983166" duration="11493000" />
+      <workItem from="1552716447567" duration="3874000" />
+      <workItem from="1552736154057" duration="6949000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40855000" />
+    <option name="totallyTimeSpent" value="55333000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-1" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4976852" visible="true" weight="0.12700106" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4976852" visible="true" weight="0.12913553" />
       <window_info id="Structure" order="1" sideWeight="0.5023148" side_tool="true" weight="0.15454546" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294979" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32740587" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.59309626" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.7541841" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38912135" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32763976" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32740587" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32919255" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.32635984" />
@@ -491,59 +438,49 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.c</url>
-          <line>12</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="(File*)((File[10])*(File*)repository-&gt;buffer[0])" language="ObjectiveC" />
-        <watch expression="(File*)((File[10])*(File*)repository-&gt;buffer[1])" language="ObjectiveC" />
-        <watch expression="(File*)((File[10])*(File*)repository-&gt;buffer[2])" language="ObjectiveC" />
-        <watch expression="(File*)((File[10])*(File*)repository-&gt;buffer[3])" language="ObjectiveC" />
-        <watch expression="(File*)((File[10])*(File*)repository-&gt;buffer[4])" language="ObjectiveC" />
+        <watch expression="(File*)((File[10])*(File*)vector-&gt;buffer[0])" language="ObjectiveC" />
+        <watch expression="(File*)((File[10])*(File*)vector-&gt;buffer[1])" language="ObjectiveC" />
+        <watch expression="(File*)((File[10])*(File*)vector-&gt;buffer[2])" language="ObjectiveC" />
+        <watch expression="(File*)((File[10])*(File*)vector-&gt;buffer[3])" language="ObjectiveC" />
+        <watch expression="(File*)((File[10])*(File*)vector-&gt;buffer[4])" language="ObjectiveC" />
+        <watch expression="(File*)((File[10])*(File*)fileRepository-&gt;buffer[0])" language="ObjectiveC" />
+        <watch expression="(File*)((File[10])*(File*)fileRepository-&gt;buffer[1])" language="ObjectiveC" />
+        <watch expression="(File*)((File[10])*(File*)fileRepository-&gt;buffer[2])" language="ObjectiveC" />
+        <watch expression="(File*)((File[10])*(File*)fileRepository-&gt;buffer[3])" language="ObjectiveC" />
+        <watch expression="(File*)((File[10])*(File*)fileRepository-&gt;buffer[4])" language="ObjectiveC" />
+        <watch expression="(Vector*)((Vector[10])*(Vector*)repositoryHistory-&gt;buffer[0])" language="ObjectiveC" />
+        <watch expression="(Vector*)((Vector[10])*(Vector*)repositoryHistory-&gt;buffer[1])" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>i==1</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
     <expressions id="watch">
       <expression>
-        <expression-string>(File*)((File[10])*(File*)repository-&gt;buffer[4])</expression-string>
+        <expression-string>(Vector*)((Vector[10])*(Vector*)repositoryHistory-&gt;buffer[1])</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>(File*)((File[10])*(File*)repository-&gt;buffer[3])</expression-string>
+        <expression-string>(Vector*)((Vector[10])*(Vector*)repositoryHistory-&gt;buffer[0])</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>(File*)((File[10])*(File*)repository-&gt;buffer[2])</expression-string>
+        <expression-string>(Vector*)((Vector[10])*(Vector*)fileRepository-&gt;buffer[0])</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>(File*)((File[10])*(File*)repository-&gt;buffer[1])</expression-string>
-        <language-id>ObjectiveC</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(File*)((File[10])*(File*)repository-&gt;buffer[0])</expression-string>
-        <language-id>ObjectiveC</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>toString((File*)repository-&gt;buffer[i])</expression-string>
-        <language-id>ObjectiveC</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(File[10])*(File*)fileRepository-&gt;buffer</expression-string>
+        <expression-string>(File*)((File[10])*(File*)fileRepository-&gt;buffer[0])</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -562,6 +499,21 @@
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
+      <expression>
+        <expression-string>(File*)((File[10])*(File*)fileRepository-&gt;buffer[1])</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>temporaryFile</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>(File*)((File[10])*(File*)vector-&gt;buffer[4])</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
     </expressions>
     <expressions id="setValue">
       <expression>
@@ -577,32 +529,10 @@
     <entry file="file://$PROJECT_DIR$/Array.h" />
     <entry file="file://$PROJECT_DIR$/FileScanner.c" />
     <entry file="file://$PROJECT_DIR$/FileScanner.h" />
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DynamicVector.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DynamicVector.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Planet.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Planet.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/DynamicVector.h" />
+    <entry file="file://$PROJECT_DIR$/DynamicVector.c" />
+    <entry file="file://$PROJECT_DIR$/Planet.h" />
+    <entry file="file://$PROJECT_DIR$/Planet.c" />
     <entry file="file://$PROJECT_DIR$/File.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -610,34 +540,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/File.c">
+    <entry file="file://$PROJECT_DIR$/FlieService.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="234">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Console.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/File.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+          <folding>
+            <element signature="e#98#115#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vector.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-432">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+        <state relative-caret-position="560">
+          <caret line="93" column="40" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
           <folding>
             <element signature="e#37#55#0" expanded="true" />
           </folding>
@@ -646,32 +607,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FileService.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FlieService.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+        <state relative-caret-position="286">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
-            <element signature="e#98#115#0" expanded="true" />
+            <element signature="e#38#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Console.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="55" column="53" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
+        <state relative-caret-position="65">
+          <caret line="44" column="81" selection-start-line="44" selection-start-column="81" selection-end-line="44" selection-end-column="81" />
           <folding>
             <element signature="e#38#56#0" expanded="true" />
           </folding>

@@ -9,5 +9,5 @@
 /**
  * Run console until exit reached on given file repository.
  */
-void runConsole(Vector* fileRepository);
+void runConsole(Vector* fileRepository, Vector* repositoryHistory);
 #endif //LAB3_CONSOLE_H

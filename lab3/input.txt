@@ -16,16 +16,39 @@ list
 list plain
 exit
 
-
 add 1166, new, plain, 1999
+add 132, old, letter, 1955
+add 142, destroyed, plain, 2000
+add 100, new, plain, 1959
+add 22, sortOf, a4, 2036
+add 124, new, letter, 1888
+add 128, new, plain2, 1999
+add 128, new, plain2, 1999
+undo
+list
 delete 1166
+list
+undo
+list
+redo
+list
+update 1166, hhh, hhh, 89u
+list
+undo
+list
+redo
+list
 exit
+
 
 add 1166, new, plain, 1999
 add 132, old, letter, 1955
 add 142, destroyed, plain, 2000
 add 100, new, plain, 1959
+add 101, new, oldie, 140
+add 102, new, goldie, 199
 list
+list 1960
 update 100, aa, aa, 8
 list
 delete 142

@@ -8,7 +8,9 @@
 int main(){
     //todo write tests
     Vector* fileRepository = createVector(10, &copyFile, &destroyFile); //todo test resize
-    runConsole(fileRepository);
+    Vector* history = createVector(10, &copyVector, &destroyVector);
+    runConsole(fileRepository, history);
+    destroyVector(history);
     destroyVector(fileRepository);
     return 0;
 }

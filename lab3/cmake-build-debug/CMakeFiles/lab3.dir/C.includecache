@@ -20,21 +20,13 @@ FlieService.h
 Vector.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.h
 
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.c
-string.h
--
-stdio.h
--
-stdlib.h
--
-File.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
-
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/File.h
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FileService.c
 Vector.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/Vector.h
+FlieService.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FlieService.h
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab3/FlieService.h
 Vector.h

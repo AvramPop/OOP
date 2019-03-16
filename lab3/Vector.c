@@ -7,7 +7,7 @@
 #include "File.h"
 #include "Vector.h"
 
-//FileRepository* getVectorOfType(FileRepository* fileRepository, char* type){
+//FileRepository* getFilesOfType(FileRepository* fileRepository, char* type){
 //    FileRepository* newRepository = newFileRepository(fileRepository->size);
 //    int i, indexInTemporaryList = 0;
 //    for(i = 0; i < fileRepository->size; i++){
@@ -73,7 +73,7 @@ Vector* copyVector(Vector *vector){
 }
 
 void removeFromVector(Vector *vector, int index){
-    if(index < vector->size){
+    if(index < vector->size && index > -1){
         for(int i = index; i < vector->size - 1; i++){
             vector->destroyFunction(vector->buffer[i]);
             vector->buffer[i] = vector->copyFunction(vector->buffer[i + 1]);
@@ -86,4 +86,12 @@ void removeFromVector(Vector *vector, int index){
 void updateAtIndex(Vector *vector, int index, Object newObject){
     vector->destroyFunction(vector->buffer[index]);
     vector->buffer[index] = vector->copyFunction(newObject);
+}
+
+void removeAllFromIndex(Vector *vector, int index){
+    int count = vector->size - index;
+    while(count){
+        removeFromVector(vector, index);
+        count--;
+    }
 }
