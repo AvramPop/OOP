@@ -35,7 +35,6 @@ void Scanner::runConsole(){
             inputAsTokens.push_back(token);
         }
         if(command == "exit"){
-            cout << "exit";
             inputNotExit = false;
         } else if(command == "list"){
             if(currentMode.getMode() == "A"){
@@ -103,7 +102,7 @@ VictimFile Scanner::victimFileFromTokens(vector<string> tokens){
 }
 
 bool Scanner::isValidInput(vector<string> input){
-    char** endPointer;
+    char** endPointer; //todo this one is for strtol
     strtol(input[2].data(), endPointer, 10);
     return  **endPointer == '\0' && atoi(input[2].data()) >= 0;
 }

@@ -1,0 +1,26 @@
+mode A
+add name1 surname1, origin1, 1, photo1
+add name2 surname2, origin2, 2, photo2
+add name3 surname3, origin3, 3, photo3
+add name4 surname4, origin4, 4, photo4
+add name5 surname5, origin5, 5, photo5
+add name6 surname6, origin6, 6, photo6
+add name7 surname7, origin7, 7, photo7
+list
+delete name7 surname7
+list
+add name7 surname7, origin7, 7, photo7
+add name7 surname7, origin7, 7, photo7
+list
+update name6 surname6, upOrigin6, 66, upPhoto6
+list
+add name6 surname6, origin6, 6, photo6
+list
+delete name7 surname7
+delete name7 surname7
+list
+add name8 surname8 thirdName8, origin8, 8, photo8
+list
+update name8 surname8 thirdName8, originUp8, 88, photoUp8
+list
+exit
