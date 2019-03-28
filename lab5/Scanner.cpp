@@ -38,7 +38,9 @@ void Scanner::runConsole(){
             cout << "exit";
             inputNotExit = false;
         } else if(command == "list"){
-            list();
+            if(currentMode.getMode() == "A"){
+                list();
+            }
         } else if(command == "add"){
             if(currentMode.getMode() == "A"){
                 add(inputAsTokens);
@@ -72,7 +74,9 @@ void Scanner::remove(string victimName){
 }
 
 void Scanner::setMode(vector<string> inputAsTokens){
-    currentMode.setMode(inputAsTokens[0]);
+    if(inputAsTokens[0] == "A" || inputAsTokens[0] == "B"){
+        currentMode.setMode(inputAsTokens[0]);
+    }
 }
 
 void Scanner::update(string victimName, vector<string> inputAsTokens){ // todo something can break here and throw logic error
@@ -99,11 +103,11 @@ VictimFile Scanner::victimFileFromTokens(vector<string> tokens){
 }
 
 bool Scanner::isValidInput(vector<string> input){
-    return isNumber(input[2]);
+    char** endPointer;
+    strtol(input[2].data(), endPointer, 10);
+    return  **endPointer == '\0' && atoi(input[2].data()) >= 0;
 }
 
 bool Scanner::isNumber(string potentialNumber) {
-    char** endPointer;
-    strtol(potentialNumber.data(), endPointer, 10);
-    return  **endPointer == '\0';
+   return false;
 }
