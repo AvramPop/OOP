@@ -70,89 +70,89 @@ CMakeFiles/lab5.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/main.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/main.cpp -o CMakeFiles/lab5.dir/main.cpp.s
 
-CMakeFiles/lab5.dir/VictimFile.cpp.o: CMakeFiles/lab5.dir/flags.make
-CMakeFiles/lab5.dir/VictimFile.cpp.o: ../VictimFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab5.dir/VictimFile.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/VictimFile.cpp.o -c /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/VictimFile.cpp
+CMakeFiles/lab5.dir/model/VictimFile.cpp.o: CMakeFiles/lab5.dir/flags.make
+CMakeFiles/lab5.dir/model/VictimFile.cpp.o: ../model/VictimFile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab5.dir/model/VictimFile.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/model/VictimFile.cpp.o -c /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.cpp
 
-CMakeFiles/lab5.dir/VictimFile.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab5.dir/VictimFile.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/VictimFile.cpp > CMakeFiles/lab5.dir/VictimFile.cpp.i
+CMakeFiles/lab5.dir/model/VictimFile.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab5.dir/model/VictimFile.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.cpp > CMakeFiles/lab5.dir/model/VictimFile.cpp.i
 
-CMakeFiles/lab5.dir/VictimFile.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/VictimFile.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/VictimFile.cpp -o CMakeFiles/lab5.dir/VictimFile.cpp.s
+CMakeFiles/lab5.dir/model/VictimFile.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/model/VictimFile.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.cpp -o CMakeFiles/lab5.dir/model/VictimFile.cpp.s
 
-CMakeFiles/lab5.dir/Scanner.cpp.o: CMakeFiles/lab5.dir/flags.make
-CMakeFiles/lab5.dir/Scanner.cpp.o: ../Scanner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lab5.dir/Scanner.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/Scanner.cpp.o -c /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Scanner.cpp
+CMakeFiles/lab5.dir/ui/Scanner.cpp.o: CMakeFiles/lab5.dir/flags.make
+CMakeFiles/lab5.dir/ui/Scanner.cpp.o: ../ui/Scanner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lab5.dir/ui/Scanner.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/ui/Scanner.cpp.o -c /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.cpp
 
-CMakeFiles/lab5.dir/Scanner.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab5.dir/Scanner.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Scanner.cpp > CMakeFiles/lab5.dir/Scanner.cpp.i
+CMakeFiles/lab5.dir/ui/Scanner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab5.dir/ui/Scanner.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.cpp > CMakeFiles/lab5.dir/ui/Scanner.cpp.i
 
-CMakeFiles/lab5.dir/Scanner.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/Scanner.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Scanner.cpp -o CMakeFiles/lab5.dir/Scanner.cpp.s
+CMakeFiles/lab5.dir/ui/Scanner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/ui/Scanner.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.cpp -o CMakeFiles/lab5.dir/ui/Scanner.cpp.s
 
-CMakeFiles/lab5.dir/VictimFileService.cpp.o: CMakeFiles/lab5.dir/flags.make
-CMakeFiles/lab5.dir/VictimFileService.cpp.o: ../VictimFileService.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab5.dir/VictimFileService.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/VictimFileService.cpp.o -c /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/VictimFileService.cpp
+CMakeFiles/lab5.dir/service/VictimFileService.cpp.o: CMakeFiles/lab5.dir/flags.make
+CMakeFiles/lab5.dir/service/VictimFileService.cpp.o: ../service/VictimFileService.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab5.dir/service/VictimFileService.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/service/VictimFileService.cpp.o -c /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.cpp
 
-CMakeFiles/lab5.dir/VictimFileService.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab5.dir/VictimFileService.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/VictimFileService.cpp > CMakeFiles/lab5.dir/VictimFileService.cpp.i
+CMakeFiles/lab5.dir/service/VictimFileService.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab5.dir/service/VictimFileService.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.cpp > CMakeFiles/lab5.dir/service/VictimFileService.cpp.i
 
-CMakeFiles/lab5.dir/VictimFileService.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/VictimFileService.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/VictimFileService.cpp -o CMakeFiles/lab5.dir/VictimFileService.cpp.s
+CMakeFiles/lab5.dir/service/VictimFileService.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/service/VictimFileService.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.cpp -o CMakeFiles/lab5.dir/service/VictimFileService.cpp.s
 
-CMakeFiles/lab5.dir/Test.cpp.o: CMakeFiles/lab5.dir/flags.make
-CMakeFiles/lab5.dir/Test.cpp.o: ../Test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lab5.dir/Test.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/Test.cpp.o -c /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Test.cpp
+CMakeFiles/lab5.dir/test/Test.cpp.o: CMakeFiles/lab5.dir/flags.make
+CMakeFiles/lab5.dir/test/Test.cpp.o: ../test/Test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lab5.dir/test/Test.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/test/Test.cpp.o -c /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.cpp
 
-CMakeFiles/lab5.dir/Test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab5.dir/Test.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Test.cpp > CMakeFiles/lab5.dir/Test.cpp.i
+CMakeFiles/lab5.dir/test/Test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab5.dir/test/Test.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.cpp > CMakeFiles/lab5.dir/test/Test.cpp.i
 
-CMakeFiles/lab5.dir/Test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/Test.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Test.cpp -o CMakeFiles/lab5.dir/Test.cpp.s
+CMakeFiles/lab5.dir/test/Test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/test/Test.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.cpp -o CMakeFiles/lab5.dir/test/Test.cpp.s
 
-CMakeFiles/lab5.dir/Mode.cpp.o: CMakeFiles/lab5.dir/flags.make
-CMakeFiles/lab5.dir/Mode.cpp.o: ../Mode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lab5.dir/Mode.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/Mode.cpp.o -c /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Mode.cpp
+CMakeFiles/lab5.dir/model/Mode.cpp.o: CMakeFiles/lab5.dir/flags.make
+CMakeFiles/lab5.dir/model/Mode.cpp.o: ../model/Mode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lab5.dir/model/Mode.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab5.dir/model/Mode.cpp.o -c /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/Mode.cpp
 
-CMakeFiles/lab5.dir/Mode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab5.dir/Mode.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Mode.cpp > CMakeFiles/lab5.dir/Mode.cpp.i
+CMakeFiles/lab5.dir/model/Mode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab5.dir/model/Mode.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/Mode.cpp > CMakeFiles/lab5.dir/model/Mode.cpp.i
 
-CMakeFiles/lab5.dir/Mode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/Mode.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Mode.cpp -o CMakeFiles/lab5.dir/Mode.cpp.s
+CMakeFiles/lab5.dir/model/Mode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/model/Mode.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/Mode.cpp -o CMakeFiles/lab5.dir/model/Mode.cpp.s
 
 # Object files for target lab5
 lab5_OBJECTS = \
 "CMakeFiles/lab5.dir/main.cpp.o" \
-"CMakeFiles/lab5.dir/VictimFile.cpp.o" \
-"CMakeFiles/lab5.dir/Scanner.cpp.o" \
-"CMakeFiles/lab5.dir/VictimFileService.cpp.o" \
-"CMakeFiles/lab5.dir/Test.cpp.o" \
-"CMakeFiles/lab5.dir/Mode.cpp.o"
+"CMakeFiles/lab5.dir/model/VictimFile.cpp.o" \
+"CMakeFiles/lab5.dir/ui/Scanner.cpp.o" \
+"CMakeFiles/lab5.dir/service/VictimFileService.cpp.o" \
+"CMakeFiles/lab5.dir/test/Test.cpp.o" \
+"CMakeFiles/lab5.dir/model/Mode.cpp.o"
 
 # External object files for target lab5
 lab5_EXTERNAL_OBJECTS =
 
 lab5: CMakeFiles/lab5.dir/main.cpp.o
-lab5: CMakeFiles/lab5.dir/VictimFile.cpp.o
-lab5: CMakeFiles/lab5.dir/Scanner.cpp.o
-lab5: CMakeFiles/lab5.dir/VictimFileService.cpp.o
-lab5: CMakeFiles/lab5.dir/Test.cpp.o
-lab5: CMakeFiles/lab5.dir/Mode.cpp.o
+lab5: CMakeFiles/lab5.dir/model/VictimFile.cpp.o
+lab5: CMakeFiles/lab5.dir/ui/Scanner.cpp.o
+lab5: CMakeFiles/lab5.dir/service/VictimFileService.cpp.o
+lab5: CMakeFiles/lab5.dir/test/Test.cpp.o
+lab5: CMakeFiles/lab5.dir/model/Mode.cpp.o
 lab5: CMakeFiles/lab5.dir/build.make
 lab5: CMakeFiles/lab5.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable lab5"

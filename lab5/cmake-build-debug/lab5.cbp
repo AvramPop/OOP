@@ -84,40 +84,40 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/DynamicVector.h">
-			<Option target="lab5"/>
-		</Unit>
-		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Mode.cpp">
-			<Option target="lab5"/>
-		</Unit>
-		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Mode.h">
-			<Option target="lab5"/>
-		</Unit>
-		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Scanner.cpp">
-			<Option target="lab5"/>
-		</Unit>
-		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Scanner.h">
-			<Option target="lab5"/>
-		</Unit>
-		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Test.cpp">
-			<Option target="lab5"/>
-		</Unit>
-		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Test.h">
-			<Option target="lab5"/>
-		</Unit>
-		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/VictimFile.cpp">
-			<Option target="lab5"/>
-		</Unit>
-		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/VictimFile.h">
-			<Option target="lab5"/>
-		</Unit>
-		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/VictimFileService.cpp">
-			<Option target="lab5"/>
-		</Unit>
-		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/VictimFileService.h">
-			<Option target="lab5"/>
-		</Unit>
 		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/main.cpp">
+			<Option target="lab5"/>
+		</Unit>
+		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/Mode.cpp">
+			<Option target="lab5"/>
+		</Unit>
+		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/Mode.h">
+			<Option target="lab5"/>
+		</Unit>
+		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.cpp">
+			<Option target="lab5"/>
+		</Unit>
+		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h">
+			<Option target="lab5"/>
+		</Unit>
+		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h">
+			<Option target="lab5"/>
+		</Unit>
+		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.cpp">
+			<Option target="lab5"/>
+		</Unit>
+		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.h">
+			<Option target="lab5"/>
+		</Unit>
+		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.cpp">
+			<Option target="lab5"/>
+		</Unit>
+		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.h">
+			<Option target="lab5"/>
+		</Unit>
+		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.cpp">
+			<Option target="lab5"/>
+		</Unit>
+		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.h">
 			<Option target="lab5"/>
 		</Unit>
 		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/CMakeLists.txt">

@@ -106,7 +106,3 @@ bool Scanner::isValidInput(vector<string> input){
     strtol(input[2].data(), endPointer, 10);
     return  **endPointer == '\0' && atoi(input[2].data()) >= 0;
 }
-
-bool Scanner::isNumber(string potentialNumber) {
-   return false;
-}

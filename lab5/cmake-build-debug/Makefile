@@ -123,141 +123,6 @@ lab5/fast:
 	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/build
 .PHONY : lab5/fast
 
-Mode.o: Mode.cpp.o
-
-.PHONY : Mode.o
-
-# target to build an object file
-Mode.cpp.o:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/Mode.cpp.o
-.PHONY : Mode.cpp.o
-
-Mode.i: Mode.cpp.i
-
-.PHONY : Mode.i
-
-# target to preprocess a source file
-Mode.cpp.i:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/Mode.cpp.i
-.PHONY : Mode.cpp.i
-
-Mode.s: Mode.cpp.s
-
-.PHONY : Mode.s
-
-# target to generate assembly for a file
-Mode.cpp.s:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/Mode.cpp.s
-.PHONY : Mode.cpp.s
-
-Scanner.o: Scanner.cpp.o
-
-.PHONY : Scanner.o
-
-# target to build an object file
-Scanner.cpp.o:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/Scanner.cpp.o
-.PHONY : Scanner.cpp.o
-
-Scanner.i: Scanner.cpp.i
-
-.PHONY : Scanner.i
-
-# target to preprocess a source file
-Scanner.cpp.i:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/Scanner.cpp.i
-.PHONY : Scanner.cpp.i
-
-Scanner.s: Scanner.cpp.s
-
-.PHONY : Scanner.s
-
-# target to generate assembly for a file
-Scanner.cpp.s:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/Scanner.cpp.s
-.PHONY : Scanner.cpp.s
-
-Test.o: Test.cpp.o
-
-.PHONY : Test.o
-
-# target to build an object file
-Test.cpp.o:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/Test.cpp.o
-.PHONY : Test.cpp.o
-
-Test.i: Test.cpp.i
-
-.PHONY : Test.i
-
-# target to preprocess a source file
-Test.cpp.i:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/Test.cpp.i
-.PHONY : Test.cpp.i
-
-Test.s: Test.cpp.s
-
-.PHONY : Test.s
-
-# target to generate assembly for a file
-Test.cpp.s:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/Test.cpp.s
-.PHONY : Test.cpp.s
-
-VictimFile.o: VictimFile.cpp.o
-
-.PHONY : VictimFile.o
-
-# target to build an object file
-VictimFile.cpp.o:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/VictimFile.cpp.o
-.PHONY : VictimFile.cpp.o
-
-VictimFile.i: VictimFile.cpp.i
-
-.PHONY : VictimFile.i
-
-# target to preprocess a source file
-VictimFile.cpp.i:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/VictimFile.cpp.i
-.PHONY : VictimFile.cpp.i
-
-VictimFile.s: VictimFile.cpp.s
-
-.PHONY : VictimFile.s
-
-# target to generate assembly for a file
-VictimFile.cpp.s:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/VictimFile.cpp.s
-.PHONY : VictimFile.cpp.s
-
-VictimFileService.o: VictimFileService.cpp.o
-
-.PHONY : VictimFileService.o
-
-# target to build an object file
-VictimFileService.cpp.o:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/VictimFileService.cpp.o
-.PHONY : VictimFileService.cpp.o
-
-VictimFileService.i: VictimFileService.cpp.i
-
-.PHONY : VictimFileService.i
-
-# target to preprocess a source file
-VictimFileService.cpp.i:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/VictimFileService.cpp.i
-.PHONY : VictimFileService.cpp.i
-
-VictimFileService.s: VictimFileService.cpp.s
-
-.PHONY : VictimFileService.s
-
-# target to generate assembly for a file
-VictimFileService.cpp.s:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/VictimFileService.cpp.s
-.PHONY : VictimFileService.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -285,6 +150,141 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+model/Mode.o: model/Mode.cpp.o
+
+.PHONY : model/Mode.o
+
+# target to build an object file
+model/Mode.cpp.o:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/model/Mode.cpp.o
+.PHONY : model/Mode.cpp.o
+
+model/Mode.i: model/Mode.cpp.i
+
+.PHONY : model/Mode.i
+
+# target to preprocess a source file
+model/Mode.cpp.i:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/model/Mode.cpp.i
+.PHONY : model/Mode.cpp.i
+
+model/Mode.s: model/Mode.cpp.s
+
+.PHONY : model/Mode.s
+
+# target to generate assembly for a file
+model/Mode.cpp.s:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/model/Mode.cpp.s
+.PHONY : model/Mode.cpp.s
+
+model/VictimFile.o: model/VictimFile.cpp.o
+
+.PHONY : model/VictimFile.o
+
+# target to build an object file
+model/VictimFile.cpp.o:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/model/VictimFile.cpp.o
+.PHONY : model/VictimFile.cpp.o
+
+model/VictimFile.i: model/VictimFile.cpp.i
+
+.PHONY : model/VictimFile.i
+
+# target to preprocess a source file
+model/VictimFile.cpp.i:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/model/VictimFile.cpp.i
+.PHONY : model/VictimFile.cpp.i
+
+model/VictimFile.s: model/VictimFile.cpp.s
+
+.PHONY : model/VictimFile.s
+
+# target to generate assembly for a file
+model/VictimFile.cpp.s:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/model/VictimFile.cpp.s
+.PHONY : model/VictimFile.cpp.s
+
+service/VictimFileService.o: service/VictimFileService.cpp.o
+
+.PHONY : service/VictimFileService.o
+
+# target to build an object file
+service/VictimFileService.cpp.o:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/service/VictimFileService.cpp.o
+.PHONY : service/VictimFileService.cpp.o
+
+service/VictimFileService.i: service/VictimFileService.cpp.i
+
+.PHONY : service/VictimFileService.i
+
+# target to preprocess a source file
+service/VictimFileService.cpp.i:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/service/VictimFileService.cpp.i
+.PHONY : service/VictimFileService.cpp.i
+
+service/VictimFileService.s: service/VictimFileService.cpp.s
+
+.PHONY : service/VictimFileService.s
+
+# target to generate assembly for a file
+service/VictimFileService.cpp.s:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/service/VictimFileService.cpp.s
+.PHONY : service/VictimFileService.cpp.s
+
+test/Test.o: test/Test.cpp.o
+
+.PHONY : test/Test.o
+
+# target to build an object file
+test/Test.cpp.o:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/test/Test.cpp.o
+.PHONY : test/Test.cpp.o
+
+test/Test.i: test/Test.cpp.i
+
+.PHONY : test/Test.i
+
+# target to preprocess a source file
+test/Test.cpp.i:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/test/Test.cpp.i
+.PHONY : test/Test.cpp.i
+
+test/Test.s: test/Test.cpp.s
+
+.PHONY : test/Test.s
+
+# target to generate assembly for a file
+test/Test.cpp.s:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/test/Test.cpp.s
+.PHONY : test/Test.cpp.s
+
+ui/Scanner.o: ui/Scanner.cpp.o
+
+.PHONY : ui/Scanner.o
+
+# target to build an object file
+ui/Scanner.cpp.o:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/ui/Scanner.cpp.o
+.PHONY : ui/Scanner.cpp.o
+
+ui/Scanner.i: ui/Scanner.cpp.i
+
+.PHONY : ui/Scanner.i
+
+# target to preprocess a source file
+ui/Scanner.cpp.i:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/ui/Scanner.cpp.i
+.PHONY : ui/Scanner.cpp.i
+
+ui/Scanner.s: ui/Scanner.cpp.s
+
+.PHONY : ui/Scanner.s
+
+# target to generate assembly for a file
+ui/Scanner.cpp.s:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/ui/Scanner.cpp.s
+.PHONY : ui/Scanner.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -294,24 +294,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... lab5"
 	@echo "... edit_cache"
-	@echo "... Mode.o"
-	@echo "... Mode.i"
-	@echo "... Mode.s"
-	@echo "... Scanner.o"
-	@echo "... Scanner.i"
-	@echo "... Scanner.s"
-	@echo "... Test.o"
-	@echo "... Test.i"
-	@echo "... Test.s"
-	@echo "... VictimFile.o"
-	@echo "... VictimFile.i"
-	@echo "... VictimFile.s"
-	@echo "... VictimFileService.o"
-	@echo "... VictimFileService.i"
-	@echo "... VictimFileService.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... model/Mode.o"
+	@echo "... model/Mode.i"
+	@echo "... model/Mode.s"
+	@echo "... model/VictimFile.o"
+	@echo "... model/VictimFile.i"
+	@echo "... model/VictimFile.s"
+	@echo "... service/VictimFileService.o"
+	@echo "... service/VictimFileService.i"
+	@echo "... service/VictimFileService.s"
+	@echo "... test/Test.o"
+	@echo "... test/Test.i"
+	@echo "... test/Test.s"
+	@echo "... ui/Scanner.o"
+	@echo "... ui/Scanner.i"
+	@echo "... ui/Scanner.s"
 .PHONY : help
 
 

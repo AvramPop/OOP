@@ -5,9 +5,9 @@
 #include <iostream>
 #include <assert.h>
 #include "Test.h"
-#include "VictimFile.h"
-#include "DynamicVector.h"
-#include "VictimFileService.h"
+#include "../model/VictimFile.h"
+#include "../repository/DynamicVector.h"
+#include "../service/VictimFileService.h"
 
 void Test::test(){
     testAdd();

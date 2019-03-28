@@ -16,13 +16,36 @@ class DynamicVector{
         int indexOfElement(TemplateClass element) const;
 
     public:
+    /**
+     * Initialise Dynamic vector with default capacity of 10.
+     * @param capacity
+     */
         DynamicVector(int capacity = 10);
         ~DynamicVector();
+    /**
+     * Overwrite access operator to return element at index.
+     */
         TemplateClass& operator[](int index);
+    /**
+     * Add element to vector if it doesn't exist according to object equality.
+     * @param newElement
+     */
         void add(TemplateClass newElement);
+    /**
+     * Remove element if it exists in vector.
+     */
         void remove(TemplateClass elementToRemove);
+    /**
+     * Update element given by equality testing.
+     */
         void update(TemplateClass elementToUpdate);
+    /**
+     * Get current size of vector (aka number of elements).
+     */
         int getSize();
+    /**
+     * Checks whether element is contained by vector.
+     */
         bool containsElement(TemplateClass element);
 
 

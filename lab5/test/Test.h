@@ -6,7 +6,7 @@
 #define LAB5_TEST_H
 
 
-#include "VictimFileService.h"
+#include "../service/VictimFileService.h"
 
 class Test {
 public:

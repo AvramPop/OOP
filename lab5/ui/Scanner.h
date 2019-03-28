@@ -7,8 +7,8 @@
 
 #include <vector>
 #include <string>
-#include "VictimFileService.h"
-#include "Mode.h"
+#include "../service/VictimFileService.h"
+#include "../model/Mode.h"
 
 class Scanner {
 private:
@@ -27,9 +27,10 @@ private:
     void print(DynamicVector<VictimFile> victimFilesToPrint);
     VictimFile victimFileFromTokens(vector<string> tokens);
     bool isValidInput(vector<string> input);
-    bool isNumber(string potentialNumber);
 public:
-
+    /**
+     * Run console until exit command given, through a brand new service.
+     */
     void runConsole();
 };
 

@@ -7,6 +7,9 @@
 
 #include <string>
 using namespace std;
+/**
+ * Stub class representing user access mode in the app.
+ * */
 class Mode {
 private:
     string mode;

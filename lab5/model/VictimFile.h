@@ -9,7 +9,9 @@
 #include <ostream>
 
 using namespace std;
-
+/**
+ * Class modeling the file of a victim.
+ */
 class VictimFile {
     friend class Test;
     private:
@@ -19,10 +21,17 @@ class VictimFile {
         string photograph;
 
     public:
+    /**
+     * Create victim file with whole info.
+     */
         VictimFile(string victimName, string placeOfOrigin, int age, string photograph);
-
+    /**
+     * Create stub victim file with empty members.
+     */
         VictimFile();
-
+    /**
+     * Create stub victim file only with names.
+     */
         VictimFile(string name);
 
         bool operator==(const VictimFile &rhs) const;
@@ -30,7 +39,10 @@ class VictimFile {
         bool operator!=(const VictimFile &rhs) const;
 
         friend ostream &operator<<(ostream &os, const VictimFile &file);
-
+    /**
+     * Format self as a string containing member data.
+     * @return
+     */
         string toPlainString();
 };
 
