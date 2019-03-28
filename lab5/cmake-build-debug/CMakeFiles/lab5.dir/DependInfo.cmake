@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Mode.cpp" "/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/cmake-build-debug/CMakeFiles/lab5.dir/Mode.cpp.o"
   "/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Scanner.cpp" "/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/cmake-build-debug/CMakeFiles/lab5.dir/Scanner.cpp.o"
   "/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Test.cpp" "/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/cmake-build-debug/CMakeFiles/lab5.dir/Test.cpp.o"
   "/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/VictimFile.cpp" "/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/cmake-build-debug/CMakeFiles/lab5.dir/VictimFile.cpp.o"

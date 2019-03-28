@@ -9,12 +9,11 @@
 #include "Scanner.h"
 
 void Scanner::runConsole(){
-    victimFileService.addVictimFile(VictimFile("dani", "ia", 8, "bani")); //todo remove this
-    victimFileService.addVictimFile(VictimFile("ana", "are", 9, "mere"));
     char userInput[1000];
     string inputAsString;
     string command;
     bool inputNotExit = true;
+    bool isFirstToken;
     while(inputNotExit){
         scanf(" %[^\n]s", userInput);
         vector<string> inputAsTokens;
@@ -25,8 +24,14 @@ void Scanner::runConsole(){
         inputAsString = inputAsString.substr(indexAfterCommand);
         stringstream inputAsStringStream(inputAsString);
         string token;
+        string nameToken;
+        isFirstToken = true;
         while(getline(inputAsStringStream, token, ',')){
             token = std::regex_replace(token, std::regex("^ +"), "");
+            if(isFirstToken){
+                isFirstToken = false;
+                nameToken = token;
+            }
             inputAsTokens.push_back(token);
         }
         if(command == "exit"){
@@ -35,13 +40,19 @@ void Scanner::runConsole(){
         } else if(command == "list"){
             list();
         } else if(command == "add"){
-            add(inputAsTokens);
+            if(currentMode.getMode() == "A"){
+                add(inputAsTokens);
+            }
         } else if(command == "update"){
-            update(inputAsTokens);
+            if(currentMode.getMode() == "A"){
+                update(nameToken, inputAsTokens);
+            }
         } else if(command == "mode"){
-            mode(inputAsTokens);
+            setMode(inputAsTokens);
         } else if(command == "delete"){
-            remove(inputAsString);
+            if(currentMode.getMode() == "A"){
+                remove(nameToken);
+            }
         }
     }
 }
@@ -51,19 +62,23 @@ void Scanner::list(){
 }
 
 void Scanner::add(vector<string> inputAsTokens){
-    victimFileService.addVictimFile(victimFileFromTokens(inputAsTokens));
+    if(isValidInput(inputAsTokens)){
+        victimFileService.addVictimFile(victimFileFromTokens(inputAsTokens));
+    }
 }
 
-void Scanner::remove(string inputAsString){
-    victimFileService.removeVictimFile(inputAsString); // todo change this, take whole second part of input
+void Scanner::remove(string victimName){
+    victimFileService.removeVictimFile(victimName);
 }
 
-void Scanner::mode(vector<string> inputAsTokens){
-    cout << "selecting mode\n";
+void Scanner::setMode(vector<string> inputAsTokens){
+    currentMode.setMode(inputAsTokens[0]);
 }
 
-void Scanner::update(vector<string> inputAsTokens){ // todo something can break here and throw logic error
-    victimFileService.updateVictimFile(inputAsTokens[0], victimFileFromTokens(inputAsTokens));
+void Scanner::update(string victimName, vector<string> inputAsTokens){ // todo something can break here and throw logic error
+    if(isValidInput(inputAsTokens)){
+        victimFileService.updateVictimFile(victimName, victimFileFromTokens(inputAsTokens));
+    }
 }
 
 void Scanner::print(vector<string> inputAsTokens){
@@ -81,4 +96,14 @@ void Scanner::print(DynamicVector<VictimFile> victimFilesToPrint){
 
 VictimFile Scanner::victimFileFromTokens(vector<string> tokens){
     return VictimFile(tokens[0], tokens[1], atoi(tokens[2].data()), tokens[3]);
+}
+
+bool Scanner::isValidInput(vector<string> input){
+    return isNumber(input[2]);
+}
+
+bool Scanner::isNumber(string potentialNumber) {
+    char** endPointer;
+    strtol(potentialNumber.data(), endPointer, 10);
+    return  **endPointer == '\0';
 }

@@ -123,6 +123,33 @@ lab5/fast:
 	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/build
 .PHONY : lab5/fast
 
+Mode.o: Mode.cpp.o
+
+.PHONY : Mode.o
+
+# target to build an object file
+Mode.cpp.o:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/Mode.cpp.o
+.PHONY : Mode.cpp.o
+
+Mode.i: Mode.cpp.i
+
+.PHONY : Mode.i
+
+# target to preprocess a source file
+Mode.cpp.i:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/Mode.cpp.i
+.PHONY : Mode.cpp.i
+
+Mode.s: Mode.cpp.s
+
+.PHONY : Mode.s
+
+# target to generate assembly for a file
+Mode.cpp.s:
+	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/Mode.cpp.s
+.PHONY : Mode.cpp.s
+
 Scanner.o: Scanner.cpp.o
 
 .PHONY : Scanner.o
@@ -267,6 +294,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... lab5"
 	@echo "... edit_cache"
+	@echo "... Mode.o"
+	@echo "... Mode.i"
+	@echo "... Mode.s"
 	@echo "... Scanner.o"
 	@echo "... Scanner.i"
 	@echo "... Scanner.s"
