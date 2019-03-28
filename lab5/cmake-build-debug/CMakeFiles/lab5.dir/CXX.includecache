@@ -28,6 +28,10 @@ string
 VictimFileService.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/VictimFileService.h
 
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Test.h
+VictimFileService.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/VictimFileService.h
+
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/VictimFile.h
 string
 -
@@ -39,4 +43,16 @@ VictimFile.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/VictimFile.h
 DynamicVector.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/DynamicVector.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/main.cpp
+iostream
+-
+VictimFile.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/VictimFile.h
+DynamicVector.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/DynamicVector.h
+Test.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Test.h
+Scanner.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Scanner.h
 

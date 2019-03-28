@@ -41,7 +41,7 @@ void Scanner::runConsole(){
         } else if(command == "mode"){
             mode(inputAsTokens);
         } else if(command == "delete"){
-            remove(inputAsTokens);
+            remove(inputAsString);
         }
     }
 }
@@ -54,8 +54,8 @@ void Scanner::add(vector<string> inputAsTokens){
     victimFileService.addVictimFile(victimFileFromTokens(inputAsTokens));
 }
 
-void Scanner::remove(vector<string> inputAsTokens){
-    victimFileService.removeVictimFile(inputAsTokens[0]); // todo change this, take whole second part of input
+void Scanner::remove(string inputAsString){
+    victimFileService.removeVictimFile(inputAsString); // todo change this, take whole second part of input
 }
 
 void Scanner::mode(vector<string> inputAsTokens){

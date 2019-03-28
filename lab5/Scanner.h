@@ -16,7 +16,7 @@ private:
 
     void add(vector<string> inputAsTokens);
 
-    void remove(vector<string> inputAsTokens);
+    void remove(string inputAsString);
 
     void mode(vector<string> inputAsTokens);
 
