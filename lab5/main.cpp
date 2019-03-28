@@ -5,9 +5,8 @@
 #include "Scanner.h"
 
 int main(){
-    VictimFileService victimFileService;
     Test test;
     test.test();
     Scanner scanner;
-    scanner.runConsole(victimFileService);
+    scanner.runConsole();
 }

@@ -5,12 +5,27 @@
 #ifndef LAB5_SCANNER_H
 #define LAB5_SCANNER_H
 
-
+#include <vector>
+#include <string>
 #include "VictimFileService.h"
 
 class Scanner {
+private:
+    VictimFileService victimFileService;
+    void list();
+
+    void add(vector<string> inputAsTokens);
+
+    void remove(vector<string> inputAsTokens);
+
+    void mode(vector<string> inputAsTokens);
+
+    void update(vector<string> inputAsTokens);
+    void print(vector<string> inputAsTokens);
+    void print(DynamicVector<VictimFile> victimFilesToPrint);
+    VictimFile victimFileFromTokens(vector<string> tokens);
 public:
-    void runConsole(VictimFileService victimFileService);
+    void runConsole();
 };
 
 

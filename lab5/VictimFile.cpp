@@ -24,3 +24,7 @@ VictimFile::VictimFile(string victimName, string placeOfOrigin, int age, string 
 VictimFile::VictimFile(string name) : victimName(name), placeOfOrigin(""), age(-1), photograph(""){}
 
 VictimFile::VictimFile() : victimName(""), placeOfOrigin(""), age(-1), photograph(""){}
+
+string VictimFile::toPlainString(){
+    return victimName + " " + placeOfOrigin + " " + to_string(age) + " " + photograph;
+}

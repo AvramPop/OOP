@@ -30,6 +30,8 @@ class VictimFile {
         bool operator!=(const VictimFile &rhs) const;
 
         friend ostream &operator<<(ostream &os, const VictimFile &file);
+
+        string toPlainString();
 };
 
 
