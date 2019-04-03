@@ -36,40 +36,54 @@ void Scanner::runConsole(){
         }
         if(command == "exit"){
             inputNotExit = false;
-        } else if(command == "list"){
+        } else if(command == "listModeA"){
             if(currentMode.getMode() == "A"){
-                list();
+                listModeA();
+            } else if(currentMode.getMode() == "B"){
+                listModeB();
             }
-        } else if(command == "add"){
+        } else if(command == "addModeA"){
             if(currentMode.getMode() == "A"){
-                add(inputAsTokens);
+                addModeA(inputAsTokens);
             }
         } else if(command == "update"){
             if(currentMode.getMode() == "A"){
-                update(nameToken, inputAsTokens);
+                updateModeA(nameToken, inputAsTokens);
             }
         } else if(command == "mode"){
             setMode(inputAsTokens);
         } else if(command == "delete"){
             if(currentMode.getMode() == "A"){
-                remove(nameToken);
+                removeModeA(nameToken);
+            }
+        } else if(command == "next"){
+            if(currentMode.getMode() == "B"){
+                nextModeB();
+            }
+        } else if(command == "save"){
+            if(currentMode.getMode() == "B"){
+                 saveModeB();
+            }
+        } else if(command == "mylist"){
+            if(currentMode.getMode() == "B"){
+                mylistModeB();
             }
         }
     }
 }
 
-void Scanner::list(){
+void Scanner::listModeA(){
     print(victimFileService.getList());
 }
 
-void Scanner::add(vector<string> inputAsTokens){
+void Scanner::addModeA(vector<string> inputAsTokens){
     if(isValidInput(inputAsTokens)){
         VictimFile victimFileFromInput = victimFileFromTokens(inputAsTokens);
         victimFileService.addVictimFile(victimFileFromInput);
     }
 }
 
-void Scanner::remove(string victimName){
+void Scanner::removeModeA(string victimName){
     victimFileService.removeVictimFile(victimName);
 }
 
@@ -79,7 +93,7 @@ void Scanner::setMode(vector<string> inputAsTokens){
     }
 }
 
-void Scanner::update(string victimName, vector<string> inputAsTokens){ // todo something can break here and throw logic error
+void Scanner::updateModeA(string victimName, vector<string> inputAsTokens){ // todo something can break here and throw logic error
     if(isValidInput(inputAsTokens)){
         VictimFile victimFileFromInput = victimFileFromTokens(inputAsTokens);
         victimFileService.updateVictimFile(victimName, victimFileFromInput);
@@ -122,3 +136,19 @@ bool Scanner::is_number(string s){
 }
 
 Scanner::Scanner(const VictimFileService &victimFileService) : victimFileService(victimFileService){}
+
+void Scanner::listModeB(){
+    cout << "listB";
+}
+
+void Scanner::nextModeB(){
+    cout << "nextB";
+}
+
+void Scanner::saveModeB(){
+    cout << "saveB";
+}
+
+void Scanner::mylistModeB(){
+    cout << "mylistB";
+}

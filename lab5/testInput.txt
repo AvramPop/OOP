@@ -19,8 +19,8 @@ list
 delete name7 surname7
 delete name7 surname7
 list
-add name8 surname8 thirdName8, origin8, 8, photo8
+addModeA name8 surname8 thirdName8, origin8, 8, photo8
 list
 update name8 surname8 thirdName8, originUp8, 88, photoUp8
-list
+listModeA
 exit

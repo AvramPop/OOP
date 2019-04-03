@@ -14,15 +14,15 @@ class Scanner {
 private:
     VictimFileService victimFileService;
     Mode currentMode;
-    void list();
+    void listModeA();
 
-    void add(vector<string> inputAsTokens);
+    void addModeA(vector<string> inputAsTokens);
 
-    void remove(string inputAsString);
+    void removeModeA(string victimName);
 
     void setMode(vector<string> inputAsTokens);
 
-    void update(string victimName, vector<string> inputAsTokens);
+    void updateModeA(string victimName, vector<string> inputAsTokens);
     void print(vector<string> inputAsTokens);
     void print(DynamicVector<VictimFile> victimFilesToPrint);
     VictimFile victimFileFromTokens(vector<string> tokens);
@@ -35,6 +35,14 @@ public:
     void runConsole();
 
     Scanner(const VictimFileService &victimFileService);
+
+    void listModeB();
+
+    void nextModeB();
+
+    void saveModeB();
+
+    void mylistModeB();
 };
 
 

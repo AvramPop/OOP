@@ -52,6 +52,41 @@ class DynamicVector{
 
     DynamicVector& operator=(const DynamicVector& baseVector);
 
+public:
+    class Iterator {
+    private:
+        TemplateClass* current;
+    public:
+        Iterator(TemplateClass *current) : current(current){}
+
+        bool operator!=(const Iterator& otherIterator){
+            return current != otherIterator.current;
+        }
+
+        Iterator& operator++(){
+            current++;
+            return *this;
+        }
+
+        Iterator operator++(int){
+            TemplateClass* actual = current;
+            current++;
+            return actual;
+        }
+
+        TemplateClass operator*(){
+            return *current;
+        }
+    };
+
+    Iterator begin(){
+        return Iterator(buffer);
+    }
+
+    Iterator end(){
+        return Iterator(buffer + size);
+    }
+
 
 };
 
