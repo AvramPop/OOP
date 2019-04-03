@@ -4,7 +4,7 @@
 
 #include "VictimFileService.h"
 
-void VictimFileService::addVictimFile(VictimFile newVictimFile){
+void VictimFileService::addVictimFile(VictimFile& newVictimFile){
     if(!repository.containsElement(newVictimFile)){
         repository.add(newVictimFile);
     }
@@ -24,7 +24,7 @@ DynamicVector<VictimFile> VictimFileService::getList(){
     return temporaryBuffer;
 }
 
-void VictimFileService::updateVictimFile(string name, VictimFile updatedVictimFile){
+void VictimFileService::updateVictimFile(string name, VictimFile& updatedVictimFile){
     if(repository.containsElement(VictimFile(name))){
         repository.update(updatedVictimFile);
     }

@@ -23,19 +23,9 @@ void Test::testAdd() const{
     assert(testBuffer[3] == VictimFile("testNameComplete1"));
 }
 
-void Test::testRemove() const{
-    VictimFileService testService = getTestService();
-    testService.removeVictimFile("testName1");
-    testService.removeVictimFile("nameNotExistent");
-    DynamicVector<VictimFile> testBuffer = testService.getList();
-    assert(testBuffer[0] == VictimFile(""));
-    assert(testBuffer[2] == VictimFile("testNameComplete1"));
-    assert(testBuffer[3] == VictimFile("testNameComplete2"));
-    assert(!testBuffer.containsElement(VictimFile("testName1")));
-}
-
 VictimFileService Test::getTestService() const{
-    VictimFileService testService;
+    DynamicVector<VictimFile> repo;
+    VictimFileService testService(repo);
     VictimFile testFileEmpty;
     VictimFile testFileWithName1("testName1");
     VictimFile testFileWithName2("testName2");
@@ -63,11 +53,25 @@ VictimFileService Test::getTestService() const{
     return testService;
 }
 
+void Test::testRemove() const{
+    VictimFileService testService = getTestService();
+    testService.removeVictimFile("testName1");
+    testService.removeVictimFile("nameNotExistent");
+    DynamicVector<VictimFile> testBuffer = testService.getList();
+    assert(testBuffer[0] == VictimFile(""));
+    assert(testBuffer[2] == VictimFile("testNameComplete1"));
+    assert(testBuffer[3] == VictimFile("testNameComplete2"));
+    VictimFile testFile("testName1");
+    assert(!testBuffer.containsElement(testFile));
+}
+
+
 void Test::testUpdate() const{
     VictimFileService testService = getTestService();
     DynamicVector<VictimFile> testBuffer = testService.getList();
     assert(testBuffer[3].photograph == "photo1");
-    testService.updateVictimFile("testNameComplete1", VictimFile("testNameComplete1", "updatedOrigin2", 200, "updatedPhoto2"));
+    VictimFile updatedFile = VictimFile("testNameComplete1", "updatedOrigin2", 200, "updatedPhoto2");
+    testService.updateVictimFile("testNameComplete1", updatedFile);
     DynamicVector<VictimFile> testBuffer2 = testService.getList();
     assert(testBuffer2[3].photograph == "updatedPhoto2");
 }

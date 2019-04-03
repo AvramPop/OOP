@@ -6,18 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/main.cpp
-iostream
--
-model/VictimFile.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h
-repository/DynamicVector.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h
-test/Test.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.h
-ui/Scanner.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.h
-
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/Mode.h
 string
 -
@@ -36,9 +24,17 @@ ostream
 ../repository/DynamicVector.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h
 
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.h
-../service/VictimFileService.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.cpp
+iostream
+-
+vector
+-
+sstream
+-
+regex
+-
+Scanner.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.h
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.h
 vector

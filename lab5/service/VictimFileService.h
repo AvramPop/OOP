@@ -13,7 +13,7 @@ class VictimFileService {
 private:
     DynamicVector<VictimFile> repository;
 public:
-    VictimFileService(){};
+    VictimFileService(const DynamicVector<VictimFile>& repository) : repository{repository} {};
     /**
      * Get repository size.
      */
@@ -21,7 +21,7 @@ public:
     /**
      * Add victim file to repository.
      */
-    void addVictimFile(VictimFile newVictimFile);
+    void addVictimFile(VictimFile& newVictimFile);
     /**
      * Remove victim file from repository.
      */
@@ -33,7 +33,7 @@ public:
     /**
      * Update victim file with name with updatedVictimFile.
      */
-    void updateVictimFile(string name, VictimFile updatedVictimFile);
+    void updateVictimFile(string name, VictimFile& updatedVictimFile);
 };
 
 

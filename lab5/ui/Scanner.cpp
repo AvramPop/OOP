@@ -64,7 +64,8 @@ void Scanner::list(){
 
 void Scanner::add(vector<string> inputAsTokens){
     if(isValidInput(inputAsTokens)){
-        victimFileService.addVictimFile(victimFileFromTokens(inputAsTokens));
+        VictimFile victimFileFromInput = victimFileFromTokens(inputAsTokens);
+        victimFileService.addVictimFile(victimFileFromInput);
     }
 }
 
@@ -80,7 +81,8 @@ void Scanner::setMode(vector<string> inputAsTokens){
 
 void Scanner::update(string victimName, vector<string> inputAsTokens){ // todo something can break here and throw logic error
     if(isValidInput(inputAsTokens)){
-        victimFileService.updateVictimFile(victimName, victimFileFromTokens(inputAsTokens));
+        VictimFile victimFileFromInput = victimFileFromTokens(inputAsTokens);
+        victimFileService.updateVictimFile(victimName, victimFileFromInput);
     }
 }
 
@@ -118,3 +120,5 @@ bool Scanner::is_number(string s){
     while (it != s.end() && isdigit(*it)) ++it;
     return !s.empty() && it == s.end();
 }
+
+Scanner::Scanner(const VictimFileService &victimFileService) : victimFileService(victimFileService){}

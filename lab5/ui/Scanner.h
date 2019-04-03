@@ -33,6 +33,8 @@ public:
      * Run console until exit command given, through a brand new service.
      */
     void runConsole();
+
+    Scanner(const VictimFileService &victimFileService);
 };
 
 

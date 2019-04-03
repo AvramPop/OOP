@@ -6,7 +6,9 @@
 
 int main(){
     Test test;
-    //test.test();
-    Scanner scanner;
+    test.test();
+    DynamicVector<VictimFile> repository;
+    VictimFileService victimFileService = VictimFileService(repository);
+    Scanner scanner(victimFileService);
     scanner.runConsole();
 }

@@ -30,7 +30,7 @@ class DynamicVector{
      * Add element to vector if it doesn't exist according to object equality.
      * @param newElement
      */
-        void add(TemplateClass newElement);
+        void add(TemplateClass& newElement);
     /**
      * Remove element if it exists in vector.
      */
@@ -38,7 +38,7 @@ class DynamicVector{
     /**
      * Update element given by equality testing.
      */
-        void update(TemplateClass elementToUpdate);
+        void update(TemplateClass& elementToUpdate);
     /**
      * Get current size of vector (aka number of elements).
      */
@@ -48,8 +48,38 @@ class DynamicVector{
      */
         bool containsElement(TemplateClass element);
 
+    DynamicVector(const DynamicVector& baseVector);
+
+    DynamicVector& operator=(const DynamicVector& baseVector);
+
 
 };
+
+template <typename TemplateClass>
+DynamicVector<TemplateClass>& DynamicVector<TemplateClass>::operator=(const DynamicVector<TemplateClass>& baseVector){
+    if (this == &baseVector){
+        return *this;
+    }
+    this->size = baseVector.size;
+    this->capacity = baseVector.capacity;
+
+    delete[] this->buffer;
+    this->buffer = new TemplateClass[this->capacity];
+    for (int i = 0; i < this->size; i++){
+        this->buffer[i] = baseVector.buffer[i];
+    }
+    return *this;
+}
+
+
+template <typename TemplateClass>
+DynamicVector<TemplateClass>::DynamicVector(const DynamicVector<TemplateClass>& baseVector){
+    this->size = baseVector.size;
+    this->capacity = baseVector.capacity;
+    this->buffer = new TemplateClass[this->capacity];
+    for (int i = 0; i < this->size; i++)
+        this->buffer[i] = baseVector.buffer[i];
+}
 
 template <typename TemplateClass>
 DynamicVector<TemplateClass>::DynamicVector(int capacity){
@@ -69,7 +99,7 @@ TemplateClass& DynamicVector<TemplateClass>::operator[](int index){
 }
 
 template <typename TemplateClass>
-void DynamicVector<TemplateClass>::add(TemplateClass newElement){
+void DynamicVector<TemplateClass>::add(TemplateClass& newElement){
     if (this->size == this->capacity){
         this->resize();
     }
@@ -99,7 +129,6 @@ template<typename TemplateClass>
 void DynamicVector<TemplateClass>::remove(TemplateClass elementToRemove){
     if(containsElement(elementToRemove)){
         int indexOfElementToRemove = indexOfElement(elementToRemove);
-        //delete this->buffer[indexOfElementToRemove];
         for(int i = indexOfElementToRemove; i < size - 1; i++){
             this->buffer[i] = this->buffer[i + 1];
         }
@@ -108,7 +137,7 @@ void DynamicVector<TemplateClass>::remove(TemplateClass elementToRemove){
 }
 
 template<typename TemplateClass>
-void DynamicVector<TemplateClass>::update(TemplateClass elementToUpdate){
+void DynamicVector<TemplateClass>::update(TemplateClass& elementToUpdate){
     if(containsElement(elementToUpdate)){
         int indexOfElementToUpdate = indexOfElement(elementToUpdate);
         buffer[indexOfElementToUpdate] = elementToUpdate;
