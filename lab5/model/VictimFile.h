@@ -44,6 +44,11 @@ class VictimFile {
      * @return
      */
         string toPlainString();
+
+        string getName() { return victimName; };
+        string getPlaceOfOrigin() { return placeOfOrigin; };
+        int getAge() { return age; };
+        string getPhotograph() { return photograph; };
 };
 
 

@@ -24,3 +24,9 @@ list
 update name8 surname8 thirdName8, originUp8, 88, photoUp8
 listModeA
 exit
+
+mode A
+add name1 surname1, origin1, 1, photo1
+list
+mode B
+next

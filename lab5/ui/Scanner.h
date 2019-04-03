@@ -14,6 +14,9 @@ class Scanner {
 private:
     VictimFileService victimFileService;
     Mode currentMode;
+   // DynamicVector<VictimFile>::Iterator victimFileIterator;
+   int currentIterationIndex;
+    DynamicVector<VictimFile> transferList;
     void listModeA();
 
     void addModeA(vector<string> inputAsTokens);
@@ -26,8 +29,12 @@ private:
     void print(vector<string> inputAsTokens);
     void print(DynamicVector<VictimFile> victimFilesToPrint);
     VictimFile victimFileFromTokens(vector<string> tokens);
-    bool isValidInput(vector<string> input);
+    bool isValidNaturalNumber(string input);
     bool is_number(string s);
+    void listModeB(vector<string> inputAsTokens);
+    void nextModeB();
+    void saveModeB(string name);
+    void mylistModeB();
 public:
     /**
      * Run console until exit command given, through a brand new service.
@@ -36,13 +43,7 @@ public:
 
     Scanner(const VictimFileService &victimFileService);
 
-    void listModeB();
-
-    void nextModeB();
-
-    void saveModeB();
-
-    void mylistModeB();
+    void setIterationStart();
 };
 
 

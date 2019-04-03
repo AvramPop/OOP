@@ -15,6 +15,8 @@ private:
     void testAdd() const;
     void testRemove() const;
     void testUpdate() const;
+    void testGetFileByName() const;
+    void testFilter() const;
 
     VictimFileService getTestService() const;
 };

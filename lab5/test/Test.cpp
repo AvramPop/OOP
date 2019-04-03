@@ -13,6 +13,8 @@ void Test::test(){
     testAdd();
     testRemove();
     testUpdate();
+    testGetFileByName();
+    testFilter();
 }
 
 void Test::testAdd() const{
@@ -74,4 +76,16 @@ void Test::testUpdate() const{
     testService.updateVictimFile("testNameComplete1", updatedFile);
     DynamicVector<VictimFile> testBuffer2 = testService.getList();
     assert(testBuffer2[3].photograph == "updatedPhoto2");
+}
+
+void Test::testGetFileByName() const{
+    VictimFileService testService = getTestService();
+    assert(testService.getVictimFileWithName("testNameComplete9") == VictimFile("testNameComplete9"));
+    assert(testService.getVictimFileWithName("testNameComplete9").getAge() == 10);
+}
+
+void Test::testFilter() const{
+    VictimFileService testService = getTestService();
+    DynamicVector<VictimFile> filterResult = testService.getVectorOfFilesWithOriginAndLowerAge("placeOfOrigin1", 100);
+    assert(filterResult[0] == VictimFile("testNameComplete1"));
 }

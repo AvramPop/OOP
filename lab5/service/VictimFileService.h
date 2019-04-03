@@ -34,6 +34,14 @@ public:
      * Update victim file with name with updatedVictimFile.
      */
     void updateVictimFile(string name, VictimFile& updatedVictimFile);
+    /**
+     * Get victim file with name.
+     */
+    VictimFile getVictimFileWithName(string name);
+    /**
+     * Return a vector consisting in all VictimFiles having given origin and age lower than given age.
+     */
+    DynamicVector<VictimFile> getVectorOfFilesWithOriginAndLowerAge(string origin, int age);
 };
 
 

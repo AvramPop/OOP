@@ -33,3 +33,26 @@ void VictimFileService::updateVictimFile(string name, VictimFile& updatedVictimF
 int VictimFileService::getRepositorySize(){
     return repository.getSize();
 }
+
+VictimFile VictimFileService::getVictimFileWithName(string name){
+    if(repository.containsElement(VictimFile(name))){
+        for(int i = 0; i < repository.getSize(); i++){
+            if(repository[i].getName() == name){
+                return repository[i];
+            }
+        }
+    }
+    throw exception();
+}
+
+
+DynamicVector<VictimFile> VictimFileService::getVectorOfFilesWithOriginAndLowerAge(string origin, int age){
+    DynamicVector<VictimFile> temporary;
+    for(int i = 0; i < getRepositorySize(); i++){
+        if(getList()[i].getPlaceOfOrigin() == origin &&
+            getList()[i].getAge() < age){
+            temporary.add(getList()[i]);
+        }
+    }
+    return temporary;
+}

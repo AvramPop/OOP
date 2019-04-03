@@ -36,13 +36,13 @@ void Scanner::runConsole(){
         }
         if(command == "exit"){
             inputNotExit = false;
-        } else if(command == "listModeA"){
+        } else if(command == "list"){
             if(currentMode.getMode() == "A"){
                 listModeA();
             } else if(currentMode.getMode() == "B"){
-                listModeB();
+                listModeB(inputAsTokens);
             }
-        } else if(command == "addModeA"){
+        } else if(command == "add"){
             if(currentMode.getMode() == "A"){
                 addModeA(inputAsTokens);
             }
@@ -52,6 +52,9 @@ void Scanner::runConsole(){
             }
         } else if(command == "mode"){
             setMode(inputAsTokens);
+            if(currentMode.getMode() == "B"){
+                setIterationStart();
+            }
         } else if(command == "delete"){
             if(currentMode.getMode() == "A"){
                 removeModeA(nameToken);
@@ -62,7 +65,7 @@ void Scanner::runConsole(){
             }
         } else if(command == "save"){
             if(currentMode.getMode() == "B"){
-                 saveModeB();
+                saveModeB(nameToken);
             }
         } else if(command == "mylist"){
             if(currentMode.getMode() == "B"){
@@ -77,7 +80,7 @@ void Scanner::listModeA(){
 }
 
 void Scanner::addModeA(vector<string> inputAsTokens){
-    if(isValidInput(inputAsTokens)){
+    if(isValidNaturalNumber(inputAsTokens[2])){
         VictimFile victimFileFromInput = victimFileFromTokens(inputAsTokens);
         victimFileService.addVictimFile(victimFileFromInput);
     }
@@ -94,7 +97,7 @@ void Scanner::setMode(vector<string> inputAsTokens){
 }
 
 void Scanner::updateModeA(string victimName, vector<string> inputAsTokens){ // todo something can break here and throw logic error
-    if(isValidInput(inputAsTokens)){
+    if(isValidNaturalNumber(inputAsTokens[2])){
         VictimFile victimFileFromInput = victimFileFromTokens(inputAsTokens);
         victimFileService.updateVictimFile(victimName, victimFileFromInput);
     }
@@ -123,10 +126,10 @@ VictimFile Scanner::victimFileFromTokens(vector<string> tokens){
 //    return  *endPointer == '\0' && atoi(input[2].data()) >= 0;
 //}
 
-bool Scanner::isValidInput(vector<string> input){
+bool Scanner::isValidNaturalNumber(string input){
 //    char** endPointer = NULL; //todo this one is for strtol
 //    strtol(input[2].data(), endPointer, 10);
-    return  is_number(input[2]) && atoi(input[2].data()) >= 0;
+    return is_number(input) && atoi(input.data()) >= 0;
 }
 
 bool Scanner::is_number(string s){
@@ -137,18 +140,39 @@ bool Scanner::is_number(string s){
 
 Scanner::Scanner(const VictimFileService &victimFileService) : victimFileService(victimFileService){}
 
-void Scanner::listModeB(){
-    cout << "listB";
+void Scanner::listModeB(vector<string> inputAsTokens){
+    if(inputAsTokens.size() == 2){
+        if(isValidNaturalNumber(inputAsTokens[1])){
+            print(victimFileService.getVectorOfFilesWithOriginAndLowerAge(inputAsTokens[0], atoi(inputAsTokens[1].data())));
+        }
+    } else {
+        listModeA();
+    }
 }
 
 void Scanner::nextModeB(){
-    cout << "nextB";
+    currentIterationIndex++;
+    if(currentIterationIndex == victimFileService.getList().getSize()){
+        setIterationStart();
+    } else {
+        cout << victimFileService.getList()[currentIterationIndex].toPlainString() << endl;
+    }
 }
 
-void Scanner::saveModeB(){
-    cout << "saveB";
+void Scanner::saveModeB(string name){
+    VictimFile victimFileToTransfer = victimFileService.getVictimFileWithName(name);
+    if(!transferList.containsElement(VictimFile(name))){
+        transferList.add(victimFileToTransfer);
+    }
 }
 
 void Scanner::mylistModeB(){
-    cout << "mylistB";
+    for(int i = 0; i < transferList.getSize(); i++){
+        cout << transferList[i].toPlainString() << endl;
+    }
+}
+
+void Scanner::setIterationStart(){
+    currentIterationIndex = 0;
+    cout << victimFileService.getList()[currentIterationIndex].toPlainString() << endl;
 }
