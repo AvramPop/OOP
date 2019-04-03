@@ -27,6 +27,7 @@ private:
     void print(DynamicVector<VictimFile> victimFilesToPrint);
     VictimFile victimFileFromTokens(vector<string> tokens);
     bool isValidInput(vector<string> input);
+    bool is_number(string s);
 public:
     /**
      * Run console until exit command given, through a brand new service.

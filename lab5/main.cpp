@@ -6,7 +6,7 @@
 
 int main(){
     Test test;
-    test.test();
+    //test.test();
     Scanner scanner;
     scanner.runConsole();
 }

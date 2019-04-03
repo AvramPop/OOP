@@ -6,24 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Test.cpp
-iostream
--
-assert.h
--
-Test.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Test.h
-model/VictimFile.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h
-repository/DynamicVector.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h
-service/VictimFileService.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.h
-
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Test.h
-service/VictimFileService.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.h
-
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/main.cpp
 iostream
 -
@@ -31,8 +13,8 @@ model/VictimFile.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h
 repository/DynamicVector.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h
-Test.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/Test.h
+test/Test.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.h
 ui/Scanner.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.h
 
@@ -48,27 +30,15 @@ ostream
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h
 
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.cpp
-VictimFileService.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.h
-
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.h
 ../model/VictimFile.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h
 ../repository/DynamicVector.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h
 
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.cpp
-iostream
--
-vector
--
-sstream
--
-regex
--
-Scanner.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.h
+../service/VictimFileService.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.h
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.h
 vector

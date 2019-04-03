@@ -7,7 +7,7 @@
 #include <sstream>
 #include <regex>
 #include "Scanner.h"
-
+using namespace std;
 void Scanner::runConsole(){
     char userInput[1000];
     string inputAsString;
@@ -101,8 +101,20 @@ VictimFile Scanner::victimFileFromTokens(vector<string> tokens){
     return VictimFile(tokens[0], tokens[1], atoi(tokens[2].data()), tokens[3]);
 }
 
+//bool Scanner::isValidInput(vector<string> input){
+//    char* endPointer = NULL; //todo this one is for strtol
+//    strtol(input[2].data(), &endPointer, 10);
+//    return  *endPointer == '\0' && atoi(input[2].data()) >= 0;
+//}
+
 bool Scanner::isValidInput(vector<string> input){
-    char** endPointer; //todo this one is for strtol
-    strtol(input[2].data(), endPointer, 10);
-    return  **endPointer == '\0' && atoi(input[2].data()) >= 0;
+//    char** endPointer = NULL; //todo this one is for strtol
+//    strtol(input[2].data(), endPointer, 10);
+    return  is_number(input[2]) && atoi(input[2].data()) >= 0;
+}
+
+bool Scanner::is_number(string s){
+    auto it = s.begin();
+    while (it != s.end() && isdigit(*it)) ++it;
+    return !s.empty() && it == s.end();
 }
