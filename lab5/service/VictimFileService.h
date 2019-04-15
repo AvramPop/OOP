@@ -8,12 +8,14 @@
 
 #include "../model/VictimFile.h"
 #include "../repository/DynamicVector.h"
+#include "../repository/Repository.h"
+#include <vector>
 
 class VictimFileService {
 private:
-    DynamicVector<VictimFile> repository;
+    Repository<VictimFile> repository;
 public:
-    VictimFileService(const DynamicVector<VictimFile>& repository) : repository{repository} {};
+    VictimFileService(const Repository<VictimFile>& repository) : repository{repository} {};
     /**
      * Get repository size.
      */
@@ -29,7 +31,7 @@ public:
     /**
      * Get whole list of victim files.
      */
-    DynamicVector<VictimFile> getList();
+    vector<VictimFile> getList();
     /**
      * Update victim file with name with updatedVictimFile.
      */
@@ -41,7 +43,7 @@ public:
     /**
      * Return a vector consisting in all VictimFiles having given origin and age lower than given age.
      */
-    DynamicVector<VictimFile> getVectorOfFilesWithOriginAndLowerAge(string origin, int age);
+    vector<VictimFile> getVectorOfFilesWithOriginAndLowerAge(string& origin, int& age);
 };
 
 

@@ -110,9 +110,9 @@ void Scanner::print(vector<string> inputAsTokens){
     cout << endl;
 }
 
-void Scanner::print(DynamicVector<VictimFile> victimFilesToPrint){
-    for(int i = 0; i < victimFilesToPrint.getSize(); i++){
-        cout << victimFilesToPrint[i].toPlainString() << endl;
+void Scanner::print(vector<VictimFile> victimFilesToPrint){
+    for(auto& victimFileToPrint : victimFilesToPrint){
+        cout << victimFileToPrint.toPlainString() << endl;
     }
 }
 
@@ -120,15 +120,7 @@ VictimFile Scanner::victimFileFromTokens(vector<string> tokens){
     return VictimFile(tokens[0], tokens[1], atoi(tokens[2].data()), tokens[3]);
 }
 
-//bool Scanner::isValidInput(vector<string> input){
-//    char* endPointer = NULL; //todo this one is for strtol
-//    strtol(input[2].data(), &endPointer, 10);
-//    return  *endPointer == '\0' && atoi(input[2].data()) >= 0;
-//}
-
 bool Scanner::isValidNaturalNumber(string input){
-//    char** endPointer = NULL; //todo this one is for strtol
-//    strtol(input[2].data(), endPointer, 10);
     return is_number(input) && atoi(input.data()) >= 0;
 }
 
@@ -143,7 +135,8 @@ Scanner::Scanner(const VictimFileService &victimFileService) : victimFileService
 void Scanner::listModeB(vector<string> inputAsTokens){
     if(inputAsTokens.size() == 2){
         if(isValidNaturalNumber(inputAsTokens[1])){
-            print(victimFileService.getVectorOfFilesWithOriginAndLowerAge(inputAsTokens[0], atoi(inputAsTokens[1].data())));
+            int conversion = atoi(inputAsTokens[1].data());
+            print(victimFileService.getVectorOfFilesWithOriginAndLowerAge(inputAsTokens[0], conversion));
         }
     } else {
         listModeA();
@@ -151,28 +144,28 @@ void Scanner::listModeB(vector<string> inputAsTokens){
 }
 
 void Scanner::nextModeB(){
-    currentIterationIndex++;
-    if(currentIterationIndex == victimFileService.getList().getSize()){
+    if(currentIterationIndex == victimFileService.getList().size()){
         setIterationStart();
+        cout << victimFileService.getList()[currentIterationIndex].toPlainString() << endl;
     } else {
         cout << victimFileService.getList()[currentIterationIndex].toPlainString() << endl;
     }
+    currentIterationIndex++;
 }
 
 void Scanner::saveModeB(string name){
     VictimFile victimFileToTransfer = victimFileService.getVictimFileWithName(name);
-    if(!transferList.containsElement(VictimFile(name))){
-        transferList.add(victimFileToTransfer);
+    if(!(find(transferList.begin(), transferList.end(), VictimFile(name)) != transferList.end())){
+        transferList.push_back(victimFileToTransfer);
     }
 }
 
 void Scanner::mylistModeB(){
-    for(int i = 0; i < transferList.getSize(); i++){
-        cout << transferList[i].toPlainString() << endl;
+    for(auto& victimFile : transferList){
+        cout << victimFile.toPlainString() << endl;
     }
 }
 
 void Scanner::setIterationStart(){
     currentIterationIndex = 0;
-    cout << victimFileService.getList()[currentIterationIndex].toPlainString() << endl;
 }

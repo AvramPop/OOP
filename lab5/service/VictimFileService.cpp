@@ -2,6 +2,7 @@
 // Created by dani on 3/27/19.
 //
 
+#include <iostream>
 #include "VictimFileService.h"
 
 void VictimFileService::addVictimFile(VictimFile& newVictimFile){
@@ -16,10 +17,10 @@ void VictimFileService::removeVictimFile(string name){
     }
 }
 
-DynamicVector<VictimFile> VictimFileService::getList(){
-    DynamicVector<VictimFile> temporaryBuffer;
+vector<VictimFile> VictimFileService::getList(){
+    vector<VictimFile> temporaryBuffer;
     for(int i = 0; i < getRepositorySize(); ++i){
-        temporaryBuffer.add(repository[i]);
+        temporaryBuffer.push_back(repository[i]);
     }
     return temporaryBuffer;
 }
@@ -46,13 +47,10 @@ VictimFile VictimFileService::getVictimFileWithName(string name){
 }
 
 
-DynamicVector<VictimFile> VictimFileService::getVectorOfFilesWithOriginAndLowerAge(string origin, int age){
-    DynamicVector<VictimFile> temporary;
-    for(int i = 0; i < getRepositorySize(); i++){
-        if(getList()[i].getPlaceOfOrigin() == origin &&
-            getList()[i].getAge() < age){
-            temporary.add(getList()[i]);
-        }
-    }
+vector<VictimFile> VictimFileService::getVectorOfFilesWithOriginAndLowerAge(string& origin, int& age){
+    vector<VictimFile> temporary;
+    vector<VictimFile> temporaryVictimFileListComplete = getList();
+    copy_if(temporaryVictimFileListComplete.begin(), temporaryVictimFileListComplete.end(), std::back_inserter(temporary),
+            [origin, age](VictimFile victimFile)->bool{return victimFile.getPlaceOfOrigin() == origin && victimFile.getAge() < age;} );
     return temporary;
 }

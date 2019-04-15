@@ -16,7 +16,7 @@ private:
     Mode currentMode;
    // DynamicVector<VictimFile>::Iterator victimFileIterator;
    int currentIterationIndex;
-    DynamicVector<VictimFile> transferList;
+    vector<VictimFile> transferList;
     void listModeA();
 
     void addModeA(vector<string> inputAsTokens);
@@ -27,7 +27,7 @@ private:
 
     void updateModeA(string victimName, vector<string> inputAsTokens);
     void print(vector<string> inputAsTokens);
-    void print(DynamicVector<VictimFile> victimFilesToPrint);
+    void print(vector<VictimFile> victimFilesToPrint);
     VictimFile victimFileFromTokens(vector<string> tokens);
     bool isValidNaturalNumber(string input);
     bool is_number(string s);

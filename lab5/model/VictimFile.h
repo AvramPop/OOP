@@ -7,6 +7,7 @@
 
 #include <string>
 #include <ostream>
+#include <istream>
 
 using namespace std;
 /**
@@ -38,17 +39,29 @@ class VictimFile {
 
         bool operator!=(const VictimFile &rhs) const;
 
-        friend ostream &operator<<(ostream &os, const VictimFile &file);
-    /**
-     * Format self as a string containing member data.
-     * @return
-     */
+        friend ostream &operator<<(ostream &outputStream, const VictimFile &file);
+        friend istream& operator>>(std::istream& inStream, VictimFile& victimFile);
+
+        /**
+        * Format self as a string containing member data.
+        * @return
+        */
         string toPlainString();
 
         string getName() { return victimName; };
         string getPlaceOfOrigin() { return placeOfOrigin; };
         int getAge() { return age; };
         string getPhotograph() { return photograph; };
+        VictimFile& operator=(const VictimFile &victimFile){
+            victimName = victimFile.victimName;
+            placeOfOrigin = victimFile.placeOfOrigin;
+            age = victimFile.age;
+            photograph = victimFile.photograph;
+            return *this;
+        }
+
+
+
 };
 
 

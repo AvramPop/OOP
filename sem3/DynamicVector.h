@@ -8,49 +8,87 @@
 
 template <typename TemplateClass>
 class DynamicVector{
-    private:
-        TemplateClass* buffer;
-        int size;
-        int capacity;
-        void resize(double factor = 1.732);
-        int indexOfElement(TemplateClass element) const;
+private:
+    TemplateClass* buffer;
+    int size;
+    int capacity;
+    void resize(double factor = 1.732);
+    int indexOfElement(TemplateClass element) const;
 
-    public:
+public:
     /**
      * Initialise Dynamic vector with default capacity of 10.
      * @param capacity
      */
-        DynamicVector(int capacity = 10);
-        ~DynamicVector();
+    DynamicVector(int capacity = 10);
+    ~DynamicVector();
     /**
      * Overwrite access operator to return element at index.
      */
-        TemplateClass& operator[](int index);
+    TemplateClass& operator[](int index);
     /**
      * Add element to vector if it doesn't exist according to object equality.
      * @param newElement
      */
-        void add(TemplateClass& newElement);
+    void add(TemplateClass& newElement);
     /**
      * Remove element if it exists in vector.
      */
-        void remove(TemplateClass elementToRemove);
+    void remove(TemplateClass elementToRemove);
     /**
      * Update element given by equality testing.
      */
-        void update(TemplateClass& elementToUpdate);
+    void update(TemplateClass& elementToUpdate);
     /**
      * Get current size of vector (aka number of elements).
      */
-        int getSize();
+    int getSize();
     /**
      * Checks whether element is contained by vector.
      */
-        bool containsElement(TemplateClass element);
+    bool containsElement(TemplateClass element);
 
     DynamicVector(const DynamicVector& baseVector);
 
     DynamicVector& operator=(const DynamicVector& baseVector);
+
+public:
+    class Iterator {
+    private:
+        TemplateClass* current;
+    public:
+        Iterator(TemplateClass* beginning){
+            current = beginning;
+        }
+
+        Iterator operator++(){
+            this->current++;
+            return *this;
+        }
+
+        Iterator operator++(int){
+            TemplateClass* actual = current;
+            this->current++;
+            return Iterator{actual};
+        }
+
+        TemplateClass operator*(){
+            return *current;
+        }
+
+        bool operator!=(Iterator otherIterator){
+            return current != otherIterator.current;
+        }
+    };
+
+    Iterator begin(){
+        return Iterator(buffer);
+    }
+
+    Iterator end(){
+        return Iterator(buffer + size);
+    }
+
 
 };
 

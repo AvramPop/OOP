@@ -12,10 +12,9 @@ bool VictimFile::operator!=(const VictimFile &rhs) const{
     return !(rhs == *this);
 }
 
-ostream &operator<<(ostream &os, const VictimFile &file){
-    os << "Victim file victimName: " << file.victimName << " placeOfOrigin: " << file.placeOfOrigin << " age: " << file.age
-       << " photograph: " << file.photograph;
-    return os;
+ostream &operator<<(ostream &outputStream, const VictimFile &file){
+    outputStream << file.victimName << " " << file.placeOfOrigin << " " << file.age << " " << file.photograph;
+    return outputStream;
 }
 
 VictimFile::VictimFile(string victimName, string placeOfOrigin, int age, string photograph)
@@ -27,4 +26,23 @@ VictimFile::VictimFile() : victimName(""), placeOfOrigin(""), age(-1), photograp
 
 string VictimFile::toPlainString(){
     return victimName + " " + placeOfOrigin + " " + to_string(age) + " " + photograph;
+}
+
+istream& operator>>(istream& inStream, VictimFile& victimFile){
+    string ageString;
+    string nameString;
+    string placeString;
+    string photoString;
+    getline(inStream, nameString, ',');
+    getline(inStream, placeString, ',');
+    placeString.erase(placeString.begin());
+    getline(inStream, ageString, ',');
+    ageString.erase(ageString.begin());
+    getline(inStream, photoString);
+    photoString.erase(photoString.begin());
+    victimFile.victimName = nameString;
+    victimFile.placeOfOrigin = placeString;
+    victimFile.age = stoi(ageString);
+    victimFile.photograph = photoString;
+    return inStream;
 }

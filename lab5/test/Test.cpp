@@ -8,6 +8,7 @@
 #include "../model/VictimFile.h"
 #include "../repository/DynamicVector.h"
 #include "../service/VictimFileService.h"
+#include <algorithm>
 
 void Test::test(){
     testAdd();
@@ -19,14 +20,14 @@ void Test::test(){
 
 void Test::testAdd() const{
     VictimFileService testService = getTestService();
-    DynamicVector<VictimFile> testBuffer = testService.getList();
+    vector<VictimFile> testBuffer = testService.getList();
     assert(testBuffer[0] == VictimFile(""));
     assert(testBuffer[1] == VictimFile("testName1"));
     assert(testBuffer[3] == VictimFile("testNameComplete1"));
 }
 
 VictimFileService Test::getTestService() const{
-    DynamicVector<VictimFile> repo;
+    Repository<VictimFile> repo;
     VictimFileService testService(repo);
     VictimFile testFileEmpty;
     VictimFile testFileWithName1("testName1");
@@ -59,22 +60,22 @@ void Test::testRemove() const{
     VictimFileService testService = getTestService();
     testService.removeVictimFile("testName1");
     testService.removeVictimFile("nameNotExistent");
-    DynamicVector<VictimFile> testBuffer = testService.getList();
+    vector<VictimFile> testBuffer = testService.getList();
     assert(testBuffer[0] == VictimFile(""));
     assert(testBuffer[2] == VictimFile("testNameComplete1"));
     assert(testBuffer[3] == VictimFile("testNameComplete2"));
     VictimFile testFile("testName1");
-    assert(!testBuffer.containsElement(testFile));
+    assert(!(find(testBuffer.begin(), testBuffer.end(), testFile) != testBuffer.end()));
 }
 
 
 void Test::testUpdate() const{
     VictimFileService testService = getTestService();
-    DynamicVector<VictimFile> testBuffer = testService.getList();
+    vector<VictimFile> testBuffer = testService.getList();
     assert(testBuffer[3].photograph == "photo1");
     VictimFile updatedFile = VictimFile("testNameComplete1", "updatedOrigin2", 200, "updatedPhoto2");
     testService.updateVictimFile("testNameComplete1", updatedFile);
-    DynamicVector<VictimFile> testBuffer2 = testService.getList();
+    vector<VictimFile> testBuffer2 = testService.getList();
     assert(testBuffer2[3].photograph == "updatedPhoto2");
 }
 
@@ -86,6 +87,8 @@ void Test::testGetFileByName() const{
 
 void Test::testFilter() const{
     VictimFileService testService = getTestService();
-    DynamicVector<VictimFile> filterResult = testService.getVectorOfFilesWithOriginAndLowerAge("placeOfOrigin1", 100);
+    string placeOfOrigin1String = "placeOfOrigin1";
+    int oneHundredDummyInt = 100;
+    vector<VictimFile> filterResult = testService.getVectorOfFilesWithOriginAndLowerAge(placeOfOrigin1String, oneHundredDummyInt);
     assert(filterResult[0] == VictimFile("testNameComplete1"));
 }

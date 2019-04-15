@@ -27,6 +27,6 @@ exit
 
 mode A
 add name1 surname1, origin1, 1, photo1
-list
 mode B
 next
+
