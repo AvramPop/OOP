@@ -16,21 +16,15 @@ string
 fstream
 -
 
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Test.cpp
-Test.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Test.h
-VictimFile.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
-FileRepository.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/FileRepository.h
-fstream
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Mode.h
+string
 -
-assert.h
--
-iostream
--
-sstream
--
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Scanner.h
+VictimFileService.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFileService.h
+Mode.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Mode.h
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Test.h
 VictimFile.h
@@ -47,4 +41,12 @@ FileRepository.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/FileRepository.h
 VictimFile.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/main.cpp
+iostream
+-
+Test.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Test.h
+Scanner.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Scanner.h
 
