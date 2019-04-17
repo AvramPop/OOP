@@ -2,6 +2,7 @@
 // Created by dani on 3/27/19.
 //
 
+#include <algorithm>
 #include "VictimFile.h"
 
 bool VictimFile::operator==(const VictimFile &rhs) const{
@@ -13,7 +14,8 @@ bool VictimFile::operator!=(const VictimFile &rhs) const{
 }
 
 ostream &operator<<(ostream &outputStream, const VictimFile &file){
-    outputStream << file.victimName << " " << file.placeOfOrigin << " " << file.age << " " << file.photograph;
+    string result = file.victimName + " " + file.placeOfOrigin + " " + std::to_string(file.age) + " " + file.photograph;
+    outputStream << result;
     return outputStream;
 }
 
@@ -23,10 +25,6 @@ VictimFile::VictimFile(string victimName, string placeOfOrigin, int age, string 
 VictimFile::VictimFile(string name) : victimName(name), placeOfOrigin(""), age(-1), photograph(""){}
 
 VictimFile::VictimFile() : victimName(""), placeOfOrigin(""), age(-1), photograph(""){}
-
-string VictimFile::toPlainString(){
-    return victimName + " " + placeOfOrigin + " " + to_string(age) + " " + photograph;
-}
 
 istream& operator>>(istream& inStream, VictimFile& victimFile){
     string ageString;
@@ -42,7 +40,17 @@ istream& operator>>(istream& inStream, VictimFile& victimFile){
     photoString.erase(photoString.begin());
     victimFile.victimName = nameString;
     victimFile.placeOfOrigin = placeString;
-    victimFile.age = stoi(ageString);
+    if(!ageString.empty() && all_of(ageString.begin(), ageString.end(), ::isdigit)){
+        victimFile.age = stoi(ageString);
+    } else {
+        throw std::exception();
+    }
     victimFile.photograph = photoString;
     return inStream;
 }
+
+string VictimFile::toFormattedString(){
+    string result = victimName + ", " + placeOfOrigin + ", " + std::to_string(age) + ", " + photograph;
+    return result;
+}
+

@@ -19,7 +19,7 @@ list
 delete name7 surname7
 delete name7 surname7
 list
-addModeA name8 surname8 thirdName8, origin8, 8, photo8
+add name8 surname8 thirdName8, origin8, 8, photo8
 list
 update name8 surname8 thirdName8, originUp8, 88, photoUp8
 listModeA
@@ -29,4 +29,3 @@ mode A
 add name1 surname1, origin1, 1, photo1
 mode B
 next
-

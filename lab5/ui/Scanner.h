@@ -14,27 +14,22 @@ class Scanner {
 private:
     VictimFileService victimFileService;
     Mode currentMode;
-   // DynamicVector<VictimFile>::Iterator victimFileIterator;
-   int currentIterationIndex;
+    int currentIterationIndex;
     vector<VictimFile> transferList;
     void listModeA();
 
-    void addModeA(vector<string> inputAsTokens);
-
-    void removeModeA(string victimName);
-
-    void setMode(vector<string> inputAsTokens);
-
-    void updateModeA(string victimName, vector<string> inputAsTokens);
-    void print(vector<string> inputAsTokens);
+    void addModeA();
+    void removeModeA();
+    void setMode();
+    void updateModeA();
     void print(vector<VictimFile> victimFilesToPrint);
-    VictimFile victimFileFromTokens(vector<string> tokens);
     bool isValidNaturalNumber(string input);
-    bool is_number(string s);
-    void listModeB(vector<string> inputAsTokens);
+    bool isNumber(string s);
+    void listModeB();
     void nextModeB();
-    void saveModeB(string name);
+    void saveModeB();
     void mylistModeB();
+    string removeUnnecessaryWhitespaces(string stringToUpdate);
 public:
     /**
      * Run console until exit command given, through a brand new service.

@@ -18,17 +18,19 @@ void Test::test(){
     testFilter();
 }
 
-void Test::testAdd() const{
+void Test::testAdd(){
     VictimFileService testService = getTestService();
     vector<VictimFile> testBuffer = testService.getList();
     assert(testBuffer[0] == VictimFile(""));
     assert(testBuffer[1] == VictimFile("testName1"));
     assert(testBuffer[3] == VictimFile("testNameComplete1"));
+    delete repository;
 }
 
-VictimFileService Test::getTestService() const{
-    Repository<VictimFile> repo;
-    VictimFileService testService(repo);
+VictimFileService Test::getTestService(){
+   // Repository<VictimFile>* repo = new Repository<VictimFile>;
+    repository = new Repository<VictimFile>;
+    VictimFileService testService(repository);
     VictimFile testFileEmpty;
     VictimFile testFileWithName1("testName1");
     VictimFile testFileWithName2("testName2");
@@ -56,7 +58,7 @@ VictimFileService Test::getTestService() const{
     return testService;
 }
 
-void Test::testRemove() const{
+void Test::testRemove(){
     VictimFileService testService = getTestService();
     testService.removeVictimFile("testName1");
     testService.removeVictimFile("nameNotExistent");
@@ -66,10 +68,11 @@ void Test::testRemove() const{
     assert(testBuffer[3] == VictimFile("testNameComplete2"));
     VictimFile testFile("testName1");
     assert(!(find(testBuffer.begin(), testBuffer.end(), testFile) != testBuffer.end()));
+    delete repository;
 }
 
 
-void Test::testUpdate() const{
+void Test::testUpdate(){
     VictimFileService testService = getTestService();
     vector<VictimFile> testBuffer = testService.getList();
     assert(testBuffer[3].photograph == "photo1");
@@ -77,18 +80,21 @@ void Test::testUpdate() const{
     testService.updateVictimFile("testNameComplete1", updatedFile);
     vector<VictimFile> testBuffer2 = testService.getList();
     assert(testBuffer2[3].photograph == "updatedPhoto2");
+    delete repository;
 }
 
-void Test::testGetFileByName() const{
+void Test::testGetFileByName(){
     VictimFileService testService = getTestService();
     assert(testService.getVictimFileWithName("testNameComplete9") == VictimFile("testNameComplete9"));
     assert(testService.getVictimFileWithName("testNameComplete9").getAge() == 10);
+    delete repository;
 }
 
-void Test::testFilter() const{
+void Test::testFilter(){
     VictimFileService testService = getTestService();
     string placeOfOrigin1String = "placeOfOrigin1";
     int oneHundredDummyInt = 100;
     vector<VictimFile> filterResult = testService.getVectorOfFilesWithOriginAndLowerAge(placeOfOrigin1String, oneHundredDummyInt);
     assert(filterResult[0] == VictimFile("testNameComplete1"));
+    delete repository;
 }

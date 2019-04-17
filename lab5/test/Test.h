@@ -12,13 +12,14 @@ class Test {
 public:
     void test();
 private:
-    void testAdd() const;
-    void testRemove() const;
-    void testUpdate() const;
-    void testGetFileByName() const;
-    void testFilter() const;
+    void testAdd();
+    void testRemove();
+    void testUpdate();
+    void testGetFileByName();
+    void testFilter();
+    Repository<VictimFile>* repository;
 
-    VictimFileService getTestService() const;
+    VictimFileService getTestService();
 };
 
 

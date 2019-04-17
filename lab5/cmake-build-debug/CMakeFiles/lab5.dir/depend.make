@@ -5,6 +5,7 @@ CMakeFiles/lab5.dir/main.cpp.o: ../main.cpp
 CMakeFiles/lab5.dir/main.cpp.o: ../model/Mode.h
 CMakeFiles/lab5.dir/main.cpp.o: ../model/VictimFile.h
 CMakeFiles/lab5.dir/main.cpp.o: ../repository/DynamicVector.h
+CMakeFiles/lab5.dir/main.cpp.o: ../repository/FileRepository.h
 CMakeFiles/lab5.dir/main.cpp.o: ../repository/Repository.h
 CMakeFiles/lab5.dir/main.cpp.o: ../service/VictimFileService.h
 CMakeFiles/lab5.dir/main.cpp.o: ../test/Test.h

@@ -13,15 +13,26 @@ template <typename TemplateClass>
 class Repository {
 private:
     int indexOfElement(TemplateClass element);
+protected:
     vector<TemplateClass> buffer;
 public:
-    void add(TemplateClass& element);
-    vector<TemplateClass> getList();
-    bool containsElement(TemplateClass element);
-    void remove(TemplateClass element);
-    void update(TemplateClass element);
-    int getSize();
-    TemplateClass& operator[](int index);
+    virtual void add(TemplateClass& element);
+
+    virtual vector<TemplateClass> getList();
+
+    virtual bool containsElement(TemplateClass element);
+
+    virtual void remove(TemplateClass element);
+
+    virtual void update(TemplateClass element);
+
+    virtual int getSize();
+
+    virtual TemplateClass& operator[](int index);
+
+    virtual TemplateClass& at(int index);
+
+    virtual ~Repository(){};
 
 };
 
@@ -72,6 +83,14 @@ int Repository<TemplateClass>::getSize(){
 
 template <typename TemplateClass>
 TemplateClass& Repository<TemplateClass>::operator[](int index){
+    if(index < getSize()){
+        return buffer[index];
+    }
+    throw exception();
+}
+
+template<typename TemplateClass>
+TemplateClass &Repository<TemplateClass>::at(int index){
     if(index < getSize()){
         return buffer[index];
     }
