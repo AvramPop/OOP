@@ -32,6 +32,8 @@ public:
     void update(TemplateClass element);
     int getSize();
     TemplateClass& at(int index);
+    TemplateClass operator[](int index);
+
 };
 
 template<typename TemplateClass>
@@ -52,11 +54,11 @@ void FileRepository<TemplateClass>::loadBufferFromFile(){
 
 template<typename TemplateClass>
 void FileRepository<TemplateClass>::dumpBufferToFile(){
-    ofstream fout(pathToRepository);
+    std::ofstream fout(pathToRepository);
     fout << "";
     if(buffer.size() > 0){
         for(int i = 0; i < buffer.size() - 1; i++){
-            fout << buffer[i].toFormattedString() << endl;
+            fout << buffer[i].toFormattedString() << std::endl;
         }
         if(buffer.size() > 0){
             fout << buffer[buffer.size() - 1].toFormattedString();
@@ -95,7 +97,7 @@ TemplateClass& FileRepository<TemplateClass>::at(int index){
         return element;
     } else {
         buffer.clear();
-        throw exception();
+        throw std::exception();
     }
 }
 
@@ -147,6 +149,19 @@ void FileRepository<TemplateClass>::remove(TemplateClass element){
         buffer.erase(std::remove(buffer.begin(), buffer.end(), element), buffer.end());
     }
     dumpBufferToFile();
+}
+
+template<typename TemplateClass>
+TemplateClass FileRepository<TemplateClass>::operator[](int index){
+    loadBufferFromFile();
+    if(index < buffer.size()){
+        TemplateClass element = buffer[index];
+        buffer.clear();
+        return element;
+    } else {
+        buffer.clear();
+        throw std::exception();
+    }
 }
 
 

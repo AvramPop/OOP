@@ -7,38 +7,40 @@
 
 
 #include "VictimFile.h"
+#include "VictimFileService.h"
 
 class Test {
 public:
     void test();
 private:
-//    void testAdd();
-//    void testRemove();
-//    void testUpdate();
-//    void testGetFileByName();
-//    void testFilter();
-//    VictimFileService getTestService();
     void stringStreamVictimFile(std::ostream& output, VictimFile victimFile);
     void testVictimFile();
-
     void testVictimRepository();
-
     void testRepositoryLoading();
-
     void testRepositoryDumping();
-
     void testRepositoryAdding();
-
     void testRepositoryUpdating();
-
     void testRepositoryDeleting();
-
     void testRepositorySize();
-
     void testRepositoryElementAccess();
-    void resetFileToDefault();
-
+    void resetFileToDefault(string path);
     void testRepositoryContains();
+    VictimFileService getTestService();
+    void testVictimService();
+
+    void testServiceGetSize();
+
+    void testServiceAddVictimFile();
+
+    void testServiceRemoveVictimFile();
+
+    void testServiceGetList();
+
+    void testServiceUpdateVictimFile();
+
+    void testServiceGetVictimFileWithName();
+
+    void testServiceGetVectorOfFilesWithOriginAndLowerAge();
 };
 
 
