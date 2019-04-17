@@ -14,11 +14,13 @@ template <typename TemplateClass>
 class FileRepository {
     friend class Test;
 private:
+    int indexOfElement(TemplateClass element);
     const std::string pathToRepository;
     void loadBufferFromFile();
     void dumpBufferToFile();
     bool fileIsEmpty(std::ifstream &file);
     std::vector<TemplateClass> buffer;
+    bool liveContainsElement(TemplateClass element);
 public:
     FileRepository<TemplateClass>(std::string path) : pathToRepository(path){
         buffer = std::vector<TemplateClass>();
@@ -103,6 +105,48 @@ int FileRepository<TemplateClass>::getSize(){
     int size = buffer.size();
     buffer.clear();
     return size;
+}
+
+template<typename TemplateClass>
+void FileRepository<TemplateClass>::update(TemplateClass element){
+    loadBufferFromFile();
+    if(liveContainsElement(element)){
+        buffer[indexOfElement(element)] = element;
+    }
+    dumpBufferToFile();
+}
+
+template <typename TemplateClass>
+int FileRepository<TemplateClass>::indexOfElement(TemplateClass element) {
+    int indexOfElementToRemove = -1;
+    for(int i = 0; i < buffer.size(); i++){
+        if(buffer[i] == element){
+            indexOfElementToRemove = i;
+        }
+    }
+    return indexOfElementToRemove;
+}
+
+template<typename TemplateClass>
+bool FileRepository<TemplateClass>::containsElement(TemplateClass element){
+    loadBufferFromFile();
+    bool contains = find(buffer.begin(), buffer.end(), element) != buffer.end();
+    buffer.clear();
+    return contains;
+}
+
+template<typename TemplateClass>
+bool FileRepository<TemplateClass>::liveContainsElement(TemplateClass element){
+    return find(buffer.begin(), buffer.end(), element) != buffer.end();
+}
+
+template<typename TemplateClass>
+void FileRepository<TemplateClass>::remove(TemplateClass element){
+    loadBufferFromFile();
+    if(liveContainsElement(element)){
+        buffer.erase(std::remove(buffer.begin(), buffer.end(), element), buffer.end());
+    }
+    dumpBufferToFile();
 }
 
 

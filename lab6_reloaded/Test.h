@@ -36,6 +36,9 @@ private:
     void testRepositorySize();
 
     void testRepositoryElementAccess();
+    void resetFileToDefault();
+
+    void testRepositoryContains();
 };
 
 

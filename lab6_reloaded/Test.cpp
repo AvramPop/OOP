@@ -48,6 +48,7 @@ void Test::testVictimRepository(){
     testRepositoryDeleting();
     testRepositorySize();
     testRepositoryElementAccess();
+    testRepositoryContains();
 }
 
 void Test::testRepositoryLoading(){
@@ -73,17 +74,30 @@ void Test::testRepositoryDumping(){
 }
 
 void Test::testRepositoryAdding(){
-//    FileRepository<VictimFile> fileRepository("/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt");
-//    fileRepository.add(VictimFile("name5 surname5", "origin5", 5, "photo5"));
-
+    FileRepository<VictimFile> fileRepository("/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt");
+    fileRepository.add(VictimFile("name5 surname5", "origin5", 5, "photo5"));
+    assert(fileRepository.getSize() == 5);
+    vector<VictimFile> testList = fileRepository.asList();
+    assert(testList[0] == VictimFile("name1 surname1"));
+    assert(testList[4] == VictimFile("name5 surname5"));
+    resetFileToDefault();
 }
 
 void Test::testRepositoryUpdating(){
-
+    FileRepository<VictimFile> fileRepository("/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt");
+    fileRepository.update(VictimFile("name1 surname1", "upOrigin1", 11, "upPhoto1"));
+    assert(fileRepository.at(0).photograph == "upPhoto1");
+    fileRepository.update(VictimFile("name4 surname4", "upOrigin4", 44, "upPhoto4"));
+    assert(fileRepository.at(3).photograph == "upPhoto4");
+    resetFileToDefault();
 }
 
 void Test::testRepositoryDeleting(){
-
+    FileRepository<VictimFile> fileRepository("/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt");
+    fileRepository.remove(VictimFile("name1 surname1"));
+    assert(fileRepository.getSize() == 3);
+    assert(fileRepository.at(0) == VictimFile("name2 surname2"));
+    resetFileToDefault();
 }
 
 void Test::testRepositorySize(){
@@ -101,4 +115,20 @@ void Test::testRepositoryElementAccess(){
     } catch(exception& exception){
         assert(true);
     }
+}
+
+void Test::resetFileToDefault(){
+    FileRepository<VictimFile> fileRepository("/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt");
+    fileRepository.dumpBufferToFile();
+    fileRepository.buffer.push_back(VictimFile("name1 surname1", "origin1", 1, "photo1"));
+    fileRepository.buffer.push_back(VictimFile("name2 surname2", "origin2", 2, "photo2"));
+    fileRepository.buffer.push_back(VictimFile("name3 surname3", "origin3", 3, "photo3"));
+    fileRepository.buffer.push_back(VictimFile("name4 surname4", "origin4", 4, "photo4"));
+    fileRepository.dumpBufferToFile();
+}
+
+void Test::testRepositoryContains(){
+    FileRepository<VictimFile> fileRepository("/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt");
+    assert(fileRepository.containsElement(VictimFile("name1 surname1")));
+    assert(!fileRepository.containsElement(VictimFile("a")));
 }
