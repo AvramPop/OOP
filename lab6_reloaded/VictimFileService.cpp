@@ -64,3 +64,5 @@ VictimFileService &VictimFileService::operator=(const VictimFileService &victimF
 }
 
 VictimFileService::VictimFileService(){}
+
+VictimFileService::VictimFileService(FileRepository<VictimFile> repository) : repository{repository} {}

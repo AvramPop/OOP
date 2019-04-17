@@ -5,6 +5,7 @@
 #include "Test.h"
 #include "VictimFile.h"
 #include "FileRepository.h"
+#include "Mode.h"
 #include <fstream>
 #include <assert.h>
 #include <iostream>
@@ -14,6 +15,7 @@ void Test::test(){
     testVictimFile();
     testVictimRepository();
     testVictimService();
+    testMode();
 }
 
 void Test::testVictimFile(){
@@ -21,6 +23,7 @@ void Test::testVictimFile(){
     VictimFile victimFile1FromText;
     VictimFile victimFile2FromText;
     VictimFile victimFile3FromText;
+    VictimFile victimFileFromTextBroken;
     fin >> victimFile1FromText;
     assert(victimFile1FromText.getPhotograph() == "photo1");
     assert(victimFile1FromText == VictimFile("name1"));
@@ -35,6 +38,16 @@ void Test::testVictimFile(){
     assert(stringStream.str() == "name1 origin1 1 photo1");
     fin >> victimFile3FromText;
     assert(victimFile3FromText == VictimFile("name3 surname3", "origin3 origin3", 3, "photo3 photo3"));
+    try{
+        fin >> victimFileFromTextBroken;
+        assert(false);
+    } catch(exception& exception){
+        assert(true);
+    }
+    VictimFile victimFile1("a");
+    victimFile1 = victimFile1;
+    assert(victimFile1.victimName == "a");
+
 }
 
 void Test::stringStreamVictimFile(std::ostream &output, VictimFile victimFile){
@@ -50,9 +63,18 @@ void Test::testVictimRepository(){
     testRepositorySize();
     testRepositoryElementAccess();
     testRepositoryContains();
+    testCopyRepository();
 }
 
 void Test::testRepositoryLoading(){
+    FileRepository<VictimFile> emptyFileRepository("/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/emptyFile.txt");
+    assert(emptyFileRepository.getSize() == 0);
+    try{
+        emptyFileRepository[2];
+        assert(false);
+    } catch(exception& exception){
+        assert(true);
+    }
     FileRepository<VictimFile> fileRepository("/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt");
     vector<VictimFile> testList = fileRepository.asList();
     assert(testList[0] == VictimFile("name1 surname1"));
@@ -142,7 +164,7 @@ void Test::testVictimService(){
     testServiceUpdateVictimFile();
     testServiceGetVictimFileWithName();
     testServiceGetVectorOfFilesWithOriginAndLowerAge();
-
+    testServiceAssignment();
 }
 
 VictimFileService Test::getTestService(){
@@ -214,5 +236,32 @@ void Test::testServiceGetVectorOfFilesWithOriginAndLowerAge(){
     VictimFileService testService = getTestService();
     vector<VictimFile> filterResult = testService.getVectorOfFilesWithOriginAndLowerAge("origin1", 100);
     assert(filterResult[0] == VictimFile("name1 surname1"));
+}
+
+void Test::testMode(){
+    Mode mode;
+    assert(mode.getMode() == "defaultNoMode");
+    mode.setMode("A");
+    assert(mode.getMode() == "A");
+    assert(Mode("B").getMode() == "B");
+
+}
+
+void Test::testCopyRepository(){
+    FileRepository<VictimFile> fileRepository1("/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData1.txt"), fileRepository2("/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData1.txt");
+    assert(fileRepository1.getSize() == 0);
+    fileRepository1 = fileRepository2;
+    assert(fileRepository1.getSize() == 0);
+    fileRepository2 = fileRepository2;
+    assert(fileRepository2.getSize() == 0);
+
+}
+
+void Test::testServiceAssignment(){
+    VictimFileService testService1 = getTestService(), testService2 = getTestService();
+    testService1 = testService2;
+    assert(testService1.getRepositorySize() == 4);
+    testService1 = testService1;
+    assert(testService1.getRepositorySize() == 4);
 }
 

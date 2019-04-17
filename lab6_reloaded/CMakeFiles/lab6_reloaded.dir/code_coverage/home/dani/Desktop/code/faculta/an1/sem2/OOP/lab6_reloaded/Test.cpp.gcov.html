@@ -1,0 +1,343 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - cov.info - /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Test.cpp</title>
+  <link rel="stylesheet" type="text/css" href="../../../../../../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../../../../../../index.html">top level</a> - <a href="index.html">home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded</a> - Test.cpp<span style="font-size: 80%;"> (source / <a href="Test.cpp.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">cov.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">209</td>
+            <td class="headerCovTableEntry">213</td>
+            <td class="headerCovTableEntryHi">98.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2019-04-17 23:09:27</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr><td><img src="../../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : //</a>
+<span class="lineNum">       2 </span>            : // Created by dani on 4/17/19.
+<span class="lineNum">       3 </span>            : //
+<span class="lineNum">       4 </span>            : 
+<span class="lineNum">       5 </span>            : #include &quot;Test.h&quot;
+<span class="lineNum">       6 </span>            : #include &quot;VictimFile.h&quot;
+<span class="lineNum">       7 </span>            : #include &quot;FileRepository.h&quot;
+<span class="lineNum">       8 </span>            : #include &quot;Mode.h&quot;
+<span class="lineNum">       9 </span>            : #include &lt;fstream&gt;
+<span class="lineNum">      10 </span>            : #include &lt;assert.h&gt;
+<span class="lineNum">      11 </span>            : #include &lt;iostream&gt;
+<a name="12"><span class="lineNum">      12 </span>            : #include &lt;sstream&gt;</a>
+<span class="lineNum">      13 </span>            : 
+<span class="lineNum">      14 </span><span class="lineCov">          1 : void Test::test(){</span>
+<span class="lineNum">      15 </span><span class="lineCov">          1 :     testVictimFile();</span>
+<span class="lineNum">      16 </span><span class="lineCov">          1 :     testVictimRepository();</span>
+<span class="lineNum">      17 </span><span class="lineCov">          1 :     testVictimService();</span>
+<span class="lineNum">      18 </span><span class="lineCov">          1 :     testMode();</span>
+<a name="19"><span class="lineNum">      19 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">      20 </span>            : 
+<span class="lineNum">      21 </span><span class="lineCov">          1 : void Test::testVictimFile(){</span>
+<span class="lineNum">      22 </span><span class="lineCov">          2 :     std::ifstream fin(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testVictimFileData.txt&quot;);</span>
+<span class="lineNum">      23 </span><span class="lineCov">          2 :     VictimFile victimFile1FromText;</span>
+<span class="lineNum">      24 </span><span class="lineCov">          2 :     VictimFile victimFile2FromText;</span>
+<span class="lineNum">      25 </span><span class="lineCov">          2 :     VictimFile victimFile3FromText;</span>
+<span class="lineNum">      26 </span><span class="lineCov">          2 :     VictimFile victimFileFromTextBroken;</span>
+<span class="lineNum">      27 </span><span class="lineCov">          1 :     fin &gt;&gt; victimFile1FromText;</span>
+<span class="lineNum">      28 </span><span class="lineCov">          1 :     assert(victimFile1FromText.getPhotograph() == &quot;photo1&quot;);</span>
+<span class="lineNum">      29 </span><span class="lineCov">          1 :     assert(victimFile1FromText == VictimFile(&quot;name1&quot;));</span>
+<span class="lineNum">      30 </span><span class="lineCov">          1 :     fin &gt;&gt; victimFile2FromText;</span>
+<span class="lineNum">      31 </span><span class="lineCov">          1 :     assert(victimFile2FromText.getAge() == 2);</span>
+<span class="lineNum">      32 </span><span class="lineCov">          1 :     assert(victimFile2FromText.getName() == &quot;name2 surname2&quot;);</span>
+<span class="lineNum">      33 </span><span class="lineCov">          1 :     assert(victimFile2FromText == VictimFile(&quot;name2 surname2&quot;));</span>
+<span class="lineNum">      34 </span><span class="lineCov">          1 :     assert(victimFile2FromText != VictimFile(&quot;name2&quot;));</span>
+<span class="lineNum">      35 </span><span class="lineCov">          1 :     assert(victimFile1FromText.toFormattedString() == &quot;name1, origin1, 1, photo1&quot;);</span>
+<span class="lineNum">      36 </span><span class="lineCov">          2 :     stringstream stringStream;</span>
+<span class="lineNum">      37 </span><span class="lineCov">          1 :     stringStreamVictimFile(stringStream, victimFile1FromText);</span>
+<span class="lineNum">      38 </span><span class="lineCov">          1 :     assert(stringStream.str() == &quot;name1 origin1 1 photo1&quot;);</span>
+<span class="lineNum">      39 </span><span class="lineCov">          1 :     fin &gt;&gt; victimFile3FromText;</span>
+<span class="lineNum">      40 </span><span class="lineCov">          1 :     assert(victimFile3FromText == VictimFile(&quot;name3 surname3&quot;, &quot;origin3 origin3&quot;, 3, &quot;photo3 photo3&quot;));</span>
+<span class="lineNum">      41 </span>            :     try{
+<span class="lineNum">      42 </span><span class="lineCov">          1 :         fin &gt;&gt; victimFileFromTextBroken;</span>
+<span class="lineNum">      43 </span><span class="lineNoCov">          0 :         assert(false);</span>
+<span class="lineNum">      44 </span><span class="lineCov">          1 :     } catch(exception&amp; exception){</span>
+<span class="lineNum">      45 </span>            :         assert(true);
+<span class="lineNum">      46 </span>            :     }
+<span class="lineNum">      47 </span><span class="lineCov">          3 :     VictimFile victimFile1(&quot;a&quot;);</span>
+<span class="lineNum">      48 </span><span class="lineCov">          1 :     victimFile1 = victimFile1;</span>
+<span class="lineNum">      49 </span><span class="lineCov">          1 :     assert(victimFile1.victimName == &quot;a&quot;);</span>
+<span class="lineNum">      50 </span>            : 
+<a name="51"><span class="lineNum">      51 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">      52 </span>            : 
+<span class="lineNum">      53 </span><span class="lineCov">          1 : void Test::stringStreamVictimFile(std::ostream &amp;output, VictimFile victimFile){</span>
+<span class="lineNum">      54 </span><span class="lineCov">          1 :     output &lt;&lt; victimFile;</span>
+<a name="55"><span class="lineNum">      55 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">      56 </span>            : 
+<span class="lineNum">      57 </span><span class="lineCov">          1 : void Test::testVictimRepository(){</span>
+<span class="lineNum">      58 </span><span class="lineCov">          1 :     testRepositoryLoading();</span>
+<span class="lineNum">      59 </span><span class="lineCov">          1 :     testRepositoryDumping();</span>
+<span class="lineNum">      60 </span><span class="lineCov">          1 :     testRepositoryAdding();</span>
+<span class="lineNum">      61 </span><span class="lineCov">          1 :     testRepositoryUpdating();</span>
+<span class="lineNum">      62 </span><span class="lineCov">          1 :     testRepositoryDeleting();</span>
+<span class="lineNum">      63 </span><span class="lineCov">          1 :     testRepositorySize();</span>
+<span class="lineNum">      64 </span><span class="lineCov">          1 :     testRepositoryElementAccess();</span>
+<span class="lineNum">      65 </span><span class="lineCov">          1 :     testRepositoryContains();</span>
+<span class="lineNum">      66 </span><span class="lineCov">          1 :     testCopyRepository();</span>
+<a name="67"><span class="lineNum">      67 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">      68 </span>            : 
+<span class="lineNum">      69 </span><span class="lineCov">          1 : void Test::testRepositoryLoading(){</span>
+<span class="lineNum">      70 </span><span class="lineCov">          2 :     FileRepository&lt;VictimFile&gt; emptyFileRepository(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/emptyFile.txt&quot;);</span>
+<span class="lineNum">      71 </span><span class="lineCov">          1 :     assert(emptyFileRepository.getSize() == 0);</span>
+<span class="lineNum">      72 </span>            :     try{
+<span class="lineNum">      73 </span><span class="lineCov">          1 :         emptyFileRepository[2];</span>
+<span class="lineNum">      74 </span><span class="lineNoCov">          0 :         assert(false);</span>
+<span class="lineNum">      75 </span><span class="lineCov">          1 :     } catch(exception&amp; exception){</span>
+<span class="lineNum">      76 </span>            :         assert(true);
+<span class="lineNum">      77 </span>            :     }
+<span class="lineNum">      78 </span><span class="lineCov">          3 :     FileRepository&lt;VictimFile&gt; fileRepository(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt&quot;);</span>
+<span class="lineNum">      79 </span><span class="lineCov">          2 :     vector&lt;VictimFile&gt; testList = fileRepository.asList();</span>
+<span class="lineNum">      80 </span><span class="lineCov">          1 :     assert(testList[0] == VictimFile(&quot;name1 surname1&quot;));</span>
+<span class="lineNum">      81 </span><span class="lineCov">          1 :     assert(testList[3] == VictimFile(&quot;name4 surname4&quot;));</span>
+<span class="lineNum">      82 </span><span class="lineCov">          1 :     assert(testList[3].getPhotograph() == &quot;photo4&quot;);</span>
+<span class="lineNum">      83 </span><span class="lineCov">          1 :     assert(testList.size() == 4);</span>
+<a name="84"><span class="lineNum">      84 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">      85 </span>            : 
+<span class="lineNum">      86 </span><span class="lineCov">          1 : void Test::testRepositoryDumping(){</span>
+<span class="lineNum">      87 </span><span class="lineCov">          2 :     FileRepository&lt;VictimFile&gt; fileRepository(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryDumping.txt&quot;);</span>
+<span class="lineNum">      88 </span><span class="lineCov">          1 :     fileRepository.dumpBufferToFile();</span>
+<span class="lineNum">      89 </span><span class="lineCov">          1 :     fileRepository.buffer.push_back(VictimFile(&quot;name1&quot;, &quot;origin1&quot;, 1, &quot;photo1&quot;));</span>
+<span class="lineNum">      90 </span><span class="lineCov">          1 :     fileRepository.buffer.push_back(VictimFile(&quot;name2 surname2&quot;, &quot;origin2&quot;, 2, &quot;photo2&quot;));</span>
+<span class="lineNum">      91 </span><span class="lineCov">          1 :     fileRepository.dumpBufferToFile();</span>
+<span class="lineNum">      92 </span><span class="lineCov">          2 :     vector&lt;VictimFile&gt; testList = fileRepository.asList();</span>
+<span class="lineNum">      93 </span><span class="lineCov">          1 :     assert(testList[0] == VictimFile(&quot;name1&quot;));</span>
+<span class="lineNum">      94 </span><span class="lineCov">          1 :     assert(testList[1] == VictimFile(&quot;name2 surname2&quot;));</span>
+<span class="lineNum">      95 </span><span class="lineCov">          1 :     assert(testList[1].getPhotograph() == &quot;photo2&quot;);</span>
+<span class="lineNum">      96 </span><span class="lineCov">          1 :     assert(testList.size() == 2);</span>
+<a name="97"><span class="lineNum">      97 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">      98 </span>            : 
+<span class="lineNum">      99 </span><span class="lineCov">          1 : void Test::testRepositoryAdding(){</span>
+<span class="lineNum">     100 </span><span class="lineCov">          2 :     FileRepository&lt;VictimFile&gt; fileRepository(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt&quot;);</span>
+<span class="lineNum">     101 </span><span class="lineCov">          1 :     fileRepository.add(VictimFile(&quot;name5 surname5&quot;, &quot;origin5&quot;, 5, &quot;photo5&quot;));</span>
+<span class="lineNum">     102 </span><span class="lineCov">          1 :     assert(fileRepository.getSize() == 5);</span>
+<span class="lineNum">     103 </span><span class="lineCov">          2 :     vector&lt;VictimFile&gt; testList = fileRepository.asList();</span>
+<span class="lineNum">     104 </span><span class="lineCov">          1 :     assert(testList[0] == VictimFile(&quot;name1 surname1&quot;));</span>
+<span class="lineNum">     105 </span><span class="lineCov">          1 :     assert(testList[4] == VictimFile(&quot;name5 surname5&quot;));</span>
+<span class="lineNum">     106 </span><span class="lineCov">          1 :     resetFileToDefault(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt&quot;);</span>
+<a name="107"><span class="lineNum">     107 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     108 </span>            : 
+<span class="lineNum">     109 </span><span class="lineCov">          1 : void Test::testRepositoryUpdating(){</span>
+<span class="lineNum">     110 </span><span class="lineCov">          2 :     FileRepository&lt;VictimFile&gt; fileRepository(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt&quot;);</span>
+<span class="lineNum">     111 </span><span class="lineCov">          1 :     fileRepository.update(VictimFile(&quot;name1 surname1&quot;, &quot;upOrigin1&quot;, 11, &quot;upPhoto1&quot;));</span>
+<span class="lineNum">     112 </span><span class="lineCov">          1 :     assert(fileRepository.at(0).photograph == &quot;upPhoto1&quot;);</span>
+<span class="lineNum">     113 </span><span class="lineCov">          1 :     fileRepository.update(VictimFile(&quot;name4 surname4&quot;, &quot;upOrigin4&quot;, 44, &quot;upPhoto4&quot;));</span>
+<span class="lineNum">     114 </span><span class="lineCov">          1 :     assert(fileRepository.at(3).photograph == &quot;upPhoto4&quot;);</span>
+<span class="lineNum">     115 </span><span class="lineCov">          1 :     resetFileToDefault(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt&quot;);</span>
+<a name="116"><span class="lineNum">     116 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     117 </span>            : 
+<span class="lineNum">     118 </span><span class="lineCov">          1 : void Test::testRepositoryDeleting(){</span>
+<span class="lineNum">     119 </span><span class="lineCov">          2 :     FileRepository&lt;VictimFile&gt; fileRepository(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt&quot;);</span>
+<span class="lineNum">     120 </span><span class="lineCov">          1 :     fileRepository.remove(VictimFile(&quot;name1 surname1&quot;));</span>
+<span class="lineNum">     121 </span><span class="lineCov">          1 :     assert(fileRepository.getSize() == 3);</span>
+<span class="lineNum">     122 </span><span class="lineCov">          1 :     assert(fileRepository.at(0) == VictimFile(&quot;name2 surname2&quot;));</span>
+<span class="lineNum">     123 </span><span class="lineCov">          1 :     resetFileToDefault(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt&quot;);</span>
+<a name="124"><span class="lineNum">     124 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     125 </span>            : 
+<span class="lineNum">     126 </span><span class="lineCov">          1 : void Test::testRepositorySize(){</span>
+<span class="lineNum">     127 </span><span class="lineCov">          2 :     FileRepository&lt;VictimFile&gt; fileRepository(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt&quot;);</span>
+<span class="lineNum">     128 </span><span class="lineCov">          1 :     assert(fileRepository.getSize() == 4);</span>
+<a name="129"><span class="lineNum">     129 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     130 </span>            : 
+<span class="lineNum">     131 </span><span class="lineCov">          1 : void Test::testRepositoryElementAccess(){</span>
+<span class="lineNum">     132 </span><span class="lineCov">          2 :     FileRepository&lt;VictimFile&gt; fileRepository(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt&quot;);</span>
+<span class="lineNum">     133 </span><span class="lineCov">          2 :     VictimFile searchResult = fileRepository.at(0);</span>
+<span class="lineNum">     134 </span><span class="lineCov">          1 :     assert(searchResult == VictimFile(&quot;name1 surname1&quot;));</span>
+<span class="lineNum">     135 </span>            :     try{
+<span class="lineNum">     136 </span><span class="lineCov">          1 :         fileRepository.at(5);</span>
+<span class="lineNum">     137 </span><span class="lineNoCov">          0 :         assert(false);</span>
+<span class="lineNum">     138 </span><span class="lineCov">          1 :     } catch(exception&amp; exception){</span>
+<span class="lineNum">     139 </span>            :         assert(true);
+<span class="lineNum">     140 </span>            :     }
+<a name="141"><span class="lineNum">     141 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     142 </span>            : 
+<span class="lineNum">     143 </span><span class="lineCov">          6 : void Test::resetFileToDefault(string path){</span>
+<span class="lineNum">     144 </span><span class="lineCov">         12 :     FileRepository&lt;VictimFile&gt; fileRepository(path);</span>
+<span class="lineNum">     145 </span><span class="lineCov">          6 :     fileRepository.dumpBufferToFile();</span>
+<span class="lineNum">     146 </span><span class="lineCov">          6 :     fileRepository.buffer.push_back(VictimFile(&quot;name1 surname1&quot;, &quot;origin1&quot;, 1, &quot;photo1&quot;));</span>
+<span class="lineNum">     147 </span><span class="lineCov">          6 :     fileRepository.buffer.push_back(VictimFile(&quot;name2 surname2&quot;, &quot;origin2&quot;, 2, &quot;photo2&quot;));</span>
+<span class="lineNum">     148 </span><span class="lineCov">          6 :     fileRepository.buffer.push_back(VictimFile(&quot;name3 surname3&quot;, &quot;origin3&quot;, 3, &quot;photo3&quot;));</span>
+<span class="lineNum">     149 </span><span class="lineCov">          6 :     fileRepository.buffer.push_back(VictimFile(&quot;name4 surname4&quot;, &quot;origin4&quot;, 4, &quot;photo4&quot;));</span>
+<span class="lineNum">     150 </span><span class="lineCov">          6 :     fileRepository.dumpBufferToFile();</span>
+<a name="151"><span class="lineNum">     151 </span><span class="lineCov">          6 : }</span></a>
+<span class="lineNum">     152 </span>            : 
+<span class="lineNum">     153 </span><span class="lineCov">          1 : void Test::testRepositoryContains(){</span>
+<span class="lineNum">     154 </span><span class="lineCov">          2 :     FileRepository&lt;VictimFile&gt; fileRepository(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData.txt&quot;);</span>
+<span class="lineNum">     155 </span><span class="lineCov">          1 :     assert(fileRepository.containsElement(VictimFile(&quot;name1 surname1&quot;)));</span>
+<span class="lineNum">     156 </span><span class="lineCov">          1 :     assert(!fileRepository.containsElement(VictimFile(&quot;a&quot;)));</span>
+<a name="157"><span class="lineNum">     157 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     158 </span>            : 
+<span class="lineNum">     159 </span><span class="lineCov">          1 : void Test::testVictimService(){</span>
+<span class="lineNum">     160 </span><span class="lineCov">          1 :     testServiceGetSize();</span>
+<span class="lineNum">     161 </span><span class="lineCov">          1 :     testServiceAddVictimFile();</span>
+<span class="lineNum">     162 </span><span class="lineCov">          1 :     testServiceRemoveVictimFile();</span>
+<span class="lineNum">     163 </span><span class="lineCov">          1 :     testServiceGetList();</span>
+<span class="lineNum">     164 </span><span class="lineCov">          1 :     testServiceUpdateVictimFile();</span>
+<span class="lineNum">     165 </span><span class="lineCov">          1 :     testServiceGetVictimFileWithName();</span>
+<span class="lineNum">     166 </span><span class="lineCov">          1 :     testServiceGetVectorOfFilesWithOriginAndLowerAge();</span>
+<span class="lineNum">     167 </span><span class="lineCov">          1 :     testServiceAssignment();</span>
+<a name="168"><span class="lineNum">     168 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     169 </span>            : 
+<span class="lineNum">     170 </span><span class="lineCov">          9 : VictimFileService Test::getTestService(){</span>
+<span class="lineNum">     171 </span><span class="lineCov">         18 :     FileRepository&lt;VictimFile&gt; repository(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testServiceData.txt&quot;);</span>
+<span class="lineNum">     172 </span><span class="lineCov">          9 :     VictimFileService testService(repository);</span>
+<span class="lineNum">     173 </span><span class="lineCov">         18 :     return testService;</span>
+<a name="174"><span class="lineNum">     174 </span>            : }</a>
+<span class="lineNum">     175 </span>            : 
+<span class="lineNum">     176 </span><span class="lineCov">          1 : void Test::testServiceGetSize(){</span>
+<span class="lineNum">     177 </span><span class="lineCov">          2 :     VictimFileService testService = getTestService();</span>
+<span class="lineNum">     178 </span><span class="lineCov">          1 :     assert(testService.getRepositorySize() == 4);</span>
+<a name="179"><span class="lineNum">     179 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     180 </span>            : 
+<span class="lineNum">     181 </span><span class="lineCov">          1 : void Test::testServiceAddVictimFile(){</span>
+<span class="lineNum">     182 </span><span class="lineCov">          2 :     VictimFileService testService = getTestService();</span>
+<span class="lineNum">     183 </span><span class="lineCov">          2 :     vector&lt;VictimFile&gt; testBuffer = testService.getList();</span>
+<span class="lineNum">     184 </span><span class="lineCov">          1 :     assert(testBuffer.size() == 4);</span>
+<span class="lineNum">     185 </span><span class="lineCov">          2 :     VictimFile newVictimFile(&quot;name5 surname5&quot;, &quot;origin5&quot;, 5, &quot;photo5&quot;);</span>
+<span class="lineNum">     186 </span><span class="lineCov">          1 :     testService.addVictimFile(newVictimFile);</span>
+<span class="lineNum">     187 </span><span class="lineCov">          1 :     testBuffer = testService.getList();</span>
+<span class="lineNum">     188 </span><span class="lineCov">          1 :     assert(testBuffer.size() == 5);</span>
+<span class="lineNum">     189 </span><span class="lineCov">          1 :     assert(testBuffer[4] == VictimFile(&quot;name5 surname5&quot;));</span>
+<span class="lineNum">     190 </span><span class="lineCov">          1 :     resetFileToDefault(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testServiceData.txt&quot;);</span>
+<a name="191"><span class="lineNum">     191 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     192 </span>            : 
+<span class="lineNum">     193 </span><span class="lineCov">          1 : void Test::testServiceRemoveVictimFile(){</span>
+<span class="lineNum">     194 </span><span class="lineCov">          2 :     VictimFileService testService = getTestService();</span>
+<span class="lineNum">     195 </span><span class="lineCov">          1 :     testService.removeVictimFile(&quot;name1 surname1&quot;);</span>
+<span class="lineNum">     196 </span><span class="lineCov">          1 :     testService.removeVictimFile(&quot;nameNotExistent&quot;);</span>
+<span class="lineNum">     197 </span><span class="lineCov">          2 :     vector&lt;VictimFile&gt; testBuffer = testService.getList();</span>
+<span class="lineNum">     198 </span><span class="lineCov">          1 :     assert(testBuffer[0] == VictimFile(&quot;name2 surname2&quot;));</span>
+<span class="lineNum">     199 </span><span class="lineCov">          1 :     assert(testBuffer[1] == VictimFile(&quot;name3 surname3&quot;));</span>
+<span class="lineNum">     200 </span><span class="lineCov">          2 :     VictimFile testFile(&quot;name1 surname1&quot;);</span>
+<span class="lineNum">     201 </span><span class="lineCov">          1 :     assert(!(find(testBuffer.begin(), testBuffer.end(), testFile) != testBuffer.end()));</span>
+<span class="lineNum">     202 </span><span class="lineCov">          1 :     resetFileToDefault(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testServiceData.txt&quot;);</span>
+<a name="203"><span class="lineNum">     203 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     204 </span>            : 
+<span class="lineNum">     205 </span><span class="lineCov">          1 : void Test::testServiceGetList(){</span>
+<span class="lineNum">     206 </span><span class="lineCov">          2 :     VictimFileService testService = getTestService();</span>
+<span class="lineNum">     207 </span><span class="lineCov">          2 :     vector&lt;VictimFile&gt; testBuffer = testService.getList();</span>
+<span class="lineNum">     208 </span><span class="lineCov">          1 :     assert(testBuffer[0] == VictimFile(&quot;name1 surname1&quot;));</span>
+<span class="lineNum">     209 </span><span class="lineCov">          1 :     assert(testBuffer.size() == 4);</span>
+<a name="210"><span class="lineNum">     210 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     211 </span>            : 
+<span class="lineNum">     212 </span><span class="lineCov">          1 : void Test::testServiceUpdateVictimFile(){</span>
+<span class="lineNum">     213 </span><span class="lineCov">          2 :     VictimFileService testService = getTestService();</span>
+<span class="lineNum">     214 </span><span class="lineCov">          2 :     vector&lt;VictimFile&gt; testBuffer = testService.getList();</span>
+<span class="lineNum">     215 </span><span class="lineCov">          1 :     assert(testBuffer[0].photograph == &quot;photo1&quot;);</span>
+<span class="lineNum">     216 </span><span class="lineCov">          2 :     VictimFile updatedFile = VictimFile(&quot;name2 surname2&quot;, &quot;updatedOrigin2&quot;, 200, &quot;updatedPhoto2&quot;);</span>
+<span class="lineNum">     217 </span><span class="lineCov">          1 :     testService.updateVictimFile(&quot;name1 surname1&quot;, updatedFile);</span>
+<span class="lineNum">     218 </span><span class="lineCov">          2 :     vector&lt;VictimFile&gt; testBuffer2 = testService.getList();</span>
+<span class="lineNum">     219 </span><span class="lineCov">          1 :     assert(testBuffer2[1].photograph == &quot;updatedPhoto2&quot;);</span>
+<span class="lineNum">     220 </span><span class="lineCov">          1 :     resetFileToDefault(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testServiceData.txt&quot;);</span>
+<a name="221"><span class="lineNum">     221 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     222 </span>            : 
+<span class="lineNum">     223 </span><span class="lineCov">          1 : void Test::testServiceGetVictimFileWithName(){</span>
+<span class="lineNum">     224 </span><span class="lineCov">          2 :     VictimFileService testService = getTestService();</span>
+<span class="lineNum">     225 </span><span class="lineCov">          1 :     assert(testService.getVictimFileWithName(&quot;name1 surname1&quot;) == VictimFile(&quot;name1 surname1&quot;));</span>
+<span class="lineNum">     226 </span><span class="lineCov">          1 :     assert(testService.getVictimFileWithName(&quot;name2 surname2&quot;).getAge() == 2);</span>
+<span class="lineNum">     227 </span>            :     try{
+<span class="lineNum">     228 </span><span class="lineCov">          2 :         testService.getVictimFileWithName(&quot;wrong name&quot;);</span>
+<span class="lineNum">     229 </span><span class="lineNoCov">          0 :         assert(false);</span>
+<span class="lineNum">     230 </span><span class="lineCov">          1 :     } catch(exception&amp; exception){</span>
+<span class="lineNum">     231 </span>            :         assert(true);
+<span class="lineNum">     232 </span>            :     }
+<a name="233"><span class="lineNum">     233 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     234 </span>            : 
+<span class="lineNum">     235 </span><span class="lineCov">          1 : void Test::testServiceGetVectorOfFilesWithOriginAndLowerAge(){</span>
+<span class="lineNum">     236 </span><span class="lineCov">          2 :     VictimFileService testService = getTestService();</span>
+<span class="lineNum">     237 </span><span class="lineCov">          2 :     vector&lt;VictimFile&gt; filterResult = testService.getVectorOfFilesWithOriginAndLowerAge(&quot;origin1&quot;, 100);</span>
+<span class="lineNum">     238 </span><span class="lineCov">          1 :     assert(filterResult[0] == VictimFile(&quot;name1 surname1&quot;));</span>
+<a name="239"><span class="lineNum">     239 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     240 </span>            : 
+<span class="lineNum">     241 </span><span class="lineCov">          1 : void Test::testMode(){</span>
+<span class="lineNum">     242 </span><span class="lineCov">          2 :     Mode mode;</span>
+<span class="lineNum">     243 </span><span class="lineCov">          1 :     assert(mode.getMode() == &quot;defaultNoMode&quot;);</span>
+<span class="lineNum">     244 </span><span class="lineCov">          1 :     mode.setMode(&quot;A&quot;);</span>
+<span class="lineNum">     245 </span><span class="lineCov">          1 :     assert(mode.getMode() == &quot;A&quot;);</span>
+<span class="lineNum">     246 </span><span class="lineCov">          1 :     assert(Mode(&quot;B&quot;).getMode() == &quot;B&quot;);</span>
+<span class="lineNum">     247 </span>            : 
+<a name="248"><span class="lineNum">     248 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     249 </span>            : 
+<span class="lineNum">     250 </span><span class="lineCov">          1 : void Test::testCopyRepository(){</span>
+<span class="lineNum">     251 </span><span class="lineCov">          2 :     FileRepository&lt;VictimFile&gt; fileRepository1(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData1.txt&quot;), fileRepository2(&quot;/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testRepositoryData1.txt&quot;);</span>
+<span class="lineNum">     252 </span><span class="lineCov">          1 :     assert(fileRepository1.getSize() == 0);</span>
+<span class="lineNum">     253 </span><span class="lineCov">          1 :     fileRepository1 = fileRepository2;</span>
+<span class="lineNum">     254 </span><span class="lineCov">          1 :     assert(fileRepository1.getSize() == 0);</span>
+<span class="lineNum">     255 </span><span class="lineCov">          1 :     fileRepository2 = fileRepository2;</span>
+<span class="lineNum">     256 </span><span class="lineCov">          1 :     assert(fileRepository2.getSize() == 0);</span>
+<span class="lineNum">     257 </span>            : 
+<a name="258"><span class="lineNum">     258 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     259 </span>            : 
+<span class="lineNum">     260 </span><span class="lineCov">          1 : void Test::testServiceAssignment(){</span>
+<span class="lineNum">     261 </span><span class="lineCov">          2 :     VictimFileService testService1 = getTestService(), testService2 = getTestService();</span>
+<span class="lineNum">     262 </span><span class="lineCov">          1 :     testService1 = testService2;</span>
+<span class="lineNum">     263 </span><span class="lineCov">          1 :     assert(testService1.getRepositorySize() == 4);</span>
+<a name="264"><span class="lineNum">     264 </span><span class="lineCov">          1 :     testService1 = testService1;</span></a>
+<span class="lineNum">     265 </span><span class="lineCov">          1 :     assert(testService1.getRepositorySize() == 4);</span>
+<span class="lineNum">     266 </span><span class="lineCov">          4 : }</span>
+<span class="lineNum">     267 </span>            : 
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.13</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

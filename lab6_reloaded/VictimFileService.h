@@ -14,7 +14,7 @@ class VictimFileService {
 private:
     FileRepository<VictimFile> repository;
 public:
-    VictimFileService(FileRepository<VictimFile> repository) : repository{repository} {};
+    VictimFileService(FileRepository<VictimFile> repository);
     /**
      * Get repository size.
      */

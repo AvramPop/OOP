@@ -41,6 +41,12 @@ private:
     void testServiceGetVictimFileWithName();
 
     void testServiceGetVectorOfFilesWithOriginAndLowerAge();
+
+    void testMode();
+
+    void testCopyRepository();
+
+    void testServiceAssignment();
 };
 
 

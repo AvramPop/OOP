@@ -1,0 +1,1 @@
+/usr/bin/g++  -g -O0 -Wall -fprofile-arcs -ftest-coverage -g   CMakeFiles/lab6_reloaded.dir/main.o CMakeFiles/lab6_reloaded.dir/Mode.o CMakeFiles/lab6_reloaded.dir/VictimFile.o CMakeFiles/lab6_reloaded.dir/Scanner.o CMakeFiles/lab6_reloaded.dir/Test.o CMakeFiles/lab6_reloaded.dir/VictimFileService.o  -o lab6_reloaded 
