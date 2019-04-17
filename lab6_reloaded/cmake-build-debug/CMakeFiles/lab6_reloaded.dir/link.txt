@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/lab6_reloaded.dir/main.cpp.o CMakeFiles/lab6_reloaded.dir/Mode.cpp.o CMakeFiles/lab6_reloaded.dir/VictimFile.cpp.o CMakeFiles/lab6_reloaded.dir/Scanner.cpp.o CMakeFiles/lab6_reloaded.dir/Test.cpp.o CMakeFiles/lab6_reloaded.dir/VictimFileService.cpp.o  -o lab6_reloaded 
