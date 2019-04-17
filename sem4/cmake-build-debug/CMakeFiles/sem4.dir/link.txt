@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/sem4.dir/main.cpp.o CMakeFiles/sem4.dir/Classifier.cpp.o CMakeFiles/sem4.dir/Instance.cpp.o  -o sem4 

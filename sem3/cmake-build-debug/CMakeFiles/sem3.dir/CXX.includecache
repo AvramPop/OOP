@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/sem3/Controller.h
+Repository.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/sem3/Repository.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/sem3/DynamicVector.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/sem3/Repository.h
+Song.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/sem3/Song.h
+DynamicVector.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/sem3/DynamicVector.h
+vector
+-
+algorithm
+-
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/sem3/Song.h
+iostream
+-
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/sem3/Tests.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/sem3/UI.h
+Controller.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/sem3/Controller.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/sem3/main.cpp
+UI.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/sem3/UI.h
+Tests.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/sem3/Tests.h
+

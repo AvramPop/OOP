@@ -34,6 +34,7 @@ public:
      * Create stub victim file only with names.
      */
         VictimFile(string name);
+     //   ~VictimFile()= default;
 
         bool operator==(const VictimFile &rhs) const;
 

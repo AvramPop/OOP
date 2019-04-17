@@ -5,107 +5,101 @@
 #ifndef LAB5_FILEREPOSITORY_H
 #define LAB5_FILEREPOSITORY_H
 
-#include "Repository.h"
-#include "../model/VictimFile.h"
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <vector>
+#include <algorithm>
 
 template <typename TemplateClass>
-class FileRepository : public virtual Repository<TemplateClass> {
+class FileRepository {
 private:
     const std::string pathToRepository;
     void loadBufferFromFile();
     void dumpBufferToFile();
     bool isEmpty(ifstream& file);
+    vector<TemplateClass> buffer;
+    int indexOfElement(TemplateClass element);
 public:
     FileRepository<TemplateClass>(std::string path) : pathToRepository(path){}
 
-    void add(TemplateClass &element) override;
+    void add(TemplateClass &element);
 
-    std::vector<TemplateClass> getList() override;
+    std::vector<TemplateClass> getList();
 
-    bool containsElement(TemplateClass element) override;
+    bool containsElement(TemplateClass element);
 
-    void remove(TemplateClass element) override;
+    void remove(TemplateClass element);
 
-    void update(TemplateClass element) override;
+    void update(TemplateClass element);
 
-    int getSize() override;
+    int getSize();
 
-    TemplateClass &operator[](int index) override;
-
-    TemplateClass& at(int index) override;
+    TemplateClass& at(int index);
 };
 
 template<typename TemplateClass>
 void FileRepository<TemplateClass>::add(TemplateClass &element){
     loadBufferFromFile();
-    Repository<TemplateClass>::add(element);
+    buffer.push_back(element);
     dumpBufferToFile();
 }
 
 template<typename TemplateClass>
 std::vector<TemplateClass> FileRepository<TemplateClass>::getList(){
     loadBufferFromFile();
-    vector<TemplateClass> temporaryBuffer = Repository<TemplateClass>::getList();
-    dumpBufferToFile();
+    vector<TemplateClass> temporaryBuffer(buffer);
+    buffer.clear();
+    //dumpBufferToFile();
     return temporaryBuffer;
 }
 
 template<typename TemplateClass>
 bool FileRepository<TemplateClass>::containsElement(TemplateClass element){
     loadBufferFromFile();
-    bool contains = Repository<TemplateClass>::containsElement(element);
-    dumpBufferToFile();
+    bool contains = find(buffer.begin(), buffer.end(), element) != buffer.end();
+    buffer.clear();
+    //dumpBufferToFile();
     return contains;
 }
 
 template<typename TemplateClass>
 void FileRepository<TemplateClass>::remove(TemplateClass element){
     loadBufferFromFile();
-    Repository<TemplateClass>::remove(element);
+    if(containsElement(element)){
+        buffer.erase(std::remove(buffer.begin(), buffer.end(), element), buffer.end());
+    }
     dumpBufferToFile();
 }
 
 template<typename TemplateClass>
 void FileRepository<TemplateClass>::update(TemplateClass element){
     loadBufferFromFile();
-    Repository<TemplateClass>::update(element);
+    if(containsElement(element)){
+        buffer[indexOfElement(element)] = element;
+    }
     dumpBufferToFile();
 }
 
 template<typename TemplateClass>
 int FileRepository<TemplateClass>::getSize(){
     loadBufferFromFile();
-    int size = Repository<TemplateClass>::getSize();
-    dumpBufferToFile();
+    int size = buffer.size();
+    buffer.clear();
+    //dumpBufferToFile();
     return size;
-}
-
-template<typename TemplateClass>
-TemplateClass &FileRepository<TemplateClass>::operator[](int index){
-    loadBufferFromFile();
-    if(index < getSize()){
-        TemplateClass element = Repository<TemplateClass>::buffer[index];
-        dumpBufferToFile();
-        return element;
-    } else {
-        dumpBufferToFile();
-        throw exception();
-    }
 }
 
 template<typename TemplateClass>
 void FileRepository<TemplateClass>::loadBufferFromFile(){
     std::ifstream fin(pathToRepository);
     if(isEmpty(fin)){
-        Repository<TemplateClass>::buffer.clear();
+        buffer.clear();
     } else {
         VictimFile temporaryVictimFile;
-        Repository<TemplateClass>::buffer.clear();
+        buffer.clear();
         while(fin >> temporaryVictimFile){
-            Repository<TemplateClass>::buffer.push_back(temporaryVictimFile);
+            buffer.push_back(temporaryVictimFile);
         }
     }
     fin.close();
@@ -114,22 +108,25 @@ void FileRepository<TemplateClass>::loadBufferFromFile(){
 template<typename TemplateClass>
 void FileRepository<TemplateClass>::dumpBufferToFile(){
     ofstream fout(pathToRepository);
-    for(VictimFile victimFile : Repository<TemplateClass>::buffer){
-        fout << victimFile.toFormattedString();
+    for(int i = 0; i < buffer.size() - 1; i++){
+        fout << buffer.at(i).toFormattedString() << endl;
+    }
+    if(buffer.size() > 0){
+        fout << buffer.at(buffer.size() - 1).toFormattedString();
     }
     fout.close();
-    Repository<TemplateClass>::buffer.clear();
+    buffer.clear();
 }
 
 template<typename TemplateClass>
 TemplateClass& FileRepository<TemplateClass>::at(int index){
     loadBufferFromFile();
     if(index < getSize()){
-        TemplateClass element = Repository<TemplateClass>::buffer[index];
-        dumpBufferToFile();
+        TemplateClass element = buffer[index];
+        buffer.clear();
         return element;
     } else {
-        dumpBufferToFile();
+        buffer.clear();
         throw exception();
     }
 }
@@ -138,5 +135,18 @@ template<typename TemplateClass>
 bool FileRepository<TemplateClass>::isEmpty(ifstream& file){
     return file.peek() == std::ifstream::traits_type::eof();
 }
+
+template <typename TemplateClass>
+int FileRepository<TemplateClass>::indexOfElement(TemplateClass element) {
+    int indexOfElementToRemove = -1;
+    for(int i = 0; i < buffer.size(); i++){
+        if(buffer[i] == element){
+            indexOfElementToRemove = i;
+        }
+    }
+    return indexOfElementToRemove;
+}
+
+
 
 #endif //LAB5_FILEREPOSITORY_H

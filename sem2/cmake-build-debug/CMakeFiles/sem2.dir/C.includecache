@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/sem2/Planet.c
+string.h
+-
+stdlib.h
+-
+Planet.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/sem2/Planet.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/sem2/Planet.h
+

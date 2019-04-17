@@ -99,9 +99,6 @@
 		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h">
 			<Option target="lab5"/>
 		</Unit>
-		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h">
-			<Option target="lab5"/>
-		</Unit>
 		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/FileRepository.h">
 			<Option target="lab5"/>
 		</Unit>

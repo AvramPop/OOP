@@ -5,11 +5,8 @@ CMakeFiles/lab5.dir/main.cpp.o
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/main.cpp
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/Mode.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h
- /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/FileRepository.h
- /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/Repository.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.h
- /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.h
 CMakeFiles/lab5.dir/model/Mode.cpp.o
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/Mode.cpp
@@ -19,22 +16,15 @@ CMakeFiles/lab5.dir/model/VictimFile.cpp.o
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h
 CMakeFiles/lab5.dir/service/VictimFileService.cpp.o
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h
- /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h
- /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/Repository.h
+ /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/FileRepository.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.cpp
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.h
 CMakeFiles/lab5.dir/test/Test.cpp.o
- /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h
- /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h
- /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/Repository.h
- /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.cpp
- /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.h
 CMakeFiles/lab5.dir/ui/Scanner.cpp.o
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/Mode.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h
- /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h
- /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/Repository.h
+ /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/FileRepository.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.cpp
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.h

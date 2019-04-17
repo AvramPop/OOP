@@ -7,24 +7,18 @@
 #IncludeRegexTransform: 
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/main.cpp
-iostream
--
-fstream
--
-model/VictimFile.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h
-repository/DynamicVector.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h
-test/Test.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.h
 ui/Scanner.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.h
-repository/FileRepository.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/FileRepository.h
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/Mode.h
 string
 -
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.cpp
+algorithm
+-
+VictimFile.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h
 string
@@ -34,21 +28,13 @@ ostream
 istream
 -
 
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h
-
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/FileRepository.h
-Repository.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/Repository.h
-../model/VictimFile.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h
 string
 -
 iostream
 -
 fstream
 -
-
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/Repository.h
 vector
 -
 algorithm
@@ -63,32 +49,10 @@ VictimFileService.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.h
 ../model/VictimFile.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h
-../repository/DynamicVector.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h
-../repository/Repository.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/Repository.h
+../repository/FileRepository.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/FileRepository.h
 vector
 -
-
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.cpp
-iostream
--
-assert.h
--
-Test.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.h
-../model/VictimFile.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h
-../repository/DynamicVector.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h
-../service/VictimFileService.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.h
-algorithm
--
-
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.h
-../service/VictimFileService.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.h
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.cpp
 iostream

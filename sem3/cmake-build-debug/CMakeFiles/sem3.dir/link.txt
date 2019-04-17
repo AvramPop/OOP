@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/sem3.dir/main.cpp.o CMakeFiles/sem3.dir/Song.cpp.o CMakeFiles/sem3.dir/Tests.cpp.o CMakeFiles/sem3.dir/UI.cpp.o CMakeFiles/sem3.dir/DynamicVector.cpp.o CMakeFiles/sem3.dir/Controller.cpp.o CMakeFiles/sem3.dir/Repository.cpp.o  -o sem3 

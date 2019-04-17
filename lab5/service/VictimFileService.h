@@ -7,15 +7,14 @@
 
 
 #include "../model/VictimFile.h"
-#include "../repository/DynamicVector.h"
-#include "../repository/Repository.h"
+#include "../repository/FileRepository.h"
 #include <vector>
 
 class VictimFileService {
 private:
-    Repository<VictimFile>* repository;
+    FileRepository<VictimFile> repository;
 public:
-    VictimFileService(Repository<VictimFile>* repository) : repository{repository} {};
+    VictimFileService(FileRepository<VictimFile> repository) : repository{repository} {};
     /**
      * Get repository size.
      */

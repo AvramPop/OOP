@@ -29,8 +29,9 @@ void Test::testAdd(){
 
 VictimFileService Test::getTestService(){
    // Repository<VictimFile>* repo = new Repository<VictimFile>;
-    repository = new Repository<VictimFile>;
-    VictimFileService testService(repository);
+    //repository = new Repository<VictimFile>;
+    Repository<VictimFile> repo;
+    VictimFileService testService(repo);
     VictimFile testFileEmpty;
     VictimFile testFileWithName1("testName1");
     VictimFile testFileWithName2("testName2");
