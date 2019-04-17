@@ -43,6 +43,9 @@ public:
      * Return a vector consisting in all VictimFiles having given origin and age lower than given age.
      */
     vector<VictimFile> getVectorOfFilesWithOriginAndLowerAge(string origin, int age);
+    VictimFileService& operator=(const VictimFileService& victimFileService);
+
+    VictimFileService();
 };
 
 

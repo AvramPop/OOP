@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.14.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.14.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.14.2/CMakeSystem.cmake"
+  "../cmake_modules/gcovr.cmake"
   "/home/dani/Desktop/sources/clion-2018.3/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCInformation.cmake"
   "/home/dani/Desktop/sources/clion-2018.3/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXInformation.cmake"
   "/home/dani/Desktop/sources/clion-2018.3/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"

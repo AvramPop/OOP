@@ -54,3 +54,13 @@ vector<VictimFile> VictimFileService::getVectorOfFilesWithOriginAndLowerAge(stri
             [origin, age](VictimFile victimFile)->bool{return victimFile.getPlaceOfOrigin() == origin && victimFile.getAge() < age;} );
     return temporary;
 }
+
+VictimFileService &VictimFileService::operator=(const VictimFileService &victimFileService){
+    if(this == &victimFileService){
+        return *this;
+    }
+    repository = victimFileService.repository;
+    return *this;
+}
+
+VictimFileService::VictimFileService(){}

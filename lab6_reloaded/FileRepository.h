@@ -25,6 +25,9 @@ public:
     FileRepository<TemplateClass>(std::string path) : pathToRepository(path){
         buffer = std::vector<TemplateClass>();
     }
+    std::string getPath() {
+        return pathToRepository;
+    }
     void add(TemplateClass element);
     std::vector<TemplateClass> asList();
     bool containsElement(TemplateClass element);
@@ -33,8 +36,21 @@ public:
     int getSize();
     TemplateClass& at(int index);
     TemplateClass operator[](int index);
+    FileRepository& operator=(const FileRepository& fileRepository);
+
+    FileRepository();
 
 };
+
+template<typename TemplateClass>
+FileRepository<TemplateClass>& FileRepository<TemplateClass>::operator=(const FileRepository& fileRepository){
+    if(this == &fileRepository){
+        return *this;
+    }
+    buffer = fileRepository.buffer;
+    const_cast<std::string&>(pathToRepository) = fileRepository.pathToRepository;
+    return *this;
+}
 
 template<typename TemplateClass>
 void FileRepository<TemplateClass>::loadBufferFromFile(){
@@ -163,6 +179,9 @@ TemplateClass FileRepository<TemplateClass>::operator[](int index){
         throw std::exception();
     }
 }
+
+template<typename TemplateClass>
+FileRepository<TemplateClass>::FileRepository(){}
 
 
 #endif //LAB6_RELOADED_FILEREPOSITORY_H

@@ -36,6 +36,7 @@ public:
     void runConsole();
 
     Scanner(const VictimFileService &victimFileService);
+    Scanner(){};
 
     void setIterationStart();
 };

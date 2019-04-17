@@ -24,6 +24,12 @@ void Scanner::runConsole(){
             if(currentMode.getMode() == "A"){
                 addModeA();
             }
+        } else if(command == "fileLocation"){
+            string path;
+            getline(std::cin, path);
+            path = removeUnnecessaryWhitespaces(path);
+            FileRepository<VictimFile> repository(path);
+            victimFileService = VictimFileService(repository);
         } else if(command == "update"){
             if(currentMode.getMode() == "A"){
                 updateModeA();
