@@ -16,7 +16,6 @@ private:
     int currentIterationIndex;
     vector<VictimFile> transferList;
     void listModeA();
-
     void addModeA();
     void removeModeA();
     void setMode();

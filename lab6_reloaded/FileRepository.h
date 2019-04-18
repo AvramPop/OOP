@@ -14,26 +14,63 @@ template <typename TemplateClass>
 class FileRepository {
     friend class Test;
 private:
+    /**
+     * Get index of element in repository.
+     */
     int indexOfElement(TemplateClass element);
     const std::string pathToRepository;
+    /**
+     * Load Buffer from file.
+     */
     void loadBufferFromFile();
+    /**
+     * Dump in-memory buffer to file.
+     */
     void dumpBufferToFile();
+    /**
+     * Check if file is empty.
+     */
     bool fileIsEmpty(std::ifstream &file);
     std::vector<TemplateClass> buffer;
+    /**
+     * Check whether in memory buffer contains element.
+     * @param element
+     * @return
+     */
     bool liveContainsElement(TemplateClass element);
 public:
     FileRepository<TemplateClass>(std::string path) : pathToRepository(path){
         buffer = std::vector<TemplateClass>();
     }
-    std::string getPath() {
-        return pathToRepository;
-    }
+    /**
+     * Add generic element to file repository
+     */
     void add(TemplateClass element);
+    /**
+     * Get buffer as vector of elements.
+     * @return
+     */
     std::vector<TemplateClass> asList();
+    /**
+     * Check whether repository contains given element.
+     */
     bool containsElement(TemplateClass element);
+    /**
+     * Remove generic element from file repository
+     * @param element
+     */
     void remove(TemplateClass element);
+    /**
+     * Update generic element in file repository
+     */
     void update(TemplateClass element);
+    /**
+     * Get size of repository.
+     */
     int getSize();
+    /**
+     * Get mutable element at index in repository.
+     */
     TemplateClass& at(int index);
     TemplateClass operator[](int index);
     FileRepository& operator=(const FileRepository& fileRepository);

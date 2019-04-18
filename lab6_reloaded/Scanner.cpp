@@ -125,7 +125,7 @@ void Scanner::listModeB(){
     stringstream inputAsStringStream(input);
     string token;
     vector<string> inputAsTokens;
-    while(getline(inputAsStringStream, token, ',')){
+    while(getline(inputAsStringStream, token, ',')){ // converts to vector of tokens
         token = std::regex_replace(token, std::regex("^ +"), "");
         inputAsTokens.push_back(token);
     }
@@ -134,7 +134,7 @@ void Scanner::listModeB(){
             int conversion = atoi(inputAsTokens[1].data());
             print(victimFileService.getVectorOfFilesWithOriginAndLowerAge(inputAsTokens[0], conversion));
         }
-    } else {
+    } else if(inputAsTokens.empty()) {
         listModeA();
     }
 }

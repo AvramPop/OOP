@@ -31,9 +31,14 @@ istream& operator>>(istream& inStream, VictimFile& victimFile){
     string placeString;
     string photoString;
     getline(inStream, nameString, ',');
+    if(nameString.empty()){
+        throw std::exception();
+    }
     getline(inStream, placeString, ',');
     if(!placeString.empty()){
         placeString.erase(placeString.begin());
+    } else {
+        throw std::exception();
     }
     getline(inStream, ageString, ',');
     if(!ageString.empty()){
@@ -42,11 +47,13 @@ istream& operator>>(istream& inStream, VictimFile& victimFile){
     getline(inStream, photoString);
     if(!photoString.empty()){
         photoString.erase(photoString.begin());
+    } else {
+        throw std::exception();
     }
     victimFile.victimName = nameString;
     victimFile.placeOfOrigin = placeString;
     if(!ageString.empty()){
-        if(all_of(ageString.begin(), ageString.end(), ::isdigit)){
+        if(all_of(ageString.begin(), ageString.end(), ::isdigit)){ // checks that all chars are digits
             victimFile.age = stoi(ageString);
         } else {
             throw std::exception();

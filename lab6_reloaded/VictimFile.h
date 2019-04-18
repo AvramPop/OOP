@@ -41,6 +41,10 @@ public:
     string getPlaceOfOrigin() { return placeOfOrigin; };
     int getAge() { return age; };
     string getPhotograph() { return photograph; };
+    /**
+     * Get VictimFile as string in right format to be dumped into file
+     * @return
+     */
     string toFormattedString();
     VictimFile& operator=(const VictimFile& victimFile);
     VictimFile(const VictimFile& victimFile) : victimName(victimFile.victimName), placeOfOrigin(victimFile.placeOfOrigin), age(victimFile.age), photograph(victimFile.photograph){};

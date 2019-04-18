@@ -75,6 +75,12 @@
 		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Mode.h">
 			<Option target="lab6_reloaded"/>
 		</Unit>
+		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Repository.cpp">
+			<Option target="lab6_reloaded"/>
+		</Unit>
+		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Repository.h">
+			<Option target="lab6_reloaded"/>
+		</Unit>
 		<Unit filename="/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Scanner.cpp">
 			<Option target="lab6_reloaded"/>
 		</Unit>
