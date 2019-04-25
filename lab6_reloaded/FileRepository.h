@@ -5,19 +5,19 @@
 #ifndef LAB6_RELOADED_FILEREPOSITORY_H
 #define LAB6_RELOADED_FILEREPOSITORY_H
 
-#include <vector>
-#include <algorithm>
 #include <string>
 #include <fstream>
+#include <algorithm>
+#include "Repository.h"
 
 template <typename TemplateClass>
-class FileRepository {
+class FileRepository : public Repository<TemplateClass> {
     friend class Test;
 private:
     /**
      * Get index of element in repository.
      */
-    int indexOfElement(TemplateClass element);
+    int indexOfElement(TemplateClass element) override;
     const std::string pathToRepository;
     /**
      * Load Buffer from file.
@@ -31,7 +31,7 @@ private:
      * Check if file is empty.
      */
     bool fileIsEmpty(std::ifstream &file);
-    std::vector<TemplateClass> buffer;
+    //std::vector<TemplateClass> buffer;
     /**
      * Check whether in memory buffer contains element.
      * @param element
@@ -40,39 +40,39 @@ private:
     bool liveContainsElement(TemplateClass element);
 public:
     FileRepository<TemplateClass>(std::string path) : pathToRepository(path){
-        buffer = std::vector<TemplateClass>();
+        this->buffer = std::vector<TemplateClass>();
     }
     /**
      * Add generic element to file repository
      */
-    void add(TemplateClass element);
+    void add(TemplateClass element) override;
     /**
      * Get buffer as vector of elements.
      * @return
      */
-    std::vector<TemplateClass> asList();
+    std::vector<TemplateClass> asList() override;
     /**
      * Check whether repository contains given element.
      */
-    bool containsElement(TemplateClass element);
+    bool containsElement(TemplateClass element) override;
     /**
      * Remove generic element from file repository
      * @param element
      */
-    void remove(TemplateClass element);
+    void remove(TemplateClass element) override;
     /**
      * Update generic element in file repository
      */
-    void update(TemplateClass element);
+    void update(TemplateClass element) override;
     /**
      * Get size of repository.
      */
-    int getSize();
+    int getSize() override;
     /**
      * Get mutable element at index in repository.
      */
-    TemplateClass& at(int index);
-    TemplateClass operator[](int index);
+    TemplateClass& at(int index) override;
+    TemplateClass operator[](int index) override;
     FileRepository& operator=(const FileRepository& fileRepository);
 
     FileRepository();
@@ -84,7 +84,7 @@ FileRepository<TemplateClass>& FileRepository<TemplateClass>::operator=(const Fi
     if(this == &fileRepository){
         return *this;
     }
-    buffer = fileRepository.buffer;
+    this->buffer = fileRepository.buffer;
     const_cast<std::string&>(pathToRepository) = fileRepository.pathToRepository;
     return *this;
 }
@@ -93,13 +93,13 @@ template<typename TemplateClass>
 void FileRepository<TemplateClass>::loadBufferFromFile(){
     std::ifstream fin(pathToRepository);
     if(fileIsEmpty(fin)){
-        buffer.clear();
+        this->buffer.clear();
     } else {
         TemplateClass temporary;
-        buffer.clear();
+        this->buffer.clear();
         while(!fin.eof()){
             fin >> temporary;
-            buffer.push_back(temporary);
+            this->buffer.push_back(temporary);
         }
     }
     fin.close();
@@ -109,16 +109,16 @@ template<typename TemplateClass>
 void FileRepository<TemplateClass>::dumpBufferToFile(){
     std::ofstream fout(pathToRepository);
     fout << "";
-    if(buffer.size() > 0){
-        for(int i = 0; i < buffer.size() - 1; i++){
-            fout << buffer[i].toFormattedString() << std::endl;
+    if(this->buffer.size() > 0){
+        for(int i = 0; i < this->buffer.size() - 1; i++){
+            fout << this->buffer[i].toFormattedString() << std::endl;
         }
-        if(buffer.size() > 0){
-            fout << buffer[buffer.size() - 1].toFormattedString();
+        if(this->buffer.size() > 0){
+            fout << this->buffer[this->buffer.size() - 1].toFormattedString();
         }
     }
     fout.close();
-    buffer.clear();
+    this->buffer.clear();
 }
 
 template<typename TemplateClass>
@@ -129,27 +129,27 @@ bool FileRepository<TemplateClass>::fileIsEmpty(std::ifstream &file){
 template<typename TemplateClass>
 std::vector<TemplateClass> FileRepository<TemplateClass>::asList(){
     loadBufferFromFile();
-    std::vector<TemplateClass> temporaryBuffer(buffer);
-    buffer.clear();
+    std::vector<TemplateClass> temporaryBuffer(this->buffer);
+    this->buffer.clear();
     return temporaryBuffer;
 }
 
 template<typename TemplateClass>
 void FileRepository<TemplateClass>::add(TemplateClass element){
     loadBufferFromFile();
-    buffer.push_back(element);
+    this->buffer.push_back(element);
     dumpBufferToFile();
 }
 
 template<typename TemplateClass>
 TemplateClass& FileRepository<TemplateClass>::at(int index){
     loadBufferFromFile();
-    if(index < buffer.size()){
-        TemplateClass& element = buffer[index];
-        buffer.clear();
+    if(index < this->buffer.size()){
+        TemplateClass& element = this->buffer[index];
+        this->buffer.clear();
         return element;
     } else {
-        buffer.clear();
+        this->buffer.clear();
         throw std::exception();
     }
 }
@@ -157,8 +157,8 @@ TemplateClass& FileRepository<TemplateClass>::at(int index){
 template<typename TemplateClass>
 int FileRepository<TemplateClass>::getSize(){
     loadBufferFromFile();
-    int size = buffer.size();
-    buffer.clear();
+    int size = this->buffer.size();
+    this->buffer.clear();
     return size;
 }
 
@@ -166,7 +166,7 @@ template<typename TemplateClass>
 void FileRepository<TemplateClass>::update(TemplateClass element){
     loadBufferFromFile();
     if(liveContainsElement(element)){
-        buffer[indexOfElement(element)] = element;
+        this->buffer[indexOfElement(element)] = element;
     }
     dumpBufferToFile();
 }
@@ -174,8 +174,8 @@ void FileRepository<TemplateClass>::update(TemplateClass element){
 template <typename TemplateClass>
 int FileRepository<TemplateClass>::indexOfElement(TemplateClass element) {
     int indexOfElementToRemove = -1;
-    for(int i = 0; i < buffer.size(); i++){
-        if(buffer[i] == element){
+    for(int i = 0; i < this->buffer.size(); i++){
+        if(this->buffer[i] == element){
             indexOfElementToRemove = i;
         }
     }
@@ -185,21 +185,21 @@ int FileRepository<TemplateClass>::indexOfElement(TemplateClass element) {
 template<typename TemplateClass>
 bool FileRepository<TemplateClass>::containsElement(TemplateClass element){
     loadBufferFromFile();
-    bool contains = find(buffer.begin(), buffer.end(), element) != buffer.end();
-    buffer.clear();
+    bool contains = find(this->buffer.begin(), this->buffer.end(), element) != this->buffer.end();
+    this->buffer.clear();
     return contains;
 }
 
 template<typename TemplateClass>
 bool FileRepository<TemplateClass>::liveContainsElement(TemplateClass element){
-    return find(buffer.begin(), buffer.end(), element) != buffer.end();
+    return find(this->buffer.begin(), this->buffer.end(), element) != this->buffer.end();
 }
 
 template<typename TemplateClass>
 void FileRepository<TemplateClass>::remove(TemplateClass element){
     loadBufferFromFile();
     if(liveContainsElement(element)){
-        buffer.erase(std::remove(buffer.begin(), buffer.end(), element), buffer.end());
+        this->buffer.erase(std::remove(this->buffer.begin(), this->buffer.end(), element), this->buffer.end());
     }
     dumpBufferToFile();
 }
@@ -207,12 +207,12 @@ void FileRepository<TemplateClass>::remove(TemplateClass element){
 template<typename TemplateClass>
 TemplateClass FileRepository<TemplateClass>::operator[](int index){
     loadBufferFromFile();
-    if(index < buffer.size()){
-        TemplateClass element = buffer[index];
-        buffer.clear();
+    if(index < this->buffer.size()){
+        TemplateClass element = this->buffer[index];
+        this->buffer.clear();
         return element;
     } else {
-        buffer.clear();
+        this->buffer.clear();
         throw std::exception();
     }
 }

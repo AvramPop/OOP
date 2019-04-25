@@ -139,21 +139,6 @@ Mode.s:
 .PHONY : Mode.s
 
 # target to build an object file
-Repository.o:
-	$(MAKE) -f CMakeFiles/lab6_reloaded.dir/build.make CMakeFiles/lab6_reloaded.dir/Repository.o
-.PHONY : Repository.o
-
-# target to preprocess a source file
-Repository.i:
-	$(MAKE) -f CMakeFiles/lab6_reloaded.dir/build.make CMakeFiles/lab6_reloaded.dir/Repository.i
-.PHONY : Repository.i
-
-# target to generate assembly for a file
-Repository.s:
-	$(MAKE) -f CMakeFiles/lab6_reloaded.dir/build.make CMakeFiles/lab6_reloaded.dir/Repository.s
-.PHONY : Repository.s
-
-# target to build an object file
 Scanner.o:
 	$(MAKE) -f CMakeFiles/lab6_reloaded.dir/build.make CMakeFiles/lab6_reloaded.dir/Scanner.o
 .PHONY : Scanner.o
@@ -240,9 +225,6 @@ help:
 	@echo "... Mode.o"
 	@echo "... Mode.i"
 	@echo "... Mode.s"
-	@echo "... Repository.o"
-	@echo "... Repository.i"
-	@echo "... Repository.s"
 	@echo "... Scanner.o"
 	@echo "... Scanner.i"
 	@echo "... Scanner.s"

@@ -7,6 +7,7 @@ CMakeFiles/lab6_reloaded.dir/Mode.o
 CMakeFiles/lab6_reloaded.dir/Scanner.o
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/FileRepository.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Mode.h
+ /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Repository.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Scanner.cpp
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Scanner.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
@@ -14,6 +15,7 @@ CMakeFiles/lab6_reloaded.dir/Scanner.o
 CMakeFiles/lab6_reloaded.dir/Test.o
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/FileRepository.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Mode.h
+ /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Repository.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Test.cpp
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Test.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
@@ -23,12 +25,14 @@ CMakeFiles/lab6_reloaded.dir/VictimFile.o
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
 CMakeFiles/lab6_reloaded.dir/VictimFileService.o
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/FileRepository.h
+ /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Repository.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFileService.cpp
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFileService.h
 CMakeFiles/lab6_reloaded.dir/main.o
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/FileRepository.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Mode.h
+ /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Repository.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Scanner.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Test.h
  /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h

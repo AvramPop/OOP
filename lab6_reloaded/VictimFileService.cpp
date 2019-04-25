@@ -4,6 +4,16 @@
 
 #include "VictimFileService.h"
 
+vector<VictimFile> VictimFileService::getList(){
+    vector<VictimFile> temporaryBuffer;
+    VictimFile temporaryVictimFile;
+    for(int i = 0; i < repository.getSize(); ++i){
+        temporaryVictimFile = repository[i];
+        temporaryBuffer.push_back(temporaryVictimFile);
+    }
+    return temporaryBuffer;
+}
+
 int VictimFileService::getRepositorySize(){
     return repository.getSize();
 }
@@ -20,16 +30,6 @@ void VictimFileService::removeVictimFile(string name){
     }
 }
 
-vector<VictimFile> VictimFileService::getList(){
-    vector<VictimFile> temporaryBuffer;
-    VictimFile temporaryVictimFile;
-    for(int i = 0; i < repository.getSize(); ++i){
-        temporaryVictimFile = repository[i];
-        temporaryBuffer.push_back(temporaryVictimFile);
-    }
-    return temporaryBuffer;
-}
-
 void VictimFileService::updateVictimFile(string name, VictimFile& updatedVictimFile){
     if(repository.containsElement(VictimFile(name))){
         repository.update(updatedVictimFile);
@@ -38,9 +38,14 @@ void VictimFileService::updateVictimFile(string name, VictimFile& updatedVictimF
 
 VictimFile VictimFileService::getVictimFileWithName(string name){
     if(repository.containsElement(VictimFile(name))){
-        for(int i = 0; i < repository.getSize(); i++){
-            if(repository[i].getName() == name){
-                return repository[i];
+//        for(int i = 0; i < repository.getSize(); i++){
+//            if(repository[i].getName() == name){
+//                return repository[i];
+//            }
+//        }
+        for(VictimFile victimFile : repository.asList()){
+            if(victimFile.getName() == name){
+                return victimFile;
             }
         }
     }

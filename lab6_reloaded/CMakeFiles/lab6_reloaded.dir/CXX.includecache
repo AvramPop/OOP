@@ -7,17 +7,21 @@
 #IncludeRegexTransform: 
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/FileRepository.h
-vector
--
-algorithm
--
 string
 -
 fstream
 -
+algorithm
+-
+Repository.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Repository.h
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Mode.h
 string
+-
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Repository.h
+vector
 -
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Scanner.cpp
@@ -34,23 +38,37 @@ VictimFileService.h
 Mode.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Mode.h
 
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Test.cpp
+Test.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Test.h
+VictimFile.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
+FileRepository.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/FileRepository.h
+Mode.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Mode.h
+fstream
+-
+assert.h
+-
+iostream
+-
+sstream
+-
+
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Test.h
 VictimFile.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
 VictimFileService.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFileService.h
 
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.cpp
-algorithm
--
-VictimFile.h
-/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
-fstream
--
-
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
 string
 -
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFileService.cpp
+VictimFileService.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFileService.h
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFileService.h
 FileRepository.h
