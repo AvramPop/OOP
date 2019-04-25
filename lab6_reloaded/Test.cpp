@@ -168,8 +168,8 @@ void Test::testVictimService(){
 }
 
 VictimFileService Test::getTestService(){
-    FileRepository<VictimFile> repository("/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testServiceData.txt");
-    VictimFileService testService(repository);
+    unique_ptr<Repository<VictimFile>> repository = make_unique<FileRepository<VictimFile>>("/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/testServiceData.txt");
+    VictimFileService testService(move(repository));
     return testService;
 }
 

@@ -13,6 +13,9 @@
 template <typename TemplateClass>
 class FileRepository : public Repository<TemplateClass> {
     friend class Test;
+
+protected:
+    virtual FileRepository<TemplateClass>* cloneImplementation() const override { return new FileRepository(*this);};
 private:
     /**
      * Get index of element in repository.

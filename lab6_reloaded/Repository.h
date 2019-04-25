@@ -6,6 +6,7 @@
 #define LAB6_RELOADED_REPOSITORY_H
 
 #include <vector>
+#include <memory>
 
 template <typename TemplateClass>
 class Repository {
@@ -30,6 +31,11 @@ public:
     virtual ~Repository(){};
 
     virtual TemplateClass operator[](int index) = 0;
+
+    virtual Repository* cloneImplementation() const = 0;
+
+    auto clone() const { return std::unique_ptr<Repository<TemplateClass>>(cloneImplementation()); }
+
 
 };
 

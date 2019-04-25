@@ -11,7 +11,7 @@
 
 class Scanner {
 private:
-    VictimFileService victimFileService;
+    unique_ptr<VictimFileService> victimFileService;
     Mode currentMode;
     int currentIterationIndex;
     vector<VictimFile> transferList;
@@ -34,7 +34,7 @@ public:
      */
     void runConsole();
 
-    Scanner(const VictimFileService &victimFileService);
+    Scanner(unique_ptr<VictimFileService> victimFileService);
     Scanner(){};
 
     void setIterationStart();

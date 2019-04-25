@@ -8,13 +8,16 @@
 
 #include "FileRepository.h"
 #include "VictimFile.h"
+#include <memory>
 
 class VictimFileService {
     friend class Test;
+
 private:
-    FileRepository<VictimFile> repository;
+    std::unique_ptr<Repository<VictimFile>> repository;
 public:
-    VictimFileService(FileRepository<VictimFile> repository);
+    VictimFileService(const VictimFileService& victimFileService);
+    VictimFileService(unique_ptr<Repository<VictimFile>> repository);
     /**
      * Get repository size.
      */

@@ -28,8 +28,9 @@ void Scanner::runConsole(){
             string path;
             getline(std::cin, path);
             path = removeUnnecessaryWhitespaces(path);
-            FileRepository<VictimFile> repository(path);
-            victimFileService = VictimFileService(repository);
+            unique_ptr<FileRepository<VictimFile>> repository = make_unique<FileRepository<VictimFile>>(path);
+            unique_ptr<VictimFileService> temporaryService = make_unique<VictimFileService>(move(repository));
+            victimFileService = move(temporaryService);
         } else if(command == "update"){
             if(currentMode.getMode() == "A"){
                 updateModeA();
@@ -60,7 +61,7 @@ void Scanner::runConsole(){
 }
 
 void Scanner::listModeA(){
-    print(victimFileService.getList());
+    print(victimFileService->getList());
 }
 
 void Scanner::addModeA(){
@@ -71,14 +72,14 @@ void Scanner::addModeA(){
     } catch(exception& exception){
         return;
     }
-    victimFileService.addVictimFile(victimFileFromInput);
+    victimFileService->addVictimFile(victimFileFromInput);
 }
 
 void Scanner::removeModeA(){
     string victimName;
     getline(std::cin, victimName);
     victimName = removeUnnecessaryWhitespaces(victimName);
-    victimFileService.removeVictimFile(victimName);
+    victimFileService->removeVictimFile(victimName);
 }
 
 void Scanner::setMode(){
@@ -98,7 +99,7 @@ void Scanner::updateModeA(){ // todo something can break here and throw logic er
     } catch(exception& exception){
         return;
     }
-    victimFileService.updateVictimFile(victimFileFromInput.getName(), victimFileFromInput);
+    victimFileService->updateVictimFile(victimFileFromInput.getName(), victimFileFromInput);
 
 }
 
@@ -116,7 +117,9 @@ bool Scanner::isNumber(string stringToTest){
     return !stringToTest.empty() && all_of(stringToTest.begin(), stringToTest.end(), ::isdigit);
 }
 
-Scanner::Scanner(const VictimFileService &victimFileService) : victimFileService(victimFileService){}
+Scanner::Scanner(unique_ptr<VictimFileService> victimFileService){
+    this->victimFileService = move(victimFileService);
+}
 
 void Scanner::listModeB(){
     string input;
@@ -132,7 +135,7 @@ void Scanner::listModeB(){
     if(inputAsTokens.size() == 2){
         if(isValidNaturalNumber(inputAsTokens[1])){
             int conversion = atoi(inputAsTokens[1].data());
-            print(victimFileService.getVectorOfFilesWithOriginAndLowerAge(inputAsTokens[0], conversion));
+            print(victimFileService->getVectorOfFilesWithOriginAndLowerAge(inputAsTokens[0], conversion));
         }
     } else if(inputAsTokens.empty()) {
         listModeA();
@@ -140,11 +143,11 @@ void Scanner::listModeB(){
 }
 
 void Scanner::nextModeB(){
-    if(currentIterationIndex == victimFileService.getList().size()){
+    if(currentIterationIndex == victimFileService->getList().size()){
         setIterationStart();
-        cout << victimFileService.getList()[currentIterationIndex] << endl;
+        cout << victimFileService->getList()[currentIterationIndex] << endl;
     } else {
-        cout << victimFileService.getList()[currentIterationIndex] << endl;
+        cout << victimFileService->getList()[currentIterationIndex] << endl;
     }
     currentIterationIndex++;
 }
@@ -153,7 +156,7 @@ void Scanner::saveModeB(){
     string name;
     getline(std::cin, name);
     name = removeUnnecessaryWhitespaces(name);
-    VictimFile victimFileToTransfer = victimFileService.getVictimFileWithName(name);
+    VictimFile victimFileToTransfer = victimFileService->getVictimFileWithName(name);
     if(!(find(transferList.begin(), transferList.end(), VictimFile(name)) != transferList.end())){
         transferList.push_back(victimFileToTransfer);
     }
