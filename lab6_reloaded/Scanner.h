@@ -14,8 +14,8 @@ private:
     unique_ptr<VictimFileService> victimFileService;
     Mode currentMode;
     int currentIterationIndex;
-    vector<VictimFile> transferList;
     string myListLocation;
+    vector<VictimFile> transferList;
     void listModeA();
     void addModeA();
     void removeModeA();
@@ -23,7 +23,7 @@ private:
     void updateModeA();
     void print(vector<VictimFile> victimFilesToPrint);
     bool isValidNaturalNumber(string input);
-    bool isNumber(string s);
+    bool isNumber(string stringToTest);
     void listModeB();
     void nextModeB();
     void saveModeB();
@@ -34,16 +34,12 @@ public:
      * Run console until exit command given, through a brand new service.
      */
     void runConsole();
-
     Scanner(unique_ptr<VictimFileService> victimFileService);
     Scanner(){
         myListLocation = "/temp/oop";
     };
-
     void setIterationStart();
-
     void saveMyListToFile();
-
     string getPathExtension();
 };
 

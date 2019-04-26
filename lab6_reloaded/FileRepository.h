@@ -35,7 +35,6 @@ private:
      * Check if file is empty.
      */
     bool fileIsEmpty(std::ifstream &file);
-    //std::vector<TemplateClass> buffer;
     /**
      * Check whether in memory buffer contains element.
      * @param element

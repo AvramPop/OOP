@@ -7,10 +7,13 @@
 vector<VictimFile> VictimFileService::getList(){
     vector<VictimFile> temporaryBuffer;
     VictimFile temporaryVictimFile;
-    for(int i = 0; i < repository->getSize(); ++i){ // todo update this to c++14
-        temporaryVictimFile = (*repository)[i];
-        temporaryBuffer.push_back(temporaryVictimFile);
+    for(VictimFile victimFile : repository->asList()){
+        temporaryBuffer.push_back(victimFile);
     }
+//    for(int i = 0; i < repository->getSize(); ++i){ // todo backup
+//        temporaryVictimFile = (*repository)[i];
+//        temporaryBuffer.push_back(temporaryVictimFile);
+//    }
     return temporaryBuffer;
 }
 
