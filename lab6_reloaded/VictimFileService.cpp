@@ -7,7 +7,7 @@
 vector<VictimFile> VictimFileService::getList(){
     vector<VictimFile> temporaryBuffer;
     VictimFile temporaryVictimFile;
-    for(int i = 0; i < repository->getSize(); ++i){
+    for(int i = 0; i < repository->getSize(); ++i){ // todo update this to c++14
         temporaryVictimFile = (*repository)[i];
         temporaryBuffer.push_back(temporaryVictimFile);
     }
@@ -38,11 +38,6 @@ void VictimFileService::updateVictimFile(string name, VictimFile& updatedVictimF
 
 VictimFile VictimFileService::getVictimFileWithName(string name){
     if(repository->containsElement(VictimFile(name))){
-//        for(int i = 0; i < repository->getSize(); i++){
-//            if(repository[i].getName() == name){
-//                return repository[i];
-//            }
-//        }
         for(VictimFile victimFile : repository->asList()){
             if(victimFile.getName() == name){
                 return victimFile;

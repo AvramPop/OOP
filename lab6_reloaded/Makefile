@@ -124,6 +124,36 @@ lab6_reloaded/fast:
 .PHONY : lab6_reloaded/fast
 
 # target to build an object file
+FileSaver.o:
+	$(MAKE) -f CMakeFiles/lab6_reloaded.dir/build.make CMakeFiles/lab6_reloaded.dir/FileSaver.o
+.PHONY : FileSaver.o
+
+# target to preprocess a source file
+FileSaver.i:
+	$(MAKE) -f CMakeFiles/lab6_reloaded.dir/build.make CMakeFiles/lab6_reloaded.dir/FileSaver.i
+.PHONY : FileSaver.i
+
+# target to generate assembly for a file
+FileSaver.s:
+	$(MAKE) -f CMakeFiles/lab6_reloaded.dir/build.make CMakeFiles/lab6_reloaded.dir/FileSaver.s
+.PHONY : FileSaver.s
+
+# target to build an object file
+MockRepository.o:
+	$(MAKE) -f CMakeFiles/lab6_reloaded.dir/build.make CMakeFiles/lab6_reloaded.dir/MockRepository.o
+.PHONY : MockRepository.o
+
+# target to preprocess a source file
+MockRepository.i:
+	$(MAKE) -f CMakeFiles/lab6_reloaded.dir/build.make CMakeFiles/lab6_reloaded.dir/MockRepository.i
+.PHONY : MockRepository.i
+
+# target to generate assembly for a file
+MockRepository.s:
+	$(MAKE) -f CMakeFiles/lab6_reloaded.dir/build.make CMakeFiles/lab6_reloaded.dir/MockRepository.s
+.PHONY : MockRepository.s
+
+# target to build an object file
 Mode.o:
 	$(MAKE) -f CMakeFiles/lab6_reloaded.dir/build.make CMakeFiles/lab6_reloaded.dir/Mode.o
 .PHONY : Mode.o
@@ -167,6 +197,21 @@ Test.i:
 Test.s:
 	$(MAKE) -f CMakeFiles/lab6_reloaded.dir/build.make CMakeFiles/lab6_reloaded.dir/Test.s
 .PHONY : Test.s
+
+# target to build an object file
+Validator.o:
+	$(MAKE) -f CMakeFiles/lab6_reloaded.dir/build.make CMakeFiles/lab6_reloaded.dir/Validator.o
+.PHONY : Validator.o
+
+# target to preprocess a source file
+Validator.i:
+	$(MAKE) -f CMakeFiles/lab6_reloaded.dir/build.make CMakeFiles/lab6_reloaded.dir/Validator.i
+.PHONY : Validator.i
+
+# target to generate assembly for a file
+Validator.s:
+	$(MAKE) -f CMakeFiles/lab6_reloaded.dir/build.make CMakeFiles/lab6_reloaded.dir/Validator.s
+.PHONY : Validator.s
 
 # target to build an object file
 VictimFile.o:
@@ -222,6 +267,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... lab6_reloaded"
 	@echo "... edit_cache"
+	@echo "... FileSaver.o"
+	@echo "... FileSaver.i"
+	@echo "... FileSaver.s"
+	@echo "... MockRepository.o"
+	@echo "... MockRepository.i"
+	@echo "... MockRepository.s"
 	@echo "... Mode.o"
 	@echo "... Mode.i"
 	@echo "... Mode.s"
@@ -231,6 +282,9 @@ help:
 	@echo "... Test.o"
 	@echo "... Test.i"
 	@echo "... Test.s"
+	@echo "... Validator.o"
+	@echo "... Validator.i"
+	@echo "... Validator.s"
 	@echo "... VictimFile.o"
 	@echo "... VictimFile.i"
 	@echo "... VictimFile.s"

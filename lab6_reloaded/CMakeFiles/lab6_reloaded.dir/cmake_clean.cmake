@@ -5,6 +5,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/lab6_reloaded.dir/Scanner.o"
   "CMakeFiles/lab6_reloaded.dir/Test.o"
   "CMakeFiles/lab6_reloaded.dir/VictimFileService.o"
+  "CMakeFiles/lab6_reloaded.dir/Validator.o"
+  "CMakeFiles/lab6_reloaded.dir/MockRepository.o"
+  "CMakeFiles/lab6_reloaded.dir/FileSaver.o"
   "lab6_reloaded.pdb"
   "lab6_reloaded"
 )

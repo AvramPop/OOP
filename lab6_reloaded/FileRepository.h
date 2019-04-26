@@ -9,6 +9,7 @@
 #include <fstream>
 #include <algorithm>
 #include "Repository.h"
+#include "Exception.h"
 
 template <typename TemplateClass>
 class FileRepository : public Repository<TemplateClass> {
@@ -101,7 +102,13 @@ void FileRepository<TemplateClass>::loadBufferFromFile(){
         TemplateClass temporary;
         this->buffer.clear();
         while(!fin.eof()){
-            fin >> temporary;
+            try{
+                fin >> temporary;
+            } catch(ValidatorException& validatorException){
+                fin.close();
+                this->buffer.clear();
+                throw ValidatorException();
+            }
             this->buffer.push_back(temporary);
         }
     }
@@ -153,7 +160,7 @@ TemplateClass& FileRepository<TemplateClass>::at(int index){
         return element;
     } else {
         this->buffer.clear();
-        throw std::exception();
+        throw RepositoryException();
     }
 }
 
@@ -170,8 +177,11 @@ void FileRepository<TemplateClass>::update(TemplateClass element){
     loadBufferFromFile();
     if(liveContainsElement(element)){
         this->buffer[indexOfElement(element)] = element;
+        dumpBufferToFile();
+    } else {
+        dumpBufferToFile();
+        throw RepositoryException();
     }
-    dumpBufferToFile();
 }
 
 template <typename TemplateClass>
@@ -182,7 +192,11 @@ int FileRepository<TemplateClass>::indexOfElement(TemplateClass element) {
             indexOfElementToRemove = i;
         }
     }
-    return indexOfElementToRemove;
+    if(indexOfElementToRemove != -1){
+        return indexOfElementToRemove;
+    } else {
+        throw RepositoryException();
+    }
 }
 
 template<typename TemplateClass>
@@ -203,8 +217,12 @@ void FileRepository<TemplateClass>::remove(TemplateClass element){
     loadBufferFromFile();
     if(liveContainsElement(element)){
         this->buffer.erase(std::remove(this->buffer.begin(), this->buffer.end(), element), this->buffer.end());
+        dumpBufferToFile();
+    } else {
+        dumpBufferToFile();
+        throw RepositoryException();
     }
-    dumpBufferToFile();
+
 }
 
 template<typename TemplateClass>
@@ -216,7 +234,7 @@ TemplateClass FileRepository<TemplateClass>::operator[](int index){
         return element;
     } else {
         this->buffer.clear();
-        throw std::exception();
+        throw RepositoryException();
     }
 }
 

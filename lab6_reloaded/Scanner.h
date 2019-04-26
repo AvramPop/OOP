@@ -15,6 +15,7 @@ private:
     Mode currentMode;
     int currentIterationIndex;
     vector<VictimFile> transferList;
+    string myListLocation;
     void listModeA();
     void addModeA();
     void removeModeA();
@@ -35,9 +36,15 @@ public:
     void runConsole();
 
     Scanner(unique_ptr<VictimFileService> victimFileService);
-    Scanner(){};
+    Scanner(){
+        myListLocation = "/temp/oop";
+    };
 
     void setIterationStart();
+
+    void saveMyListToFile();
+
+    string getPathExtension();
 };
 
 

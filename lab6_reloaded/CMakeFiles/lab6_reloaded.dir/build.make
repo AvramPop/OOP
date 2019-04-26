@@ -135,6 +135,45 @@ CMakeFiles/lab6_reloaded.dir/VictimFileService.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab6_reloaded.dir/VictimFileService.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFileService.cpp -o CMakeFiles/lab6_reloaded.dir/VictimFileService.s
 
+CMakeFiles/lab6_reloaded.dir/Validator.o: CMakeFiles/lab6_reloaded.dir/flags.make
+CMakeFiles/lab6_reloaded.dir/Validator.o: Validator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/lab6_reloaded.dir/Validator.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab6_reloaded.dir/Validator.o -c /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Validator.cpp
+
+CMakeFiles/lab6_reloaded.dir/Validator.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab6_reloaded.dir/Validator.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Validator.cpp > CMakeFiles/lab6_reloaded.dir/Validator.i
+
+CMakeFiles/lab6_reloaded.dir/Validator.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab6_reloaded.dir/Validator.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Validator.cpp -o CMakeFiles/lab6_reloaded.dir/Validator.s
+
+CMakeFiles/lab6_reloaded.dir/MockRepository.o: CMakeFiles/lab6_reloaded.dir/flags.make
+CMakeFiles/lab6_reloaded.dir/MockRepository.o: MockRepository.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/lab6_reloaded.dir/MockRepository.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab6_reloaded.dir/MockRepository.o -c /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/MockRepository.cpp
+
+CMakeFiles/lab6_reloaded.dir/MockRepository.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab6_reloaded.dir/MockRepository.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/MockRepository.cpp > CMakeFiles/lab6_reloaded.dir/MockRepository.i
+
+CMakeFiles/lab6_reloaded.dir/MockRepository.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab6_reloaded.dir/MockRepository.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/MockRepository.cpp -o CMakeFiles/lab6_reloaded.dir/MockRepository.s
+
+CMakeFiles/lab6_reloaded.dir/FileSaver.o: CMakeFiles/lab6_reloaded.dir/flags.make
+CMakeFiles/lab6_reloaded.dir/FileSaver.o: FileSaver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/lab6_reloaded.dir/FileSaver.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lab6_reloaded.dir/FileSaver.o -c /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/FileSaver.cpp
+
+CMakeFiles/lab6_reloaded.dir/FileSaver.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab6_reloaded.dir/FileSaver.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/FileSaver.cpp > CMakeFiles/lab6_reloaded.dir/FileSaver.i
+
+CMakeFiles/lab6_reloaded.dir/FileSaver.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab6_reloaded.dir/FileSaver.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/FileSaver.cpp -o CMakeFiles/lab6_reloaded.dir/FileSaver.s
+
 # Object files for target lab6_reloaded
 lab6_reloaded_OBJECTS = \
 "CMakeFiles/lab6_reloaded.dir/main.o" \
@@ -142,7 +181,10 @@ lab6_reloaded_OBJECTS = \
 "CMakeFiles/lab6_reloaded.dir/VictimFile.o" \
 "CMakeFiles/lab6_reloaded.dir/Scanner.o" \
 "CMakeFiles/lab6_reloaded.dir/Test.o" \
-"CMakeFiles/lab6_reloaded.dir/VictimFileService.o"
+"CMakeFiles/lab6_reloaded.dir/VictimFileService.o" \
+"CMakeFiles/lab6_reloaded.dir/Validator.o" \
+"CMakeFiles/lab6_reloaded.dir/MockRepository.o" \
+"CMakeFiles/lab6_reloaded.dir/FileSaver.o"
 
 # External object files for target lab6_reloaded
 lab6_reloaded_EXTERNAL_OBJECTS =
@@ -153,9 +195,12 @@ lab6_reloaded: CMakeFiles/lab6_reloaded.dir/VictimFile.o
 lab6_reloaded: CMakeFiles/lab6_reloaded.dir/Scanner.o
 lab6_reloaded: CMakeFiles/lab6_reloaded.dir/Test.o
 lab6_reloaded: CMakeFiles/lab6_reloaded.dir/VictimFileService.o
+lab6_reloaded: CMakeFiles/lab6_reloaded.dir/Validator.o
+lab6_reloaded: CMakeFiles/lab6_reloaded.dir/MockRepository.o
+lab6_reloaded: CMakeFiles/lab6_reloaded.dir/FileSaver.o
 lab6_reloaded: CMakeFiles/lab6_reloaded.dir/build.make
 lab6_reloaded: CMakeFiles/lab6_reloaded.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable lab6_reloaded"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable lab6_reloaded"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lab6_reloaded.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

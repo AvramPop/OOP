@@ -4,6 +4,8 @@
 
 #include <algorithm>
 #include "VictimFile.h"
+#include "Validator.h"
+#include "Exception.h"
 #include <fstream>
 
 bool VictimFile::operator==(const VictimFile &rhs) const{
@@ -31,37 +33,76 @@ istream& operator>>(istream& inStream, VictimFile& victimFile){
     string placeString;
     string photoString;
     getline(inStream, nameString, ',');
-    if(nameString.empty()){
-        throw std::exception();
-    }
     getline(inStream, placeString, ',');
-    if(!placeString.empty()){
+    try{
         placeString.erase(placeString.begin());
-    } else {
-        throw std::exception();
+    } catch(exception& exception){
+        throw ValidatorException();
     }
     getline(inStream, ageString, ',');
-    if(!ageString.empty()){
+    try{
         ageString.erase(ageString.begin());
+    } catch(exception& exception){
+        throw ValidatorException();
     }
     getline(inStream, photoString);
-    if(!photoString.empty()){
+    try{
         photoString.erase(photoString.begin());
+    } catch(exception& exception){
+        throw ValidatorException();
+    }
+    Validator validator;
+    if(validator.validateVictimFile(nameString, placeString, ageString, photoString)){
+        victimFile.victimName = nameString;
+        victimFile.placeOfOrigin = placeString;
+        victimFile.age = stoi(ageString);
+        victimFile.photograph = photoString;
+        return inStream;
     } else {
-        throw std::exception();
+        throw ValidatorException();
     }
-    victimFile.victimName = nameString;
-    victimFile.placeOfOrigin = placeString;
-    if(!ageString.empty()){
-        if(all_of(ageString.begin(), ageString.end(), ::isdigit)){ // checks that all chars are digits
-            victimFile.age = stoi(ageString);
-        } else {
-            throw std::exception();
-        }
-    }
-    victimFile.photograph = photoString;
-    return inStream;
 }
+
+//istream& operator>>(istream& inStream, VictimFile& victimFile){ // todo >> backup
+//    string ageString;
+//    string nameString;
+//    string placeString;
+//    string photoString;
+//    getline(inStream, nameString, ',');
+//    if(nameString.empty()){
+//        throw std::exception();
+//    }
+//    getline(inStream, placeString, ',');
+//    if(!placeString.empty()){
+//        placeString.erase(placeString.begin());
+//    } else {
+//        throw std::exception();
+//    }
+//    placeString.erase(placeString.begin());
+//    getline(inStream, ageString, ',');
+//    if(!ageString.empty()){
+//        ageString.erase(ageString.begin());
+//    }
+//    ageString.erase(ageString.begin());
+//    getline(inStream, photoString);
+//    if(!photoString.empty()){
+//        photoString.erase(photoString.begin());
+//    } else {
+//        throw std::exception();
+//    }
+//    photoString.erase(photoString.begin());
+//    victimFile.victimName = nameString;
+//    victimFile.placeOfOrigin = placeString;
+//    if(!ageString.empty()){
+//        if(all_of(ageString.begin(), ageString.end(), ::isdigit)){ // checks that all chars are digits
+//            victimFile.age = stoi(ageString);
+//        } else {
+//            throw std::exception();
+//        }
+//    }
+//    victimFile.photograph = photoString;
+//    return inStream;
+//}
 
 string VictimFile::toFormattedString(){
     string result = victimName + ", " + placeOfOrigin + ", " + std::to_string(age) + ", " + photograph;

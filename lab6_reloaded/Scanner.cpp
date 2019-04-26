@@ -3,8 +3,10 @@
 //
 
 #include "Scanner.h"
+#include "FileSaver.h"
 #include <iostream>
 #include <regex>
+#include <stdlib.h>
 
 using namespace std;
 void Scanner::runConsole(){
@@ -35,6 +37,11 @@ void Scanner::runConsole(){
             if(currentMode.getMode() == "A"){
                 updateModeA();
             }
+        } else if(command == "mylistLocation"){
+            string path;
+            getline(std::cin, path);
+            path = removeUnnecessaryWhitespaces(path);
+            myListLocation = path;
         } else if(command == "mode"){
             setMode();
             if(currentMode.getMode() == "B"){
@@ -118,6 +125,7 @@ bool Scanner::isNumber(string stringToTest){
 }
 
 Scanner::Scanner(unique_ptr<VictimFileService> victimFileService){
+    myListLocation = "/temp/oop";
     this->victimFileService = move(victimFileService);
 }
 
@@ -160,12 +168,29 @@ void Scanner::saveModeB(){
     if(!(find(transferList.begin(), transferList.end(), VictimFile(name)) != transferList.end())){
         transferList.push_back(victimFileToTransfer);
     }
+    saveMyListToFile();
 }
 
+//void Scanner::mylistModeB(){ //todo backup
+//    for(auto& victimFile : transferList){
+//        cout << victimFile << endl;
+//    }
+//}
+
 void Scanner::mylistModeB(){
-    for(auto& victimFile : transferList){
-        cout << victimFile << endl;
+    string extension = getPathExtension();
+    string command;
+    if(extension == "txt"){
+        command += "gedit ";
+        command += myListLocation;
+    } else if(extension == "html"){
+        command += "timeout 4 chromium-browser ";
+        command += myListLocation;
+    } else if(extension == "csv"){
+        command += "gedit ";
+        command += myListLocation;
     }
+    system(command.data());
 }
 
 void Scanner::setIterationStart(){
@@ -174,4 +199,21 @@ void Scanner::setIterationStart(){
 
 string Scanner::removeUnnecessaryWhitespaces(string stringToUpdate){
     return std::regex_replace(stringToUpdate, std::regex("^ +| +$|( ) +"), "$1");
+}
+
+void Scanner::saveMyListToFile(){
+    unique_ptr<FormattedFileSaver<VictimFile>> fileSaver;
+    string extension = getPathExtension();
+    if(extension == "txt"){
+        fileSaver = make_unique<TXTSaver<VictimFile>>(myListLocation);
+    } else if(extension == "html"){
+        fileSaver = make_unique<HTMLSaver<VictimFile>>(myListLocation);
+    } else if(extension == "csv"){
+        fileSaver = make_unique<CSVSaver<VictimFile>>(myListLocation);
+    }
+    fileSaver->save(transferList);
+}
+
+string Scanner::getPathExtension(){
+    return myListLocation.substr(myListLocation.find_last_of(".") + 1);
 }

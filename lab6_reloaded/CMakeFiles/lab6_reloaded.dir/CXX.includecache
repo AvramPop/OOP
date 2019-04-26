@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Exception.h
+bits/exception.h
+-
+
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/FileRepository.h
 string
 -
@@ -15,6 +19,18 @@ algorithm
 -
 Repository.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Repository.h
+Exception.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Exception.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/FileSaver.h
+string
+-
+vector
+-
+fstream
+-
+VictimFile.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Mode.h
 string
@@ -29,9 +45,13 @@ memory
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Scanner.cpp
 Scanner.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Scanner.h
+FileSaver.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/FileSaver.h
 iostream
 -
 regex
+-
+stdlib.h
 -
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Scanner.h

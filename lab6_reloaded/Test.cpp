@@ -9,6 +9,7 @@
 #include <fstream>
 #include <assert.h>
 #include <iostream>
+#include "MockRepository.h"
 #include <sstream>
 
 void Test::test(){
@@ -135,7 +136,7 @@ void Test::testRepositoryElementAccess(){
     try{
         fileRepository.at(5);
         assert(false);
-    } catch(exception& exception){
+    } catch(RepositoryException& exception){
         assert(true);
     }
 }
@@ -232,10 +233,17 @@ void Test::testServiceGetVictimFileWithName(){
     }
 }
 
+//void Test::testServiceGetVectorOfFilesWithOriginAndLowerAge(){ // todo backup
+//    VictimFileService testService = getTestService();
+//    vector<VictimFile> filterResult = testService.getVectorOfFilesWithOriginAndLowerAge("origin1", 100);
+//    assert(filterResult[0] == VictimFile("name1 surname1"));
+//}
+
 void Test::testServiceGetVectorOfFilesWithOriginAndLowerAge(){
-    VictimFileService testService = getTestService();
-    vector<VictimFile> filterResult = testService.getVectorOfFilesWithOriginAndLowerAge("origin1", 100);
-    assert(filterResult[0] == VictimFile("name1 surname1"));
+    unique_ptr<Repository<VictimFile>> repository = make_unique<MockRepository<VictimFile>>();
+    VictimFileService testService(move(repository));
+    vector<VictimFile> filterResult = testService.getVectorOfFilesWithOriginAndLowerAge("placeOfOrigin1", 100);
+    assert(filterResult[0] == VictimFile("testName1 surname1"));
 }
 
 void Test::testMode(){
@@ -264,4 +272,5 @@ void Test::testServiceAssignment(){
     testService1 = testService1;
     assert(testService1.getRepositorySize() == 4);
 }
+
 

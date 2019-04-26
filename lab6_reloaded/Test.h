@@ -9,6 +9,7 @@
 #include "VictimFile.h"
 #include "VictimFileService.h"
 
+
 class Test {
 public:
     void test();
@@ -48,6 +49,8 @@ private:
 //
     void testServiceAssignment();
 };
+
+
 
 
 #endif //LAB6_RELOADED_TEST_H
