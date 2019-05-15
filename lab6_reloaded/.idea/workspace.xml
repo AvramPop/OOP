@@ -12,81 +12,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37893540-bf16-4f52-94de-ab4828af7da4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/Exception.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/Exception.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/FileRepository.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/FileRepository.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/FileSaver.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/FileSaver.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/MockRepository.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/MockRepository.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/Mode.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/Mode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/OOP-qt.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/Repository.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/Repository.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/Scanner.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/Scanner.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/Validator.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/Validator.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/VictimFile.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/VictimFile.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/VictimFileService.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/VictimFileService.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/gene.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/gene.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/genesgui.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/genesgui.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/mainwindow.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/mainwindow.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/mainwindow.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OOP-qt/node.qrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab5/cmake-build-debug/CMakeFiles/lab5.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5/cmake-build-debug/CMakeFiles/lab5.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab5/cmake-build-debug/CMakeFiles/lab5.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5/cmake-build-debug/CMakeFiles/lab5.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab5/cmake-build-debug/CMakeFiles/lab5.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5/cmake-build-debug/CMakeFiles/lab5.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab5/cmake-build-debug/CMakeFiles/lab5.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5/cmake-build-debug/CMakeFiles/lab5.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab5/cmake-build-debug/CMakeFiles/lab5.dir/service/VictimFileService.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5/cmake-build-debug/CMakeFiles/lab5.dir/service/VictimFileService.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab5/cmake-build-debug/CMakeFiles/lab5.dir/ui/Scanner.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5/cmake-build-debug/CMakeFiles/lab5.dir/ui/Scanner.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab5/repository/FileRepository.h" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5/repository/FileRepository.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab5/repository/Repository.h" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5/repository/Repository.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/MockRepository.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/MockRepository.gcno" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/Scanner.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/Scanner.gcno" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/Scanner.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/Scanner.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/Test.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/Test.gcno" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/Test.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/Test.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/Validator.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/Validator.gcno" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/Validator.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/Validator.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/VictimFile.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/VictimFile.gcno" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/VictimFile.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/VictimFile.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/VictimFileService.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/VictimFileService.gcno" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/VictimFileService.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/VictimFileService.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/main.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/main.gcno" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/lab6_reloaded.dir/main.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scanner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Scanner.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab6_reloaded" beforeDir="false" afterPath="$PROJECT_DIR$/lab6_reloaded" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/CSVPlaylist.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/CSVPlaylist.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/Controller.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/Controller.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/PlayList.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/PlayList.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/Repository.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/Repository.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/Song.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/Song.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/Songs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/Songs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/UI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/UI.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/UI.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/UI.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/UndoAction.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/UndoAction.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/UndoAction.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/UndoAction.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/UndoAdd.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/UndoAdd.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/UndoAdd.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/UndoAdd.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/UndoRemove.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/UndoRemove.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/UndoRemove.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/UndoRemove.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem5/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP-qt/temp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP-qt/OOP-qt.pro" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP-qt/OOP-qt.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP-qt/gene.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP-qt/gene.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP-qt/genesgui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP-qt/GUI.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP-qt/genesgui.h" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP-qt/GUI.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP-qt/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP-qt/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-OOP-qt-Desktop_Qt_5_12_3_GCC_64bit-Debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build-OOP-qt-Desktop_Qt_5_12_3_GCC_64bit-Debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-OOP-qt-Desktop_Qt_5_12_3_GCC_64bit-Debug/OOP-qt" beforeDir="false" afterPath="$PROJECT_DIR$/../build-OOP-qt-Desktop_Qt_5_12_3_GCC_64bit-Debug/OOP-qt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-OOP-qt-Desktop_Qt_5_12_3_GCC_64bit-Debug/genesgui.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build-OOP-qt-Desktop_Qt_5_12_3_GCC_64bit-Debug/genesgui.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-OOP-qt-Desktop_Qt_5_12_3_GCC_64bit-Debug/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build-OOP-qt-Desktop_Qt_5_12_3_GCC_64bit-Debug/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-OOP-qt-Desktop_Qt_5_12_3_GCC_64bit-Debug/moc_genesgui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../build-OOP-qt-Desktop_Qt_5_12_3_GCC_64bit-Debug/moc_genesgui.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-OOP-qt-Desktop_Qt_5_12_3_GCC_64bit-Debug/moc_genesgui.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build-OOP-qt-Desktop_Qt_5_12_3_GCC_64bit-Debug/moc_genesgui.o" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -120,22 +58,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Validator.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" selection-start-line="4" selection-end-line="20" />
-              <folding>
-                <element signature="e#38#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="126">
+              <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="37" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -152,7 +78,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -164,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VictimFile.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" selection-start-line="3" selection-end-line="122" selection-end-column="1" />
+            <state relative-caret-position="184">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="e#38#58#0" expanded="true" />
               </folding>
@@ -177,7 +103,19 @@
         <entry file="file://$PROJECT_DIR$/VictimFile.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="94">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="52" />
+              <caret line="6" selection-start-line="6" selection-end-line="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FileRepository.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2566">
+              <caret line="227" column="51" lean-forward="true" selection-start-line="227" selection-start-column="51" selection-end-line="227" selection-end-column="51" />
+              <folding>
+                <element signature="e#117#134#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -185,8 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VictimFileService.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="52" lean-forward="true" selection-start-line="6" selection-end-line="52" />
+            <state relative-caret-position="936">
+              <caret line="52" selection-start-line="6" selection-end-line="52" />
               <folding>
                 <element signature="e#124#151#0" expanded="true" />
               </folding>
@@ -197,8 +135,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scanner.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="219" lean-forward="true" selection-start-line="3" selection-end-line="219" />
+            <state relative-caret-position="3942">
+              <caret line="219" selection-start-line="3" selection-end-line="219" />
               <folding>
                 <element signature="e#38#58#0" expanded="true" />
               </folding>
@@ -209,8 +147,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VictimFileService.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="78" lean-forward="true" selection-start-line="3" selection-end-line="78" />
+            <state relative-caret-position="1404">
+              <caret line="78" selection-start-line="3" selection-end-line="78" />
             </state>
           </provider>
         </entry>
@@ -218,8 +156,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scanner.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="44" lean-forward="true" selection-start-line="7" selection-end-line="44" />
+            <state relative-caret-position="792">
+              <caret line="44" selection-start-line="7" selection-end-line="44" />
               <folding>
                 <element signature="e#104#134#0" expanded="true" />
               </folding>
@@ -285,6 +223,7 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1920" />
     <option name="y" value="-1" />
     <option name="width" value="1366" />
     <option name="height" value="768" />
@@ -297,6 +236,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -308,7 +248,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -456,11 +395,12 @@
       <workItem from="1557385277341" duration="588000" />
       <workItem from="1557390902153" duration="394000" />
       <workItem from="1557867524733" duration="2117000" />
+      <workItem from="1557908991110" duration="1236000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53998000" />
+    <option name="totallyTimeSpent" value="55234000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -472,9 +412,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1" width="1366" height="768" extended-state="6" />
+    <frame x="1920" y="-1" width="1366" height="768" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.32763976" visible="true" weight="0.28181818" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.32763976" weight="0.28636363" />
       <window_info id="Structure" order="1" sideWeight="0.67236024" side_tool="true" weight="0.18484849" />
       <window_info id="Favorites" order="2" sideWeight="0.50078005" side_tool="true" weight="0.13820705" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -604,11 +545,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.csv">
-      <provider editor-type-id="text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor" />
@@ -617,16 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" selection-start-line="8" selection-end-line="11" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileRepository.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="241" lean-forward="true" selection-start-line="7" selection-end-line="241" />
-          <folding>
-            <element signature="e#117#134#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -693,13 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Validator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" selection-start-line="7" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Validator.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -710,10 +634,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Validator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" selection-start-line="7" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VictimFileService.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="52" selection-start-line="6" selection-end-line="52" />
+          <folding>
+            <element signature="e#124#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scanner.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3942">
+          <caret line="219" selection-start-line="3" selection-end-line="219" />
+          <folding>
+            <element signature="e#38#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VictimFileService.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1404">
+          <caret line="78" selection-start-line="3" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scanner.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="44" selection-start-line="7" selection-end-line="44" />
+          <folding>
+            <element signature="e#104#134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="32" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/VictimFile.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="122" selection-end-column="1" />
+        <state relative-caret-position="184">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="e#38#58#0" expanded="true" />
           </folding>
@@ -723,61 +708,17 @@
     <entry file="file://$PROJECT_DIR$/VictimFile.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="52" />
+          <caret line="6" selection-start-line="6" selection-end-line="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VictimFileService.h">
+    <entry file="file://$PROJECT_DIR$/FileRepository.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="52" lean-forward="true" selection-start-line="6" selection-end-line="52" />
+        <state relative-caret-position="2566">
+          <caret line="227" column="51" lean-forward="true" selection-start-line="227" selection-start-column="51" selection-end-line="227" selection-end-column="51" />
           <folding>
-            <element signature="e#124#151#0" expanded="true" />
+            <element signature="e#117#134#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VictimFileService.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="78" lean-forward="true" selection-start-line="3" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scanner.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="44" lean-forward="true" selection-start-line="7" selection-end-line="44" />
-          <folding>
-            <element signature="e#104#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scanner.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="219" lean-forward="true" selection-start-line="3" selection-end-line="219" />
-          <folding>
-            <element signature="e#38#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="32" selection-end-line="9" selection-end-column="38" />
         </state>
       </provider>
     </entry>

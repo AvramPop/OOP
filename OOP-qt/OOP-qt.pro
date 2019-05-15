@@ -28,6 +28,7 @@ SOURCES += \
         Exception.cpp \
         FileRepository.cpp \
         FileSaver.cpp \
+        GUI.cpp \
         MockRepository.cpp \
         Mode.cpp \
         Repository.cpp \
@@ -35,8 +36,6 @@ SOURCES += \
         Validator.cpp \
         VictimFile.cpp \
         VictimFileService.cpp \
-        gene.cpp \
-        genesgui.cpp \
         main.cpp \
         mainwindow.cpp
 
@@ -44,6 +43,7 @@ HEADERS += \
         Exception.h \
         FileRepository.h \
         FileSaver.h \
+        GUI.h \
         MockRepository.h \
         Mode.h \
         Repository.h \
@@ -51,8 +51,6 @@ HEADERS += \
         Validator.h \
         VictimFile.h \
         VictimFileService.h \
-        gene.h \
-        genesgui.h \
         mainwindow.h
 
 FORMS += \
@@ -66,4 +64,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES +=
 
 DISTFILES += \
-    data.txt
+    data.txt \
+    temp.txt

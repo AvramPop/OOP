@@ -4,7 +4,7 @@
 
 #pragma once
 #include <qwidget.h>
-#include "gene.h"
+#include "VictimFile.h"
 #include <QListWidget>
 #include <QFormLayout>
 #include <QLineEdit>
@@ -12,16 +12,16 @@
 #include <QPushButton>
 #include <QLabel>
 
-class GenesGUI: public QWidget
+class GUI: public QWidget
 {
     Q_OBJECT
 
 public:
-    GenesGUI(std::vector<Gene> genes, QWidget *parent = 0);
-    ~GenesGUI();
+    GUI(std::vector<VictimFile> victimFiles, QWidget *parent = 0);
+    ~GUI();
 
 private:
-    std::vector<Gene> genes;
+    std::vector<VictimFile> victimFiles;
 
     QListWidget* victimFilesList;
     QListWidget* transferList;
@@ -40,7 +40,7 @@ private:
    // int getSelectedIndex();
   //  void connectSignalsAndSlots();
 
-  //  void populateGenesList();
+    void populateVictimFilesList();
 //    // When an item in the list is clicked, the text boxes get filled with the item's information
 //    void listItemChanged();
 

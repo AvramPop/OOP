@@ -55,6 +55,7 @@ OBJECTS_DIR   = ./
 SOURCES       = ../OOP-qt/Exception.cpp \
 		../OOP-qt/FileRepository.cpp \
 		../OOP-qt/FileSaver.cpp \
+		../OOP-qt/GUI.cpp \
 		../OOP-qt/MockRepository.cpp \
 		../OOP-qt/Mode.cpp \
 		../OOP-qt/Repository.cpp \
@@ -62,14 +63,13 @@ SOURCES       = ../OOP-qt/Exception.cpp \
 		../OOP-qt/Validator.cpp \
 		../OOP-qt/VictimFile.cpp \
 		../OOP-qt/VictimFileService.cpp \
-		../OOP-qt/gene.cpp \
-		../OOP-qt/genesgui.cpp \
 		../OOP-qt/main.cpp \
-		../OOP-qt/mainwindow.cpp moc_genesgui.cpp \
+		../OOP-qt/mainwindow.cpp moc_GUI.cpp \
 		moc_mainwindow.cpp
 OBJECTS       = Exception.o \
 		FileRepository.o \
 		FileSaver.o \
+		GUI.o \
 		MockRepository.o \
 		Mode.o \
 		Repository.o \
@@ -77,13 +77,12 @@ OBJECTS       = Exception.o \
 		Validator.o \
 		VictimFile.o \
 		VictimFileService.o \
-		gene.o \
-		genesgui.o \
 		main.o \
 		mainwindow.o \
-		moc_genesgui.o \
+		moc_GUI.o \
 		moc_mainwindow.o
 DIST          = ../OOP-qt/data.txt \
+		../OOP-qt/temp.txt \
 		/home/dani/Qt/5.12.3/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/dani/Qt/5.12.3/gcc_64/mkspecs/common/unix.conf \
 		/home/dani/Qt/5.12.3/gcc_64/mkspecs/common/linux.conf \
@@ -280,6 +279,7 @@ DIST          = ../OOP-qt/data.txt \
 		../OOP-qt/OOP-qt.pro ../OOP-qt/Exception.h \
 		../OOP-qt/FileRepository.h \
 		../OOP-qt/FileSaver.h \
+		../OOP-qt/GUI.h \
 		../OOP-qt/MockRepository.h \
 		../OOP-qt/Mode.h \
 		../OOP-qt/Repository.h \
@@ -287,11 +287,10 @@ DIST          = ../OOP-qt/data.txt \
 		../OOP-qt/Validator.h \
 		../OOP-qt/VictimFile.h \
 		../OOP-qt/VictimFileService.h \
-		../OOP-qt/gene.h \
-		../OOP-qt/genesgui.h \
 		../OOP-qt/mainwindow.h ../OOP-qt/Exception.cpp \
 		../OOP-qt/FileRepository.cpp \
 		../OOP-qt/FileSaver.cpp \
+		../OOP-qt/GUI.cpp \
 		../OOP-qt/MockRepository.cpp \
 		../OOP-qt/Mode.cpp \
 		../OOP-qt/Repository.cpp \
@@ -299,8 +298,6 @@ DIST          = ../OOP-qt/data.txt \
 		../OOP-qt/Validator.cpp \
 		../OOP-qt/VictimFile.cpp \
 		../OOP-qt/VictimFileService.cpp \
-		../OOP-qt/gene.cpp \
-		../OOP-qt/genesgui.cpp \
 		../OOP-qt/main.cpp \
 		../OOP-qt/mainwindow.cpp
 QMAKE_TARGET  = OOP-qt
@@ -724,8 +721,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /home/dani/Qt/5.12.3/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../OOP-qt/Exception.h ../OOP-qt/FileRepository.h ../OOP-qt/FileSaver.h ../OOP-qt/MockRepository.h ../OOP-qt/Mode.h ../OOP-qt/Repository.h ../OOP-qt/Scanner.h ../OOP-qt/Validator.h ../OOP-qt/VictimFile.h ../OOP-qt/VictimFileService.h ../OOP-qt/gene.h ../OOP-qt/genesgui.h ../OOP-qt/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../OOP-qt/Exception.cpp ../OOP-qt/FileRepository.cpp ../OOP-qt/FileSaver.cpp ../OOP-qt/MockRepository.cpp ../OOP-qt/Mode.cpp ../OOP-qt/Repository.cpp ../OOP-qt/Scanner.cpp ../OOP-qt/Validator.cpp ../OOP-qt/VictimFile.cpp ../OOP-qt/VictimFileService.cpp ../OOP-qt/gene.cpp ../OOP-qt/genesgui.cpp ../OOP-qt/main.cpp ../OOP-qt/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../OOP-qt/Exception.h ../OOP-qt/FileRepository.h ../OOP-qt/FileSaver.h ../OOP-qt/GUI.h ../OOP-qt/MockRepository.h ../OOP-qt/Mode.h ../OOP-qt/Repository.h ../OOP-qt/Scanner.h ../OOP-qt/Validator.h ../OOP-qt/VictimFile.h ../OOP-qt/VictimFileService.h ../OOP-qt/mainwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../OOP-qt/Exception.cpp ../OOP-qt/FileRepository.cpp ../OOP-qt/FileSaver.cpp ../OOP-qt/GUI.cpp ../OOP-qt/MockRepository.cpp ../OOP-qt/Mode.cpp ../OOP-qt/Repository.cpp ../OOP-qt/Scanner.cpp ../OOP-qt/Validator.cpp ../OOP-qt/VictimFile.cpp ../OOP-qt/VictimFileService.cpp ../OOP-qt/main.cpp ../OOP-qt/mainwindow.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../OOP-qt/mainwindow.ui $(DISTDIR)/
 
 
@@ -758,10 +755,10 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /home/dani/Qt/5.12.3/gcc_64/mkspecs/features/data/dummy.cpp
 	g++ -pipe -g -std=gnu++1y -Wall -W -dM -E -o moc_predefs.h /home/dani/Qt/5.12.3/gcc_64/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_genesgui.cpp moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_GUI.cpp moc_mainwindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_genesgui.cpp moc_mainwindow.cpp
-moc_genesgui.cpp: ../OOP-qt/genesgui.h \
+	-$(DEL_FILE) moc_GUI.cpp moc_mainwindow.cpp
+moc_GUI.cpp: ../OOP-qt/GUI.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qwidget.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtGui/qtguiglobal.h \
@@ -864,7 +861,7 @@ moc_genesgui.cpp: ../OOP-qt/genesgui.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qfiledevice.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtGui/qvector2d.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtGui/qtouchdevice.h \
-		../OOP-qt/gene.h \
+		../OOP-qt/VictimFile.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/QListWidget \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qlistwidget.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qlistview.h \
@@ -908,7 +905,7 @@ moc_genesgui.cpp: ../OOP-qt/genesgui.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qlabel.h \
 		moc_predefs.h \
 		/home/dani/Qt/5.12.3/gcc_64/bin/moc
-	/home/dani/Qt/5.12.3/gcc_64/bin/moc $(DEFINES) --include /home/dani/Desktop/code/faculta/an1/sem2/OOP/build-OOP-qt-Desktop_Qt_5_12_3_GCC_64bit-Debug/moc_predefs.h -I/home/dani/Qt/5.12.3/gcc_64/mkspecs/linux-g++ -I/home/dani/Desktop/code/faculta/an1/sem2/OOP/OOP-qt -I/home/dani/Qt/5.12.3/gcc_64/include -I/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets -I/home/dani/Qt/5.12.3/gcc_64/include/QtGui -I/home/dani/Qt/5.12.3/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../OOP-qt/genesgui.h -o moc_genesgui.cpp
+	/home/dani/Qt/5.12.3/gcc_64/bin/moc $(DEFINES) --include /home/dani/Desktop/code/faculta/an1/sem2/OOP/build-OOP-qt-Desktop_Qt_5_12_3_GCC_64bit-Debug/moc_predefs.h -I/home/dani/Qt/5.12.3/gcc_64/mkspecs/linux-g++ -I/home/dani/Desktop/code/faculta/an1/sem2/OOP/OOP-qt -I/home/dani/Qt/5.12.3/gcc_64/include -I/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets -I/home/dani/Qt/5.12.3/gcc_64/include/QtGui -I/home/dani/Qt/5.12.3/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../OOP-qt/GUI.h -o moc_GUI.cpp
 
 moc_mainwindow.cpp: ../OOP-qt/mainwindow.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/QMainWindow \
@@ -1051,110 +1048,7 @@ FileRepository.o: ../OOP-qt/FileRepository.cpp
 FileSaver.o: ../OOP-qt/FileSaver.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o FileSaver.o ../OOP-qt/FileSaver.cpp
 
-MockRepository.o: ../OOP-qt/MockRepository.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o MockRepository.o ../OOP-qt/MockRepository.cpp
-
-Mode.o: ../OOP-qt/Mode.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Mode.o ../OOP-qt/Mode.cpp
-
-Repository.o: ../OOP-qt/Repository.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Repository.o ../OOP-qt/Repository.cpp
-
-Scanner.o: ../OOP-qt/Scanner.cpp ../OOP-qt/Scanner.h \
-		../OOP-qt/VictimFileService.h \
-		../OOP-qt/FileRepository.h \
-		../OOP-qt/Repository.h \
-		../OOP-qt/Exception.h \
-		../OOP-qt/VictimFile.h \
-		../OOP-qt/Mode.h \
-		../OOP-qt/FileSaver.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/QDebug \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qdebug.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qalgorithms.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qglobal.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qconfig-bootstrapped.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qconfig.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qtcore-config.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qsystemdetection.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qprocessordetection.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qcompilerdetection.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qtypeinfo.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qsysinfo.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qlogging.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qflags.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qatomic.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qbasicatomic.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qatomic_bootstrap.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qgenericatomic.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qatomic_cxx11.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qatomic_msvc.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qglobalstatic.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qmutex.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qnumeric.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qversiontagging.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qhash.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qchar.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qiterator.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qlist.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qrefcount.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qarraydata.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qhashfunctions.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qstring.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qbytearray.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qnamespace.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qstringliteral.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qstringalgorithms.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qstringview.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qstringbuilder.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qpair.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qbytearraylist.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qstringlist.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qregexp.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qstringmatcher.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qmap.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qtextstream.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qiodevice.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qobject.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qobjectdefs.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qcoreevent.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qscopedpointer.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qmetatype.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qvarlengtharray.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qcontainerfwd.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qobject_impl.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qlocale.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qvariant.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qshareddata.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qvector.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qpoint.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qset.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qcontiguouscache.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qsharedpointer.h \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qsharedpointer_impl.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Scanner.o ../OOP-qt/Scanner.cpp
-
-Validator.o: ../OOP-qt/Validator.cpp ../OOP-qt/Validator.h \
-		../OOP-qt/VictimFile.h \
-		../OOP-qt/Exception.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Validator.o ../OOP-qt/Validator.cpp
-
-VictimFile.o: ../OOP-qt/VictimFile.cpp ../OOP-qt/VictimFile.h \
-		../OOP-qt/Validator.h \
-		../OOP-qt/Exception.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o VictimFile.o ../OOP-qt/VictimFile.cpp
-
-VictimFileService.o: ../OOP-qt/VictimFileService.cpp ../OOP-qt/VictimFileService.h \
-		../OOP-qt/FileRepository.h \
-		../OOP-qt/Repository.h \
-		../OOP-qt/Exception.h \
-		../OOP-qt/VictimFile.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o VictimFileService.o ../OOP-qt/VictimFileService.cpp
-
-gene.o: ../OOP-qt/gene.cpp ../OOP-qt/gene.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gene.o ../OOP-qt/gene.cpp
-
-genesgui.o: ../OOP-qt/genesgui.cpp ../OOP-qt/genesgui.h \
+GUI.o: ../OOP-qt/GUI.cpp ../OOP-qt/GUI.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qwidget.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtGui/qtguiglobal.h \
@@ -1257,7 +1151,7 @@ genesgui.o: ../OOP-qt/genesgui.cpp ../OOP-qt/genesgui.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qfiledevice.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtGui/qvector2d.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtGui/qtouchdevice.h \
-		../OOP-qt/gene.h \
+		../OOP-qt/VictimFile.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/QListWidget \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qlistwidget.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qlistview.h \
@@ -1300,7 +1194,107 @@ genesgui.o: ../OOP-qt/genesgui.cpp ../OOP-qt/genesgui.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/QLabel \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qlabel.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/QDebug
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o genesgui.o ../OOP-qt/genesgui.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o GUI.o ../OOP-qt/GUI.cpp
+
+MockRepository.o: ../OOP-qt/MockRepository.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o MockRepository.o ../OOP-qt/MockRepository.cpp
+
+Mode.o: ../OOP-qt/Mode.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Mode.o ../OOP-qt/Mode.cpp
+
+Repository.o: ../OOP-qt/Repository.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Repository.o ../OOP-qt/Repository.cpp
+
+Scanner.o: ../OOP-qt/Scanner.cpp ../OOP-qt/Scanner.h \
+		../OOP-qt/VictimFileService.h \
+		../OOP-qt/FileRepository.h \
+		../OOP-qt/Repository.h \
+		../OOP-qt/Exception.h \
+		../OOP-qt/VictimFile.h \
+		../OOP-qt/Mode.h \
+		../OOP-qt/FileSaver.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/QDebug \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qdebug.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qalgorithms.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qglobal.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qconfig.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qtcore-config.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qsysinfo.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qlogging.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qflags.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qatomic.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qmutex.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qnumeric.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qversiontagging.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qhash.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qchar.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qiterator.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qlist.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qrefcount.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qarraydata.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qstring.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qbytearray.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qnamespace.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qstringliteral.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qstringview.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qpair.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qstringlist.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qregexp.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qmap.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qtextstream.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qiodevice.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qobject.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qcoreevent.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qmetatype.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qobject_impl.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qlocale.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qvariant.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qshareddata.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qvector.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qpoint.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qset.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qsharedpointer_impl.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Scanner.o ../OOP-qt/Scanner.cpp
+
+Validator.o: ../OOP-qt/Validator.cpp ../OOP-qt/Validator.h \
+		../OOP-qt/VictimFile.h \
+		../OOP-qt/Exception.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Validator.o ../OOP-qt/Validator.cpp
+
+VictimFile.o: ../OOP-qt/VictimFile.cpp ../OOP-qt/VictimFile.h \
+		../OOP-qt/Validator.h \
+		../OOP-qt/Exception.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o VictimFile.o ../OOP-qt/VictimFile.cpp
+
+VictimFileService.o: ../OOP-qt/VictimFileService.cpp ../OOP-qt/VictimFileService.h \
+		../OOP-qt/FileRepository.h \
+		../OOP-qt/Repository.h \
+		../OOP-qt/Exception.h \
+		../OOP-qt/VictimFile.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o VictimFileService.o ../OOP-qt/VictimFileService.cpp
 
 main.o: ../OOP-qt/main.cpp /home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/QApplication \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qapplication.h \
@@ -1424,8 +1418,8 @@ main.o: ../OOP-qt/main.cpp /home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/QApplic
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qlayout.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qlayoutitem.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qgridlayout.h \
-		../OOP-qt/genesgui.h \
-		../OOP-qt/gene.h \
+		../OOP-qt/GUI.h \
+		../OOP-qt/VictimFile.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/QListWidget \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qlistwidget.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qlistview.h \
@@ -1463,7 +1457,6 @@ main.o: ../OOP-qt/main.cpp /home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/QApplic
 		../OOP-qt/FileRepository.h \
 		../OOP-qt/Repository.h \
 		../OOP-qt/Exception.h \
-		../OOP-qt/VictimFile.h \
 		../OOP-qt/Mode.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../OOP-qt/main.cpp
 
@@ -1595,8 +1588,8 @@ mainwindow.o: ../OOP-qt/mainwindow.cpp ../OOP-qt/mainwindow.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../OOP-qt/mainwindow.cpp
 
-moc_genesgui.o: moc_genesgui.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_genesgui.o moc_genesgui.cpp
+moc_GUI.o: moc_GUI.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_GUI.o moc_GUI.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
