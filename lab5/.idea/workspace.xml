@@ -12,64 +12,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ec0175d-338b-4c92-9f38-fe25323df76d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../lab6_reloaded/data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab6_reloaded/Exception.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab6_reloaded/FileSaver.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab6_reloaded/FileSaver.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab6_reloaded/MockRepository.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab6_reloaded/MockRepository.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab6_reloaded/Validator.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab6_reloaded/Validator.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_e64f6.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_e64f6.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_e64f6.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_e64f6.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_e64f6.dir/feature_tests.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_e64f6.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_e64f6.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_e64f6.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeTmp/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/model/VictimFile.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/model/VictimFile.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/service/VictimFileService.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/service/VictimFileService.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/test/Test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/test/Test.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/ui/Scanner.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lab5.dir/ui/Scanner.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lab5" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lab5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lab5.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lab5.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/VictimFile.h" beforeDir="false" afterPath="$PROJECT_DIR$/model/VictimFile.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/repo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/repository/FileRepository.h" beforeDir="false" afterPath="$PROJECT_DIR$/repository/FileRepository.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/repository/Repository.h" beforeDir="false" afterPath="$PROJECT_DIR$/repository/Repository.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/VictimFileService.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/service/VictimFileService.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/VictimFileService.h" beforeDir="false" afterPath="$PROJECT_DIR$/service/VictimFileService.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/Test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test.h" beforeDir="false" afterPath="$PROJECT_DIR$/test/Test.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab6_reloaded/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/Scanner.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/Scanner.gcda" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/Scanner.gcno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/Scanner.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/Test.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/Test.gcda" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/Test.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/Test.gcno" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/Test.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/Test.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/VictimFile.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/VictimFile.gcda" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/VictimFile.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/VictimFile.gcno" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/VictimFile.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/VictimFile.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/VictimFileService.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/VictimFileService.gcda" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/VictimFileService.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/VictimFileService.gcno" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/VictimFileService.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/VictimFileService.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/main.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/main.gcda" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/main.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/main.gcno" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/lab6_reloaded.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/FileRepository.h" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/FileRepository.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab6_reloaded/Scanner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/Scanner.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab6_reloaded/Scanner.h" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/Scanner.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/cmake-build-debug/CMakeFiles/lab6_reloaded.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/cmake-build-debug/CMakeFiles/lab6_reloaded.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/cmake-build-debug/CMakeFiles/lab6_reloaded.dir/Scanner.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/cmake-build-debug/CMakeFiles/lab6_reloaded.dir/Scanner.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/cmake-build-debug/CMakeFiles/lab6_reloaded.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/cmake-build-debug/CMakeFiles/lab6_reloaded.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/cmake-build-debug/CMakeFiles/lab6_reloaded.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/cmake-build-debug/CMakeFiles/lab6_reloaded.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/cmake-build-debug/CMakeFiles/lab6_reloaded.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/cmake-build-debug/CMakeFiles/lab6_reloaded.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/cmake-build-debug/lab6_reloaded" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/cmake-build-debug/lab6_reloaded" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/Test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/Test.h" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/Test.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/VictimFile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/VictimFile.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/VictimFileService.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/VictimFileService.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/lab6_reloaded" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/lab6_reloaded" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6_reloaded/lab6_reloaded.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/lab6_reloaded.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab6_reloaded/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6_reloaded/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/CSVPlaylist.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/CSVPlaylist.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/Controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/Controller.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/PlayList.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/PlayList.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/Repository.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/Repository.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/Song.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/Song.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/Songs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/Songs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/UI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/UI.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/UI.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/UI.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/UndoAction.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/UndoAction.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/UndoAction.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/UndoAction.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/UndoAdd.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/UndoAdd.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/UndoAdd.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/UndoAdd.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/UndoRemove.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/UndoRemove.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/UndoRemove.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/UndoRemove.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem5/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sem5/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,91 +115,24 @@
     <favorites_list name="lab5" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/Scanner.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="40" column="29" lean-forward="true" selection-start-line="13" selection-end-line="40" selection-end-column="29" />
-              <folding>
-                <element signature="e#85#102#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/Scanner.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-              <folding>
-                <element signature="e#38#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/VictimFileService.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="56" selection-end-column="21" />
-              <folding>
-                <element signature="e#38#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/Test.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/Test.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="98" column="63" lean-forward="true" selection-start-line="94" selection-start-column="3" selection-end-line="98" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repository/FileRepository.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+            <state relative-caret-position="559">
+              <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
               <folding>
                 <element signature="e#99#116#0" expanded="true" />
-                <element signature="e#205#229#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/VictimFileService.h">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/Test.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-270">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#106#138#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="372">
+              <caret line="45" column="86" selection-start-line="37" selection-start-column="4" selection-end-line="45" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -241,15 +189,15 @@
         <option value="$PROJECT_DIR$/testInput.txt" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/test/Test.h" />
-        <option value="$PROJECT_DIR$/repository/Repository.h" />
         <option value="$PROJECT_DIR$/service/VictimFileService.h" />
         <option value="$PROJECT_DIR$/ui/Scanner.h" />
         <option value="$PROJECT_DIR$/model/VictimFile.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/service/VictimFileService.cpp" />
         <option value="$PROJECT_DIR$/model/VictimFile.h" />
-        <option value="$PROJECT_DIR$/repository/FileRepository.h" />
         <option value="$PROJECT_DIR$/test/Test.cpp" />
+        <option value="$PROJECT_DIR$/repository/FileRepository.h" />
+        <option value="$PROJECT_DIR$/repository/Repository.h" />
       </list>
     </option>
   </component>
@@ -268,6 +216,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -304,7 +253,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -455,11 +403,16 @@
       <workItem from="1555417876732" duration="5491000" />
       <workItem from="1555487130362" duration="3728000" />
       <workItem from="1555514511519" duration="7297000" />
+      <workItem from="1555923672916" duration="195000" />
+      <workItem from="1556001286251" duration="253000" />
+      <workItem from="1556168471122" duration="582000" />
+      <workItem from="1556194533689" duration="1547000" />
+      <workItem from="1556261415115" duration="614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77176000" />
+    <option name="totallyTimeSpent" value="80367000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -472,8 +425,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="-1" width="1366" height="768" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49642858" visible="true" weight="0.23030303" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49642858" visible="true" weight="0.24545455" />
       <window_info id="Structure" order="1" sideWeight="0.50357145" side_tool="true" weight="0.20170757" />
       <window_info id="Favorites" order="2" sideWeight="0.50247526" side_tool="true" weight="0.108333334" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -484,7 +438,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3294979" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32217574" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32489452" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.38509318" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
@@ -523,11 +477,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>6</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/model/VictimFile.cpp</url>
           <line>29</line>
@@ -756,13 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repository/Repository.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="51" column="3" lean-forward="true" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/VictimFile.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -804,17 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repository/FileRepository.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding>
-            <element signature="e#99#116#0" expanded="true" />
-            <element signature="e#205#229#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/Test.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -822,16 +753,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Test.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="98" column="63" lean-forward="true" selection-start-line="94" selection-start-column="3" selection-end-line="98" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/VictimFileService.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
+        <state relative-caret-position="126">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#106#138#0" expanded="true" />
@@ -841,8 +765,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/service/VictimFileService.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="870">
           <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="56" selection-end-column="21" />
+          <folding>
+            <element signature="e#38#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/Scanner.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           <folding>
             <element signature="e#38#57#0" expanded="true" />
           </folding>
@@ -851,28 +785,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/Scanner.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="40" column="29" lean-forward="true" selection-start-line="13" selection-end-line="40" selection-end-column="29" />
+        <state relative-caret-position="694">
+          <caret line="40" column="29" selection-start-line="13" selection-end-line="40" selection-end-column="29" />
           <folding>
             <element signature="e#85#102#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui/Scanner.cpp">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        <state relative-caret-position="126">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/Repository.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="20" />
           <folding>
-            <element signature="e#38#57#0" expanded="true" />
+            <element signature="e#98#115#0" expanded="true" />
+            <element signature="e#147#171#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/repository/FileRepository.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="559">
+          <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
+          <folding>
+            <element signature="e#99#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Test.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="45" column="86" selection-start-line="37" selection-start-column="4" selection-end-line="45" selection-end-column="86" />
         </state>
       </provider>
     </entry>

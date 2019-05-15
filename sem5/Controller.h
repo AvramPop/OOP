@@ -2,7 +2,9 @@
 #include "Repository.h"
 #include "FilePlaylist.h"
 #include "SongValidator.h"
+#include "UndoAction.h"
 #include <memory>
+#include <vector>
 
 class Controller
 {
@@ -10,6 +12,7 @@ private:
 	Repository repo;
 	FilePlaylist* playList;
 	SongValidator validator;
+    std::vector<std::unique_ptr<UndoAction>> undoHistory;
 
 public:
 	Controller(const Repository& r, FilePlaylist* p, SongValidator v) : repo{ r }, playList{ p }, validator{ v } {}
@@ -26,6 +29,8 @@ public:
 	void addSongToRepository(const std::string& artist, const std::string& title, double minutes, double seconds, const std::string& source);
 
 	void removeSongFromRepository(const std::string& artist, const std::string& title);
+
+	void undo();
 
 	/*
 		Adds a given song to the current playlist.

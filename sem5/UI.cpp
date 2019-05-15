@@ -19,6 +19,7 @@ void UI::printRepositoryMenu()
 	cout << "\t 1 - Add song." << endl;
 	cout << "\t 2 - Remove song." << endl;
 	cout << "\t 3 - Display all." << endl;
+    cout << "\t 4 - Undo." << endl;
 	cout << "\t 0 - Back." << endl;
 }
 
@@ -196,6 +197,9 @@ void UI::run()
 				case 3:
 					this->displayAllSongsRepo();
 					break;
+                case 4:
+                    this->undoRepo();
+                    break;
 				}
 			}			
 		}
@@ -258,4 +262,12 @@ void UI::run()
 			}
 		}
 	}
+}
+
+void UI::undoRepo(){
+    try{
+        this->ctrl.undo();
+    } catch(exception& e){
+        cout << "Nothing to undo!\n";
+    }
 }

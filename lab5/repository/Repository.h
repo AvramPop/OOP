@@ -1,40 +1,37 @@
 ////
 //// Created by dani on 4/15/19.
 ////
-//
-//#ifndef LAB5_REPOSITORY_H
-//#define LAB5_REPOSITORY_H
-//
-//
-//#include <vector>
-//#include <algorithm>
-//
-//template <typename TemplateClass>
-//class Repository {
-//private:
-//    int indexOfElement(TemplateClass element);
-//protected:
-//    vector<TemplateClass> buffer;
-//public:
-//    virtual void add(TemplateClass& element);
-//
-//    virtual vector<TemplateClass> getList();
-//
-//    virtual bool containsElement(TemplateClass element);
-//
-//    virtual void remove(TemplateClass element);
-//
-//    virtual void update(TemplateClass element);
-//
-//    virtual int getSize();
-//
-//    virtual TemplateClass& operator[](int index);
-//
-//    virtual TemplateClass& at(int index);
-//
-//    virtual ~Repository(){};
-//
-//};
+
+#ifndef LAB5_REPOSITORY_H
+#define LAB5_REPOSITORY_H
+
+
+#include <vector>
+#include <algorithm>
+
+template <typename TemplateClass>
+class Repository {
+protected:
+    virtual int indexOfElement(TemplateClass element) = 0;
+    std::vector<TemplateClass> buffer;
+public:
+    virtual void add(TemplateClass& element) = 0;
+
+    virtual std::vector<TemplateClass> getList() = 0;
+
+    virtual bool containsElement(TemplateClass element) = 0;
+
+    virtual void remove(TemplateClass element) = 0;
+
+    virtual void update(TemplateClass element) = 0;
+
+    virtual int getSize() = 0;
+
+    virtual TemplateClass& at(int index) = 0;
+
+    virtual ~Repository(){};
+
+};
 //
 //template <typename TemplateClass>
 //void Repository<TemplateClass>::add(TemplateClass& element){
@@ -42,7 +39,7 @@
 //}
 //
 //template <typename TemplateClass>
-//vector<TemplateClass> Repository<TemplateClass>::getList(){
+//std::vector<TemplateClass> Repository<TemplateClass>::getList(){
 //    return buffer;
 //}
 //
@@ -86,7 +83,7 @@
 //    if(index < getSize()){
 //        return buffer[index];
 //    }
-//    throw exception();
+//    throw std::exception();
 //}
 //
 //template<typename TemplateClass>
@@ -94,8 +91,8 @@
 //    if(index < getSize()){
 //        return buffer[index];
 //    }
-//    throw exception();
+//    throw std::exception();
 //}
-//
-//
-//#endif //LAB5_REPOSITORY_H
+
+
+#endif //LAB5_REPOSITORY_H

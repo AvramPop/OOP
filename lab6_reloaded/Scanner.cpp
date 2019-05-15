@@ -184,7 +184,7 @@ void Scanner::mylistModeB(){
         command += "gedit ";
         command += myListLocation;
     } else if(extension == "html"){
-        command += "timeout 4 chromium-browser ";
+        command += "timeout 15 chromium-browser ";
         command += myListLocation;
     } else if(extension == "csv"){
         command += "gedit ";

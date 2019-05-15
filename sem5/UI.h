@@ -22,5 +22,7 @@ private:
 	void addSongToPlaylist();
 	void addAllSongsByArtistToPlaylist();
 	void savePlaylistToFile();
+
+    void undoRepo();
 };
 

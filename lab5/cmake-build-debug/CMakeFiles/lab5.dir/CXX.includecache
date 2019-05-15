@@ -10,6 +10,10 @@
 ui/Scanner.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.h
 
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/Mode.cpp
+Mode.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/Mode.h
+
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/Mode.h
 string
 -
@@ -39,6 +43,14 @@ vector
 -
 algorithm
 -
+Repository.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/Repository.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/Repository.h
+vector
+-
+algorithm
+-
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.cpp
 iostream
@@ -53,6 +65,24 @@ VictimFileService.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/FileRepository.h
 vector
 -
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.cpp
+iostream
+-
+assert.h
+-
+Test.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.h
+../model/VictimFile.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/model/VictimFile.h
+../repository/DynamicVector.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/repository/DynamicVector.h
+../service/VictimFileService.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/service/VictimFileService.h
+algorithm
+-
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/test/Test.h
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab5/ui/Scanner.cpp
 iostream

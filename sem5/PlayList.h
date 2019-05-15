@@ -15,7 +15,7 @@ public:
 	void add(const Song& song);
 
 	// Returns the song that is currently playing.
-	Song PlayList::getCurrentSong();
+	Song getCurrentSong();
 
 	// Starts the playlist - plays the first song.
 	void play();

@@ -1,6 +1,7 @@
 #include "Repository.h"
 #include <string>
 #include <fstream>
+#include <algorithm>
 #include "Utils.h"
 #include "RepositoryExceptions.h"
 

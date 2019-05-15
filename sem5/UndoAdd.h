@@ -6,11 +6,18 @@
 #define SEM5_UNDOADD_H
 
 
+#include "Song.h"
+#include "Repository.h"
+#include "UndoAction.h"
 
-class UndoAdd {
+class UndoAdd : public UndoAction{
+    void executeUndo() override;
 
+public:
+    UndoAdd(Repository &repository, const Song &song);
+
+    virtual ~UndoAdd();
 };
-
 
 
 #endif //SEM5_UNDOADD_H

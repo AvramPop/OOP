@@ -3,3 +3,9 @@
 //
 
 #include "UndoAction.h"
+
+UndoAction::UndoAction(Repository &repository, const Song &song) : repository(repository), song(song){}
+
+UndoAction::~UndoAction(){
+
+}

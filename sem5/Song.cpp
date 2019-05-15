@@ -1,6 +1,6 @@
 #include "Song.h"
-#include <Windows.h>
-#include <shellapi.h>
+//#include <Windows.h>
+//#include <shellapi.h>
 #include "Utils.h"
 #include <iostream>
 #include <vector>
@@ -24,7 +24,7 @@ bool Song::operator==(const Song & s)
 
 void Song::play()
 {
-	ShellExecuteA(NULL, NULL, "chrome.exe", this->getSource().c_str(), NULL, SW_SHOWMAXIMIZED);
+	//ShellExecuteA(NULL, NULL, "chrome.exe", this->getSource().c_str(), NULL, SW_SHOWMAXIMIZED);
 }
 
 istream & operator>>(istream & is, Song & s)
