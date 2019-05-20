@@ -21,9 +21,11 @@ class GUI: public QWidget
 public:
     GUI(unique_ptr<VictimFileService> victimFileService, QWidget *parent = 0);
     ~GUI();
+    //int* currentSelected;
 
 private:
     unique_ptr<VictimFileService> victimFileService;
+
     QListWidget* victimFilesList;
     QListWidget* transferList;
     QLineEdit* nameEdit;

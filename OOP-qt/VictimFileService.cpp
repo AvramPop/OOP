@@ -62,6 +62,7 @@ VictimFileService &VictimFileService::operator=(const VictimFileService &victimF
 VictimFileService::VictimFileService(){}
 
 VictimFileService::VictimFileService(unique_ptr<Repository<VictimFile>> repository){
+    currentSelected = 0;
     this->repository = std::move(repository);
 }
 

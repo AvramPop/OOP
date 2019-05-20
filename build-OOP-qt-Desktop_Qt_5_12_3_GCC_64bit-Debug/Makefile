@@ -83,6 +83,7 @@ OBJECTS       = Exception.o \
 		moc_mainwindow.o
 DIST          = ../OOP-qt/data.txt \
 		../OOP-qt/temp.txt \
+		../OOP-qt/transfer.csv \
 		/home/dani/Qt/5.12.3/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/dani/Qt/5.12.3/gcc_64/mkspecs/common/unix.conf \
 		/home/dani/Qt/5.12.3/gcc_64/mkspecs/common/linux.conf \
@@ -903,6 +904,11 @@ moc_GUI.cpp: ../OOP-qt/GUI.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/QLabel \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qlabel.h \
+		../OOP-qt/VictimFileService.h \
+		../OOP-qt/FileRepository.h \
+		../OOP-qt/Repository.h \
+		../OOP-qt/Exception.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/QVector \
 		moc_predefs.h \
 		/home/dani/Qt/5.12.3/gcc_64/bin/moc
 	/home/dani/Qt/5.12.3/gcc_64/bin/moc $(DEFINES) --include /home/dani/Desktop/code/faculta/an1/sem2/OOP/build-OOP-qt-Desktop_Qt_5_12_3_GCC_64bit-Debug/moc_predefs.h -I/home/dani/Qt/5.12.3/gcc_64/mkspecs/linux-g++ -I/home/dani/Desktop/code/faculta/an1/sem2/OOP/OOP-qt -I/home/dani/Qt/5.12.3/gcc_64/include -I/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets -I/home/dani/Qt/5.12.3/gcc_64/include/QtGui -I/home/dani/Qt/5.12.3/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../OOP-qt/GUI.h -o moc_GUI.cpp
@@ -1048,7 +1054,9 @@ FileRepository.o: ../OOP-qt/FileRepository.cpp
 FileSaver.o: ../OOP-qt/FileSaver.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o FileSaver.o ../OOP-qt/FileSaver.cpp
 
-GUI.o: ../OOP-qt/GUI.cpp ../OOP-qt/GUI.h \
+GUI.o: ../OOP-qt/GUI.cpp ../OOP-qt/FileSaver.h \
+		../OOP-qt/VictimFile.h \
+		../OOP-qt/GUI.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qwidget.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtGui/qtguiglobal.h \
@@ -1151,7 +1159,6 @@ GUI.o: ../OOP-qt/GUI.cpp ../OOP-qt/GUI.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/qfiledevice.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtGui/qvector2d.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtGui/qtouchdevice.h \
-		../OOP-qt/VictimFile.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/QListWidget \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qlistwidget.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qlistview.h \
@@ -1193,6 +1200,11 @@ GUI.o: ../OOP-qt/GUI.cpp ../OOP-qt/GUI.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/QLabel \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qlabel.h \
+		../OOP-qt/VictimFileService.h \
+		../OOP-qt/FileRepository.h \
+		../OOP-qt/Repository.h \
+		../OOP-qt/Exception.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/QVector \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o GUI.o ../OOP-qt/GUI.cpp
 
@@ -1452,11 +1464,12 @@ main.o: ../OOP-qt/main.cpp /home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/QApplic
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qabstractbutton.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/QLabel \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qlabel.h \
-		../OOP-qt/Scanner.h \
 		../OOP-qt/VictimFileService.h \
 		../OOP-qt/FileRepository.h \
 		../OOP-qt/Repository.h \
 		../OOP-qt/Exception.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/QVector \
+		../OOP-qt/Scanner.h \
 		../OOP-qt/Mode.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../OOP-qt/main.cpp
 

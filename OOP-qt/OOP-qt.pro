@@ -65,4 +65,5 @@ RESOURCES +=
 
 DISTFILES += \
     data.txt \
-    temp.txt
+    temp.txt \
+    transfer.csv

@@ -14,12 +14,18 @@ class VictimFileService {
 private:
     std::unique_ptr<Repository<VictimFile>> repository;
     vector<VictimFile> transferList;
+    int currentSelected;
+    std::string transferListLocation;
 public:
     VictimFileService(const VictimFileService& victimFileService);
     VictimFileService(unique_ptr<Repository<VictimFile>> repository);
     /**
      * Get repository size.
      */
+    void setTransferListLocation(std::string location) {transferListLocation = location;}
+    std::string getTransferListLocation(){return transferListLocation;}
+    int getCurrentSelected() {return currentSelected;}
+    void nextSelected() {currentSelected++; if(currentSelected == transferList.size()) currentSelected = 0;}
     int getRepositorySize();
     /**
      * Add victim file to repository.
