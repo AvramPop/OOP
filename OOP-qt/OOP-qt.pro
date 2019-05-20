@@ -29,6 +29,7 @@ SOURCES += \
         FileRepository.cpp \
         FileSaver.cpp \
         GUI.cpp \
+        InMemoryRepository.cpp \
         MockRepository.cpp \
         Mode.cpp \
         Repository.cpp \
@@ -44,6 +45,7 @@ HEADERS += \
         FileRepository.h \
         FileSaver.h \
         GUI.h \
+        InMemoryRepository.h \
         MockRepository.h \
         Mode.h \
         Repository.h \
@@ -64,6 +66,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES +=
 
 DISTFILES += \
+    conf.in \
     data.txt \
     temp.txt \
     transfer.csv

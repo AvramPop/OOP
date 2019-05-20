@@ -56,6 +56,7 @@ SOURCES       = ../OOP-qt/Exception.cpp \
 		../OOP-qt/FileRepository.cpp \
 		../OOP-qt/FileSaver.cpp \
 		../OOP-qt/GUI.cpp \
+		../OOP-qt/InMemoryRepository.cpp \
 		../OOP-qt/MockRepository.cpp \
 		../OOP-qt/Mode.cpp \
 		../OOP-qt/Repository.cpp \
@@ -70,6 +71,7 @@ OBJECTS       = Exception.o \
 		FileRepository.o \
 		FileSaver.o \
 		GUI.o \
+		InMemoryRepository.o \
 		MockRepository.o \
 		Mode.o \
 		Repository.o \
@@ -81,7 +83,8 @@ OBJECTS       = Exception.o \
 		mainwindow.o \
 		moc_GUI.o \
 		moc_mainwindow.o
-DIST          = ../OOP-qt/data.txt \
+DIST          = ../OOP-qt/conf.in \
+		../OOP-qt/data.txt \
 		../OOP-qt/temp.txt \
 		../OOP-qt/transfer.csv \
 		/home/dani/Qt/5.12.3/gcc_64/mkspecs/features/spec_pre.prf \
@@ -281,6 +284,7 @@ DIST          = ../OOP-qt/data.txt \
 		../OOP-qt/FileRepository.h \
 		../OOP-qt/FileSaver.h \
 		../OOP-qt/GUI.h \
+		../OOP-qt/InMemoryRepository.h \
 		../OOP-qt/MockRepository.h \
 		../OOP-qt/Mode.h \
 		../OOP-qt/Repository.h \
@@ -292,6 +296,7 @@ DIST          = ../OOP-qt/data.txt \
 		../OOP-qt/FileRepository.cpp \
 		../OOP-qt/FileSaver.cpp \
 		../OOP-qt/GUI.cpp \
+		../OOP-qt/InMemoryRepository.cpp \
 		../OOP-qt/MockRepository.cpp \
 		../OOP-qt/Mode.cpp \
 		../OOP-qt/Repository.cpp \
@@ -722,8 +727,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /home/dani/Qt/5.12.3/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../OOP-qt/Exception.h ../OOP-qt/FileRepository.h ../OOP-qt/FileSaver.h ../OOP-qt/GUI.h ../OOP-qt/MockRepository.h ../OOP-qt/Mode.h ../OOP-qt/Repository.h ../OOP-qt/Scanner.h ../OOP-qt/Validator.h ../OOP-qt/VictimFile.h ../OOP-qt/VictimFileService.h ../OOP-qt/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../OOP-qt/Exception.cpp ../OOP-qt/FileRepository.cpp ../OOP-qt/FileSaver.cpp ../OOP-qt/GUI.cpp ../OOP-qt/MockRepository.cpp ../OOP-qt/Mode.cpp ../OOP-qt/Repository.cpp ../OOP-qt/Scanner.cpp ../OOP-qt/Validator.cpp ../OOP-qt/VictimFile.cpp ../OOP-qt/VictimFileService.cpp ../OOP-qt/main.cpp ../OOP-qt/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../OOP-qt/Exception.h ../OOP-qt/FileRepository.h ../OOP-qt/FileSaver.h ../OOP-qt/GUI.h ../OOP-qt/InMemoryRepository.h ../OOP-qt/MockRepository.h ../OOP-qt/Mode.h ../OOP-qt/Repository.h ../OOP-qt/Scanner.h ../OOP-qt/Validator.h ../OOP-qt/VictimFile.h ../OOP-qt/VictimFileService.h ../OOP-qt/mainwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../OOP-qt/Exception.cpp ../OOP-qt/FileRepository.cpp ../OOP-qt/FileSaver.cpp ../OOP-qt/GUI.cpp ../OOP-qt/InMemoryRepository.cpp ../OOP-qt/MockRepository.cpp ../OOP-qt/Mode.cpp ../OOP-qt/Repository.cpp ../OOP-qt/Scanner.cpp ../OOP-qt/Validator.cpp ../OOP-qt/VictimFile.cpp ../OOP-qt/VictimFileService.cpp ../OOP-qt/main.cpp ../OOP-qt/mainwindow.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../OOP-qt/mainwindow.ui $(DISTDIR)/
 
 
@@ -1205,8 +1210,17 @@ GUI.o: ../OOP-qt/GUI.cpp ../OOP-qt/FileSaver.h \
 		../OOP-qt/Repository.h \
 		../OOP-qt/Exception.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/QVector \
-		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/QDebug
+		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/QDebug \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/QMessageBox \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qmessagebox.h \
+		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o GUI.o ../OOP-qt/GUI.cpp
+
+InMemoryRepository.o: ../OOP-qt/InMemoryRepository.cpp ../OOP-qt/InMemoryRepository.h \
+		../OOP-qt/Exception.h \
+		../OOP-qt/VictimFile.h \
+		../OOP-qt/Repository.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o InMemoryRepository.o ../OOP-qt/InMemoryRepository.cpp
 
 MockRepository.o: ../OOP-qt/MockRepository.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o MockRepository.o ../OOP-qt/MockRepository.cpp
