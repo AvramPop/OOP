@@ -6,7 +6,7 @@
 #define LAB6_RELOADED_EXCEPTION_H
 
 
-#include <bits/exception.h>
+#include <exception>
 
 class RepositoryException : public std::exception {};
 class ValidatorException : public std::exception {};

@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_GUI_t {
-    QByteArrayData data[1];
-    char stringdata0[4];
+    QByteArrayData data[22];
+    char stringdata0[365];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -31,10 +31,41 @@ struct qt_meta_stringdata_GUI_t {
     )
 static const qt_meta_stringdata_GUI_t qt_meta_stringdata_GUI = {
     {
-QT_MOC_LITERAL(0, 0, 3) // "GUI"
+QT_MOC_LITERAL(0, 0, 3), // "GUI"
+QT_MOC_LITERAL(1, 4, 24), // "victimFilesUpdatedSignal"
+QT_MOC_LITERAL(2, 29, 0), // ""
+QT_MOC_LITERAL(3, 30, 19), // "addVictimFileSignal"
+QT_MOC_LITERAL(4, 50, 11), // "std::string"
+QT_MOC_LITERAL(5, 62, 14), // "victimFileName"
+QT_MOC_LITERAL(6, 77, 15), // "victimFilePlace"
+QT_MOC_LITERAL(7, 93, 13), // "victimFileAge"
+QT_MOC_LITERAL(8, 107, 15), // "victimFilePhoto"
+QT_MOC_LITERAL(9, 123, 22), // "deleteVictimFileSignal"
+QT_MOC_LITERAL(10, 146, 22), // "updateVictimFileSignal"
+QT_MOC_LITERAL(11, 169, 20), // "saveVictimFileSignal"
+QT_MOC_LITERAL(12, 190, 20), // "nextVictimFileSignal"
+QT_MOC_LITERAL(13, 211, 22), // "filterVictimFileSignal"
+QT_MOC_LITERAL(14, 234, 20), // "openVictimFileSignal"
+QT_MOC_LITERAL(15, 255, 13), // "addVictimFile"
+QT_MOC_LITERAL(16, 269, 16), // "deleteVictimFile"
+QT_MOC_LITERAL(17, 286, 16), // "updateVictimFile"
+QT_MOC_LITERAL(18, 303, 14), // "saveVictimFile"
+QT_MOC_LITERAL(19, 318, 14), // "nextVictimFile"
+QT_MOC_LITERAL(20, 333, 16), // "filterVictimFile"
+QT_MOC_LITERAL(21, 350, 14) // "openVictimFile"
 
     },
-    "GUI"
+    "GUI\0victimFilesUpdatedSignal\0\0"
+    "addVictimFileSignal\0std::string\0"
+    "victimFileName\0victimFilePlace\0"
+    "victimFileAge\0victimFilePhoto\0"
+    "deleteVictimFileSignal\0updateVictimFileSignal\0"
+    "saveVictimFileSignal\0nextVictimFileSignal\0"
+    "filterVictimFileSignal\0openVictimFileSignal\0"
+    "addVictimFile\0deleteVictimFile\0"
+    "updateVictimFile\0saveVictimFile\0"
+    "nextVictimFile\0filterVictimFile\0"
+    "openVictimFile"
 };
 #undef QT_MOC_LITERAL
 
@@ -44,22 +75,136 @@ static const uint qt_meta_data_GUI[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       0,    0, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       0,       // signalCount
+       8,       // signalCount
+
+ // signals: name, argc, parameters, tag, flags
+       1,    0,   89,    2, 0x06 /* Public */,
+       3,    4,   90,    2, 0x06 /* Public */,
+       9,    4,   99,    2, 0x06 /* Public */,
+      10,    4,  108,    2, 0x06 /* Public */,
+      11,    4,  117,    2, 0x06 /* Public */,
+      12,    4,  126,    2, 0x06 /* Public */,
+      13,    4,  135,    2, 0x06 /* Public */,
+      14,    4,  144,    2, 0x06 /* Public */,
+
+ // slots: name, argc, parameters, tag, flags
+      15,    4,  153,    2, 0x0a /* Public */,
+      16,    4,  162,    2, 0x0a /* Public */,
+      17,    4,  171,    2, 0x0a /* Public */,
+      18,    4,  180,    2, 0x0a /* Public */,
+      19,    4,  189,    2, 0x0a /* Public */,
+      20,    4,  198,    2, 0x0a /* Public */,
+      21,    4,  207,    2, 0x0a /* Public */,
+
+ // signals: parameters
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 4, QMetaType::Int, 0x80000000 | 4,    5,    6,    7,    8,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 4, QMetaType::Int, 0x80000000 | 4,    5,    6,    7,    8,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 4, QMetaType::Int, 0x80000000 | 4,    5,    6,    7,    8,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 4, QMetaType::Int, 0x80000000 | 4,    5,    6,    7,    8,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 4, QMetaType::Int, 0x80000000 | 4,    5,    6,    7,    8,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 4, QMetaType::Int, 0x80000000 | 4,    5,    6,    7,    8,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 4, QMetaType::Int, 0x80000000 | 4,    5,    6,    7,    8,
+
+ // slots: parameters
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 4, QMetaType::Int, 0x80000000 | 4,    5,    6,    7,    8,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 4, QMetaType::Int, 0x80000000 | 4,    5,    6,    7,    8,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 4, QMetaType::Int, 0x80000000 | 4,    5,    6,    7,    8,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 4, QMetaType::Int, 0x80000000 | 4,    5,    6,    7,    8,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 4, QMetaType::Int, 0x80000000 | 4,    5,    6,    7,    8,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 4, QMetaType::Int, 0x80000000 | 4,    5,    6,    7,    8,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 4, QMetaType::Int, 0x80000000 | 4,    5,    6,    7,    8,
 
        0        // eod
 };
 
 void GUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    Q_UNUSED(_o);
-    Q_UNUSED(_id);
-    Q_UNUSED(_c);
-    Q_UNUSED(_a);
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        auto *_t = static_cast<GUI *>(_o);
+        Q_UNUSED(_t)
+        switch (_id) {
+        case 0: _t->victimFilesUpdatedSignal(); break;
+        case 1: _t->addVictimFileSignal((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 2: _t->deleteVictimFileSignal((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 3: _t->updateVictimFileSignal((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 4: _t->saveVictimFileSignal((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 5: _t->nextVictimFileSignal((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 6: _t->filterVictimFileSignal((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 7: _t->openVictimFileSignal((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 8: _t->addVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 9: _t->deleteVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 10: _t->updateVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 11: _t->saveVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 12: _t->nextVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 13: _t->filterVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 14: _t->openVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        default: ;
+        }
+    } else if (_c == QMetaObject::IndexOfMethod) {
+        int *result = reinterpret_cast<int *>(_a[0]);
+        {
+            using _t = void (GUI::*)();
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&GUI::victimFilesUpdatedSignal)) {
+                *result = 0;
+                return;
+            }
+        }
+        {
+            using _t = void (GUI::*)(const std::string & , const std::string & , const int , const std::string & );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&GUI::addVictimFileSignal)) {
+                *result = 1;
+                return;
+            }
+        }
+        {
+            using _t = void (GUI::*)(const std::string & , const std::string & , const int , const std::string & );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&GUI::deleteVictimFileSignal)) {
+                *result = 2;
+                return;
+            }
+        }
+        {
+            using _t = void (GUI::*)(const std::string & , const std::string & , const int , const std::string & );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&GUI::updateVictimFileSignal)) {
+                *result = 3;
+                return;
+            }
+        }
+        {
+            using _t = void (GUI::*)(const std::string & , const std::string & , const int , const std::string & );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&GUI::saveVictimFileSignal)) {
+                *result = 4;
+                return;
+            }
+        }
+        {
+            using _t = void (GUI::*)(const std::string & , const std::string & , const int , const std::string & );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&GUI::nextVictimFileSignal)) {
+                *result = 5;
+                return;
+            }
+        }
+        {
+            using _t = void (GUI::*)(const std::string & , const std::string & , const int , const std::string & );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&GUI::filterVictimFileSignal)) {
+                *result = 6;
+                return;
+            }
+        }
+        {
+            using _t = void (GUI::*)(const std::string & , const std::string & , const int , const std::string & );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&GUI::openVictimFileSignal)) {
+                *result = 7;
+                return;
+            }
+        }
+    }
 }
 
 QT_INIT_METAOBJECT const QMetaObject GUI::staticMetaObject = { {
@@ -88,7 +233,73 @@ void *GUI::qt_metacast(const char *_clname)
 int GUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 15)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 15;
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 15)
+            *reinterpret_cast<int*>(_a[0]) = -1;
+        _id -= 15;
+    }
     return _id;
+}
+
+// SIGNAL 0
+void GUI::victimFilesUpdatedSignal()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+}
+
+// SIGNAL 1
+void GUI::addVictimFileSignal(const std::string & _t1, const std::string & _t2, const int _t3, const std::string & _t4)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)), const_cast<void*>(reinterpret_cast<const void*>(&_t4)) };
+    QMetaObject::activate(this, &staticMetaObject, 1, _a);
+}
+
+// SIGNAL 2
+void GUI::deleteVictimFileSignal(const std::string & _t1, const std::string & _t2, const int _t3, const std::string & _t4)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)), const_cast<void*>(reinterpret_cast<const void*>(&_t4)) };
+    QMetaObject::activate(this, &staticMetaObject, 2, _a);
+}
+
+// SIGNAL 3
+void GUI::updateVictimFileSignal(const std::string & _t1, const std::string & _t2, const int _t3, const std::string & _t4)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)), const_cast<void*>(reinterpret_cast<const void*>(&_t4)) };
+    QMetaObject::activate(this, &staticMetaObject, 3, _a);
+}
+
+// SIGNAL 4
+void GUI::saveVictimFileSignal(const std::string & _t1, const std::string & _t2, const int _t3, const std::string & _t4)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)), const_cast<void*>(reinterpret_cast<const void*>(&_t4)) };
+    QMetaObject::activate(this, &staticMetaObject, 4, _a);
+}
+
+// SIGNAL 5
+void GUI::nextVictimFileSignal(const std::string & _t1, const std::string & _t2, const int _t3, const std::string & _t4)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)), const_cast<void*>(reinterpret_cast<const void*>(&_t4)) };
+    QMetaObject::activate(this, &staticMetaObject, 5, _a);
+}
+
+// SIGNAL 6
+void GUI::filterVictimFileSignal(const std::string & _t1, const std::string & _t2, const int _t3, const std::string & _t4)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)), const_cast<void*>(reinterpret_cast<const void*>(&_t4)) };
+    QMetaObject::activate(this, &staticMetaObject, 6, _a);
+}
+
+// SIGNAL 7
+void GUI::openVictimFileSignal(const std::string & _t1, const std::string & _t2, const int _t3, const std::string & _t4)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)), const_cast<void*>(reinterpret_cast<const void*>(&_t4)) };
+    QMetaObject::activate(this, &staticMetaObject, 7, _a);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

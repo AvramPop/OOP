@@ -7,7 +7,7 @@
 #IncludeRegexTransform: 
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Exception.h
-bits/exception.h
+exception
 -
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/FileRepository.h
@@ -31,6 +31,20 @@ fstream
 -
 VictimFile.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/MockRepository.cpp
+MockRepository.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/MockRepository.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/MockRepository.h
+vector
+-
+Exception.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Exception.h
+VictimFile.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
+Repository.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Repository.h
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Mode.h
 string
@@ -60,9 +74,63 @@ VictimFileService.h
 Mode.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Mode.h
 
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Test.cpp
+Test.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Test.h
+VictimFile.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
+FileRepository.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/FileRepository.h
+Mode.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Mode.h
+fstream
+-
+assert.h
+-
+iostream
+-
+MockRepository.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/MockRepository.h
+sstream
+-
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Test.h
+VictimFile.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
+VictimFileService.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFileService.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Validator.cpp
+algorithm
+-
+Validator.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Validator.h
+Exception.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Exception.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Validator.h
+VictimFile.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.cpp
+algorithm
+-
+VictimFile.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
+Validator.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Validator.h
+Exception.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Exception.h
+fstream
+-
+
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
 string
 -
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFileService.cpp
+VictimFileService.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFileService.h
 
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFileService.h
 FileRepository.h
@@ -71,4 +139,12 @@ VictimFile.h
 /home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/VictimFile.h
 memory
 -
+
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/main.cpp
+iostream
+-
+Test.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Test.h
+Scanner.h
+/home/dani/Desktop/code/faculta/an1/sem2/OOP/lab6_reloaded/Scanner.h
 

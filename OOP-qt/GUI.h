@@ -11,17 +11,19 @@
 #include <QTextEdit>
 #include <QPushButton>
 #include <QLabel>
+#include "VictimFileService.h"
 
 class GUI: public QWidget
 {
     Q_OBJECT
 
 public:
-    GUI(std::vector<VictimFile> victimFiles, QWidget *parent = 0);
+    GUI(unique_ptr<VictimFileService> victimFileService, QWidget *parent = 0);
     ~GUI();
 
 private:
-    std::vector<VictimFile> victimFiles;
+    unique_ptr<VictimFileService> victimFileService;
+    //std::vector<VictimFile> victimFiles;
 
     QListWidget* victimFilesList;
     QListWidget* transferList;
@@ -32,28 +34,45 @@ private:
     QPushButton* addButton;
     QPushButton* deleteButton;
     QPushButton* updateButton;
-    QPushButton* moveButton;
+    QPushButton* saveButton;
     QPushButton* nextButton;
     QPushButton* filterButton;
+    QPushButton* openButton;
 
     void initGUI();
-   // int getSelectedIndex();
-  //  void connectSignalsAndSlots();
+    int getSelectedIndex();
+    void connectSignalsAndSlots();
 
     void populateVictimFilesList();
 //    // When an item in the list is clicked, the text boxes get filled with the item's information
-//    void listItemChanged();
+    void listItemChanged();
 
-//    void addGeneButtonHandler();
-//    void deleteGeneButtonHandler();
+    void addVictimFileButtonHandler();
+    void deleteVictimFileButtonHandler();
+    void updateVictimFileButtonHandler();
+    void filterVictimFileButtonHandler();
+    void nextVictimFileButtonHandler();
+    void saveVictimFileButtonHandler();
+    void openVictimFileButtonHandler();
 
-//signals:
-//    void genesUpdatedSignal();
-//    void addGeneSignal(const std::string& geneName, const std::string& organismName, const std::string& sequence);
+signals:
+    void victimFilesUpdatedSignal();
+    void addVictimFileSignal(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
+    void deleteVictimFileSignal(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
+    void updateVictimFileSignal(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
+    void saveVictimFileSignal(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
+    void nextVictimFileSignal(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
+    void filterVictimFileSignal(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
+    void openVictimFileSignal(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
 
-//public slots:
-//    void addGene(const std::string& geneName, const std::string& organismName, const std::string& sequence);
+public slots:
+    void addVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
+    void deleteVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
+    void updateVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
+    void saveVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
+    void nextVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
+    void filterVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
+    void openVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
 };
-
 
 #endif // GENESGUI_H

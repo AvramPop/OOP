@@ -1,15 +1,225 @@
 ﻿#include "GUI.h"
 #include <QDebug>
 
-GUI::GUI(std::vector<VictimFile> victimFiles, QWidget * parent): QWidget{parent}, victimFiles{victimFiles}
+GUI::GUI(unique_ptr<VictimFileService> victimFileService, QWidget * parent): QWidget{parent}
 {
+    this->victimFileService = std::move(victimFileService);
     this->initGUI();
-  //  this->connectSignalsAndSlots();
+    this->connectSignalsAndSlots();
     this->populateVictimFilesList();
 }
 
 GUI::~GUI()
 {
+}
+
+void GUI::connectSignalsAndSlots()
+{
+    // when the vector of genes is updated - re-populate the list
+    //QObject::connect(this, SIGNAL(genesUpdatedSignal()), this, SLOT(populateGenesList()));
+    QObject::connect(this, &GUI::victimFilesUpdatedSignal, this, &GUI::populateVictimFilesList);
+
+    // add a connection: function listItemChanged() will be called when an item in the list is selected
+    QObject::connect(this->victimFilesList, &QListWidget::itemSelectionChanged, this, [this]() {this->listItemChanged(); });
+
+    // add button connections
+    QObject::connect(this->addButton, &QPushButton::clicked, this, &GUI::addVictimFileButtonHandler);
+    QObject::connect(this->deleteButton, &QPushButton::clicked, this, &GUI::deleteVictimFileButtonHandler);
+    QObject::connect(this->updateButton, &QPushButton::clicked, this, &GUI::updateVictimFileButtonHandler);
+    QObject::connect(this->saveButton, &QPushButton::clicked, this, &GUI::saveVictimFileButtonHandler);
+    QObject::connect(this->nextButton, &QPushButton::clicked, this, &GUI::nextVictimFileButtonHandler);
+    QObject::connect(this->filterButton, &QPushButton::clicked, this, &GUI::filterVictimFileButtonHandler);
+    QObject::connect(this->openButton, &QPushButton::clicked, this, &GUI::openVictimFileButtonHandler);
+
+
+    // connect the addGene signal to the addGene slot, which adds a gene to vector
+    QObject::connect(this, SIGNAL(addVictimFileSignal(const std::string&, const std::string&, const int, const std::string&)),
+                        this, SLOT(addVictimFile(const std::string&, const std::string&, const int, const std::string&)));
+    //	QObject::connect(this, SIGNAL(addGeneSignal(const std::string&, const std::string&, const std::string&)),
+  //  this, SLOT(addGene(const std::string&, const std::string&, const std::string&)));
+    QObject::connect(this, SIGNAL(deleteVictimFileSignal(const std::string&, const std::string&, const int, const std::string&)),
+                        this, SLOT(deleteVictimFile(const std::string&, const std::string&, const int, const std::string&)));
+    QObject::connect(this, SIGNAL(updateVictimFileSignal(const std::string&, const std::string&, const int, const std::string&)),
+                        this, SLOT(updateVictimFile(const std::string&, const std::string&, const int, const std::string&)));
+    QObject::connect(this, SIGNAL(saveVictimFileSignal(const std::string&, const std::string&, const int, const std::string&)),
+                        this, SLOT(saveVictimFile(const std::string&, const std::string&, const int, const std::string&)));
+    QObject::connect(this, SIGNAL(nextVictimFileSignal(const std::string&, const std::string&, const int, const std::string&)),
+                        this, SLOT(nextVictimFile(const std::string&, const std::string&, const int, const std::string&)));
+    QObject::connect(this, SIGNAL(filterVictimFileSignal(const std::string&, const std::string&, const int, const std::string&)),
+                        this, SLOT(filterVictimFile(const std::string&, const std::string&, const int, const std::string&)));
+    QObject::connect(this, SIGNAL(openVictimFileSignal(const std::string&, const std::string&, const int, const std::string&)),
+                        this, SLOT(openVictimFile(const std::string&, const std::string&, const int, const std::string&)));
+}
+//done
+void GUI::addVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto)
+{
+   // this->genes.push_back(Gene{ geneName, organismName, sequence });
+   VictimFile newVictimFile(victimFileName, victimFilePlace, victimFileAge, victimFilePhoto);
+    this->victimFileService->addVictimFile(newVictimFile);
+    // emit the signal: the genes were updated
+    emit victimFilesUpdatedSignal();
+}
+
+void GUI::addVictimFileButtonHandler()
+{
+    // read data from the textboxes and add the new gene
+    QString victimFileName = this->nameEdit->text();
+    QString victimFilePlace = this->placeEdit->text();
+    QString victimFileAge = this->ageEdit->text();
+    QString victimFilePhoto = this->fileEdit->text();
+
+    emit addVictimFileSignal(victimFileName.toStdString(), victimFilePlace.toStdString(), std::stoi(victimFileAge.toStdString()), victimFilePhoto.toStdString());
+}
+
+void GUI::deleteVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto)
+{
+   // this->genes.push_back(Gene{ geneName, organismName, sequence });
+//add victim file to controller ++++++++++++++++++++++++++++++++++++++++++++++++
+    // emit the signal: the genes were updated
+    emit victimFilesUpdatedSignal();
+}
+
+void GUI::deleteVictimFileButtonHandler()
+{
+    // get the selected index and delete the gene
+    int idx = this->getSelectedIndex();
+
+    if (idx < 0 || idx >= this->victimFileService->getRepositorySize())
+        return;
+
+   // this->victimFiles.erase(this->genes.begin() + idx);
+    //controller remove victim file at index-----------------------------------------------
+    // emit the signal: the genes were updated
+    emit victimFilesUpdatedSignal();
+}
+
+void GUI::updateVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto)
+{
+   // this->genes.push_back(Gene{ geneName, organismName, sequence });
+//add victim file to controller ++++++++++++++++++++++++++++++++++++++++++++++++
+    // emit the signal: the genes were updated
+    emit victimFilesUpdatedSignal();
+}
+
+void GUI::updateVictimFileButtonHandler()
+{
+    // read data from the textboxes and add the new gene
+    QString victimFileName = this->nameEdit->text();
+    QString victimFilePlace = this->placeEdit->text();
+    QString victimFileAge = this->ageEdit->text();
+    QString victimFilePhoto = this->fileEdit->text();
+
+    emit addVictimFileSignal(victimFileName.toStdString(), victimFilePlace.toStdString(), stoi(victimFileAge.toStdString()), victimFilePhoto.toStdString());
+}
+void GUI::filterVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto)
+{
+   // this->genes.push_back(Gene{ geneName, organismName, sequence });
+//add victim file to controller ++++++++++++++++++++++++++++++++++++++++++++++++
+    // emit the signal: the genes were updated
+    emit victimFilesUpdatedSignal();
+}
+
+void GUI::filterVictimFileButtonHandler()
+{
+    // read data from the textboxes and add the new gene
+    QString victimFileName = this->nameEdit->text();
+    QString victimFilePlace = this->placeEdit->text();
+    QString victimFileAge = this->ageEdit->text();
+    QString victimFilePhoto = this->fileEdit->text();
+
+    emit addVictimFileSignal(victimFileName.toStdString(), victimFilePlace.toStdString(), stoi(victimFileAge.toStdString()), victimFilePhoto.toStdString());
+}
+void GUI::nextVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto)
+{
+   // this->genes.push_back(Gene{ geneName, organismName, sequence });
+//add victim file to controller ++++++++++++++++++++++++++++++++++++++++++++++++
+    // emit the signal: the genes were updated
+    emit victimFilesUpdatedSignal();
+}
+
+void GUI::nextVictimFileButtonHandler()
+{
+    // read data from the textboxes and add the new gene
+    QString victimFileName = this->nameEdit->text();
+    QString victimFilePlace = this->placeEdit->text();
+    QString victimFileAge = this->ageEdit->text();
+    QString victimFilePhoto = this->fileEdit->text();
+
+    emit addVictimFileSignal(victimFileName.toStdString(), victimFilePlace.toStdString(), stoi(victimFileAge.toStdString()), victimFilePhoto.toStdString());
+}
+void GUI::openVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto)
+{
+   // this->genes.push_back(Gene{ geneName, organismName, sequence });
+//add victim file to controller ++++++++++++++++++++++++++++++++++++++++++++++++
+    // emit the signal: the genes were updated
+    emit victimFilesUpdatedSignal();
+}
+
+void GUI::openVictimFileButtonHandler()
+{
+    // read data from the textboxes and add the new gene
+    QString victimFileName = this->nameEdit->text();
+    QString victimFilePlace = this->placeEdit->text();
+    QString victimFileAge = this->ageEdit->text();
+    QString victimFilePhoto = this->fileEdit->text();
+
+    emit addVictimFileSignal(victimFileName.toStdString(), victimFilePlace.toStdString(), stoi(victimFileAge.toStdString()), victimFilePhoto.toStdString());
+}
+void GUI::saveVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto)
+{
+   // this->genes.push_back(Gene{ geneName, organismName, sequence });
+//add victim file to controller ++++++++++++++++++++++++++++++++++++++++++++++++
+    // emit the signal: the genes were updated
+    emit victimFilesUpdatedSignal();
+}
+
+void GUI::saveVictimFileButtonHandler()
+{
+    // read data from the textboxes and add the new gene
+    QString victimFileName = this->nameEdit->text();
+    QString victimFilePlace = this->placeEdit->text();
+    QString victimFileAge = this->ageEdit->text();
+    QString victimFilePhoto = this->fileEdit->text();
+
+    emit addVictimFileSignal(victimFileName.toStdString(), victimFilePlace.toStdString(), stoi(victimFileAge.toStdString()), victimFilePhoto.toStdString());
+}
+
+
+int GUI::getSelectedIndex()
+{
+    if (this->victimFilesList->count() == 0)
+        return -1;
+
+    // get selected index
+    QModelIndexList index = this->victimFilesList->selectionModel()->selectedIndexes();
+    if (index.size() == 0)
+    {
+        this->nameEdit->clear();
+        this->placeEdit->clear();
+        this->ageEdit->clear();
+        this->fileEdit->clear();
+        return -1;
+    }
+
+    int idx = index.at(0).row();
+    return idx;
+}
+
+void GUI::listItemChanged()
+{
+    int selectedIndex = this->getSelectedIndex();
+    if (selectedIndex == -1)
+        return;
+
+    // get the song at the selected index
+    if (selectedIndex >= this->victimFileService->getRepositorySize())
+        return;
+    VictimFile victimFile = this->victimFileService->getList()[selectedIndex];
+
+    this->nameEdit->setText(QString::fromStdString(victimFile.getName()));
+    this->placeEdit->setText(QString::fromStdString(victimFile.getPlaceOfOrigin()));
+    this->ageEdit->setText(QString::fromStdString(std::to_string(victimFile.getAge())));
+    this->fileEdit->setText(QString::fromStdString(victimFile.getPhotograph()));
 }
 
 void GUI::populateVictimFilesList()
@@ -18,7 +228,7 @@ void GUI::populateVictimFilesList()
     if (this->victimFilesList->count() > 0)
         this->victimFilesList->clear();
 
-    for (auto file : this->victimFiles)
+    for (auto file : this->victimFileService->getList())
     {
         QString itemInList = QString::fromStdString(file.getName() + ", " + file.getPlaceOfOrigin() + ", " + std::to_string(file.getAge()) + " years old, " + file.getPhotograph());
         QFont f{ "Verdana", 15 };
@@ -27,7 +237,7 @@ void GUI::populateVictimFilesList()
         this->victimFilesList->addItem(item);
     }
 
-//    if (this->victimFiles.size() > 0)
+//    if (this->victimFileService->getRepositorySize() > 0)
 //        this->victimFilesList->setCurrentRow(0);
 }
 
@@ -85,9 +295,9 @@ void GUI::initGUI()
 
     QWidget* middleSide = new QWidget{};
     QVBoxLayout* middleLayout = new QVBoxLayout{ middleSide };
-    this->moveButton = new QPushButton(">");
-    this->moveButton->setFont(f);
-    middleLayout->addWidget(this->moveButton);
+    this->saveButton = new QPushButton(">");
+    this->saveButton->setFont(f);
+    middleLayout->addWidget(this->saveButton);
 
     QWidget* rightSide = new QWidget{};
     QVBoxLayout* rightLayout = new QVBoxLayout{ rightSide };
