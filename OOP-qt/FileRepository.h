@@ -171,11 +171,11 @@ int FileRepository<TemplateClass>::getSize(){
 template<typename TemplateClass>
 void FileRepository<TemplateClass>::update(TemplateClass element){
     loadBufferFromFile();
-    if(liveContainsElement(element)){
+   if(liveContainsElement(element)){
         this->buffer[indexOfElement(element)] = element;
         dumpBufferToFile();
-    } else {
-        dumpBufferToFile();
+   } else {
+       dumpBufferToFile();
         throw RepositoryException();
     }
 }

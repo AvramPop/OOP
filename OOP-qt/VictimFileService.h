@@ -13,6 +13,7 @@ class VictimFileService {
 
 private:
     std::unique_ptr<Repository<VictimFile>> repository;
+    vector<VictimFile> transferList;
 public:
     VictimFileService(const VictimFileService& victimFileService);
     VictimFileService(unique_ptr<Repository<VictimFile>> repository);
@@ -32,6 +33,9 @@ public:
      * Get whole list of victim files.
      */
     vector<VictimFile> getList();
+
+    void addToTransfer(VictimFile victimFile) {transferList.push_back(victimFile);}
+    std::vector<VictimFile> getTransfer() {return transferList;}
     /**
      * Update victim file with name with updatedVictimFile.
      */

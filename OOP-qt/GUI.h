@@ -12,6 +12,7 @@
 #include <QPushButton>
 #include <QLabel>
 #include "VictimFileService.h"
+#include <QVector>
 
 class GUI: public QWidget
 {
@@ -23,8 +24,6 @@ public:
 
 private:
     unique_ptr<VictimFileService> victimFileService;
-    //std::vector<VictimFile> victimFiles;
-
     QListWidget* victimFilesList;
     QListWidget* transferList;
     QLineEdit* nameEdit;
@@ -44,6 +43,7 @@ private:
     void connectSignalsAndSlots();
 
     void populateVictimFilesList();
+    void populateTransferList();
 //    // When an item in the list is clicked, the text boxes get filled with the item's information
     void listItemChanged();
 
@@ -57,9 +57,10 @@ private:
 
 signals:
     void victimFilesUpdatedSignal();
+    void transferListUpdatedSignal();
     void addVictimFileSignal(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
     void deleteVictimFileSignal(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
-    void updateVictimFileSignal(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
+    void updateVictimFileSignal(const std::string& oldName, const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
     void saveVictimFileSignal(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
     void nextVictimFileSignal(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
     void filterVictimFileSignal(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
@@ -67,8 +68,8 @@ signals:
 
 public slots:
     void addVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
-    void deleteVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
-    void updateVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
+//    void deleteVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
+    void updateVictimFile(const std::string& oldName, const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
     void saveVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
     void nextVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
     void filterVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
