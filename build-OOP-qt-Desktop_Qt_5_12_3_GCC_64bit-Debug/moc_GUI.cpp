@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_GUI_t {
-    QByteArrayData data[23];
-    char stringdata0[382];
+    QByteArrayData data[25];
+    char stringdata0[401];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -48,12 +48,14 @@ QT_MOC_LITERAL(13, 203, 20), // "saveVictimFileSignal"
 QT_MOC_LITERAL(14, 224, 20), // "nextVictimFileSignal"
 QT_MOC_LITERAL(15, 245, 22), // "filterVictimFileSignal"
 QT_MOC_LITERAL(16, 268, 20), // "openVictimFileSignal"
-QT_MOC_LITERAL(17, 289, 13), // "addVictimFile"
-QT_MOC_LITERAL(18, 303, 16), // "updateVictimFile"
-QT_MOC_LITERAL(19, 320, 14), // "saveVictimFile"
-QT_MOC_LITERAL(20, 335, 14), // "nextVictimFile"
-QT_MOC_LITERAL(21, 350, 16), // "filterVictimFile"
-QT_MOC_LITERAL(22, 367, 14) // "openVictimFile"
+QT_MOC_LITERAL(17, 289, 13), // "enableButtons"
+QT_MOC_LITERAL(18, 303, 4), // "mode"
+QT_MOC_LITERAL(19, 308, 13), // "addVictimFile"
+QT_MOC_LITERAL(20, 322, 16), // "updateVictimFile"
+QT_MOC_LITERAL(21, 339, 14), // "saveVictimFile"
+QT_MOC_LITERAL(22, 354, 14), // "nextVictimFile"
+QT_MOC_LITERAL(23, 369, 16), // "filterVictimFile"
+QT_MOC_LITERAL(24, 386, 14) // "openVictimFile"
 
     },
     "GUI\0victimFilesUpdatedSignal\0\0"
@@ -63,10 +65,10 @@ QT_MOC_LITERAL(22, 367, 14) // "openVictimFile"
     "deleteVictimFileSignal\0updateVictimFileSignal\0"
     "oldName\0saveVictimFileSignal\0"
     "nextVictimFileSignal\0filterVictimFileSignal\0"
-    "openVictimFileSignal\0addVictimFile\0"
-    "updateVictimFile\0saveVictimFile\0"
-    "nextVictimFile\0filterVictimFile\0"
-    "openVictimFile"
+    "openVictimFileSignal\0enableButtons\0"
+    "mode\0addVictimFile\0updateVictimFile\0"
+    "saveVictimFile\0nextVictimFile\0"
+    "filterVictimFile\0openVictimFile"
 };
 #undef QT_MOC_LITERAL
 
@@ -76,7 +78,7 @@ static const uint qt_meta_data_GUI[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      15,   14, // methods
+      16,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -84,23 +86,24 @@ static const uint qt_meta_data_GUI[] = {
        9,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   89,    2, 0x06 /* Public */,
-       3,    0,   90,    2, 0x06 /* Public */,
-       4,    4,   91,    2, 0x06 /* Public */,
-      10,    4,  100,    2, 0x06 /* Public */,
-      11,    5,  109,    2, 0x06 /* Public */,
-      13,    4,  120,    2, 0x06 /* Public */,
-      14,    4,  129,    2, 0x06 /* Public */,
-      15,    4,  138,    2, 0x06 /* Public */,
-      16,    4,  147,    2, 0x06 /* Public */,
+       1,    0,   94,    2, 0x06 /* Public */,
+       3,    0,   95,    2, 0x06 /* Public */,
+       4,    4,   96,    2, 0x06 /* Public */,
+      10,    4,  105,    2, 0x06 /* Public */,
+      11,    5,  114,    2, 0x06 /* Public */,
+      13,    4,  125,    2, 0x06 /* Public */,
+      14,    4,  134,    2, 0x06 /* Public */,
+      15,    4,  143,    2, 0x06 /* Public */,
+      16,    4,  152,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      17,    4,  156,    2, 0x0a /* Public */,
-      18,    5,  165,    2, 0x0a /* Public */,
-      19,    4,  176,    2, 0x0a /* Public */,
-      20,    4,  185,    2, 0x0a /* Public */,
-      21,    4,  194,    2, 0x0a /* Public */,
-      22,    4,  203,    2, 0x0a /* Public */,
+      17,    1,  161,    2, 0x0a /* Public */,
+      19,    4,  164,    2, 0x0a /* Public */,
+      20,    5,  173,    2, 0x0a /* Public */,
+      21,    4,  184,    2, 0x0a /* Public */,
+      22,    4,  193,    2, 0x0a /* Public */,
+      23,    4,  202,    2, 0x0a /* Public */,
+      24,    4,  211,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -114,6 +117,7 @@ static const uint qt_meta_data_GUI[] = {
     QMetaType::Void, 0x80000000 | 5, 0x80000000 | 5, QMetaType::Int, 0x80000000 | 5,    6,    7,    8,    9,
 
  // slots: parameters
+    QMetaType::Void, QMetaType::Int,   18,
     QMetaType::Void, 0x80000000 | 5, 0x80000000 | 5, QMetaType::Int, 0x80000000 | 5,    6,    7,    8,    9,
     QMetaType::Void, 0x80000000 | 5, 0x80000000 | 5, 0x80000000 | 5, QMetaType::Int, 0x80000000 | 5,   12,    6,    7,    8,    9,
     QMetaType::Void, 0x80000000 | 5, 0x80000000 | 5, QMetaType::Int, 0x80000000 | 5,    6,    7,    8,    9,
@@ -139,12 +143,13 @@ void GUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **
         case 6: _t->nextVictimFileSignal((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
         case 7: _t->filterVictimFileSignal((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
         case 8: _t->openVictimFileSignal((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
-        case 9: _t->addVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
-        case 10: _t->updateVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const std::string(*)>(_a[3])),(*reinterpret_cast< const int(*)>(_a[4])),(*reinterpret_cast< const std::string(*)>(_a[5]))); break;
-        case 11: _t->saveVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
-        case 12: _t->nextVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
-        case 13: _t->filterVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
-        case 14: _t->openVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 9: _t->enableButtons((*reinterpret_cast< const int(*)>(_a[1]))); break;
+        case 10: _t->addVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 11: _t->updateVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const std::string(*)>(_a[3])),(*reinterpret_cast< const int(*)>(_a[4])),(*reinterpret_cast< const std::string(*)>(_a[5]))); break;
+        case 12: _t->saveVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 13: _t->nextVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 14: _t->filterVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
+        case 15: _t->openVictimFile((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3])),(*reinterpret_cast< const std::string(*)>(_a[4]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -244,13 +249,13 @@ int GUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 15)
+        if (_id < 16)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 15;
+        _id -= 16;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 15)
+        if (_id < 16)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 15;
+        _id -= 16;
     }
     return _id;
 }

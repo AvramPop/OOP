@@ -11,6 +11,7 @@
 #include <QTextEdit>
 #include <QPushButton>
 #include <QLabel>
+#include <QComboBox>
 #include "VictimFileService.h"
 #include <QVector>
 
@@ -39,6 +40,7 @@ private:
     QPushButton* nextButton;
     QPushButton* filterButton;
     QPushButton* openButton;
+    QComboBox* modeComboBox;
 
     void initGUI();
     int getSelectedIndex();
@@ -46,9 +48,12 @@ private:
 
     void populateVictimFilesList();
     void populateTransferList();
+
 //    // When an item in the list is clicked, the text boxes get filled with the item's information
     void listItemChanged();
-
+    void enableModeA();
+    void enableModeB();
+    void enableModeDefault();
     void addVictimFileButtonHandler();
     void deleteVictimFileButtonHandler();
     void updateVictimFileButtonHandler();
@@ -69,6 +74,7 @@ signals:
     void openVictimFileSignal(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
 
 public slots:
+    void enableButtons(const int mode);
     void addVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
 //    void deleteVictimFile(const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);
     void updateVictimFile(const std::string& oldName, const std::string& victimFileName, const std::string& victimFilePlace, const int victimFileAge, const std::string& victimFilePhoto);

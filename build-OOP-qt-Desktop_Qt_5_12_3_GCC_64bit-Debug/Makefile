@@ -1216,10 +1216,7 @@ GUI.o: ../OOP-qt/GUI.cpp ../OOP-qt/FileSaver.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/qdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o GUI.o ../OOP-qt/GUI.cpp
 
-InMemoryRepository.o: ../OOP-qt/InMemoryRepository.cpp ../OOP-qt/InMemoryRepository.h \
-		../OOP-qt/Exception.h \
-		../OOP-qt/VictimFile.h \
-		../OOP-qt/Repository.h
+InMemoryRepository.o: ../OOP-qt/InMemoryRepository.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o InMemoryRepository.o ../OOP-qt/InMemoryRepository.cpp
 
 MockRepository.o: ../OOP-qt/MockRepository.cpp 
@@ -1484,7 +1481,8 @@ main.o: ../OOP-qt/main.cpp /home/dani/Qt/5.12.3/gcc_64/include/QtWidgets/QApplic
 		../OOP-qt/Exception.h \
 		/home/dani/Qt/5.12.3/gcc_64/include/QtCore/QVector \
 		../OOP-qt/Scanner.h \
-		../OOP-qt/Mode.h
+		../OOP-qt/Mode.h \
+		../OOP-qt/InMemoryRepository.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../OOP-qt/main.cpp
 
 mainwindow.o: ../OOP-qt/mainwindow.cpp ../OOP-qt/mainwindow.h \

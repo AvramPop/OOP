@@ -19,13 +19,11 @@ GUI::~GUI()
 }
 void GUI::connectSignalsAndSlots()
 {
-    // when the vector of genes is updated - re-populate the list
-    //QObject::connect(this, SIGNAL(genesUpdatedSignal()), this, SLOT(populateGenesList()));
     QObject::connect(this, &GUI::victimFilesUpdatedSignal, this, &GUI::populateVictimFilesList);
     QObject::connect(this, &GUI::transferListUpdatedSignal, this, &GUI::populateTransferList);
-    //QObject::connect(this, &GUI::transferListUpdatedSignal, this, &GUI::populateTransferList);
-    // add a connection: function listItemChanged() will be called when an item in the list is selected
     QObject::connect(this->victimFilesList, &QListWidget::itemSelectionChanged, this, [this]() {this->listItemChanged(); });
+
+   // QObject::connect(this->modeComboBox, &QComboBox::currentIndexChanged, this, &GUI::enableButtons);
 
     // add button connections
   /**/  QObject::connect(this->addButton, &QPushButton::clicked, this, &GUI::addVictimFileButtonHandler);
@@ -36,8 +34,8 @@ void GUI::connectSignalsAndSlots()
     QObject::connect(this->filterButton, &QPushButton::clicked, this, &GUI::filterVictimFileButtonHandler);
   /**/  QObject::connect(this->openButton, &QPushButton::clicked, this, &GUI::openVictimFileButtonHandler);
 
-
-    // connect the addGene signal to the addGene slot, which adds a gene to vector
+   // QObject::connect(this->modeComboBox, SIGNAL(QComboBox::currentIndexChanged(int index)), this, SLOT(enableButtons(const int mode)));
+    QObject::connect(this->modeComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), [=](int index){/*qDebug() << "mode changed: " << index << "\n";*/ this->enableButtons(index);});
     QObject::connect(this, SIGNAL(addVictimFileSignal(const std::string&, const std::string&, const int, const std::string&)),
                         this, SLOT(addVictimFile(const std::string&, const std::string&, const int, const std::string&)));
     QObject::connect(this, SIGNAL(updateVictimFileSignal(const std::string&, const std::string&, const std::string&, const int, const std::string&)),
@@ -58,6 +56,56 @@ void GUI::updateVictimFile(const std::string& oldName, const std::string& victim
     this->victimFileService->updateVictimFile(oldName, victimFileFromInput);
     emit victimFilesUpdatedSignal();
 }
+
+void GUI::enableModeA(){
+    this->addButton->setEnabled(true);
+    this->deleteButton->setEnabled(true);
+    this->updateButton->setEnabled(true);
+    this->filterButton->setEnabled(false);
+    this->saveButton->setEnabled(false);
+    this->nextButton->setEnabled(false);
+    this->openButton->setEnabled(false);
+}
+
+void GUI::enableModeB(){
+    this->addButton->setEnabled(false);
+    this->deleteButton->setEnabled(false);
+    this->updateButton->setEnabled(false);
+    this->filterButton->setEnabled(true);
+    this->saveButton->setEnabled(true);
+    this->nextButton->setEnabled(true);
+    this->openButton->setEnabled(true);
+}
+
+void GUI::enableModeDefault(){
+    this->addButton->setEnabled(false);
+    this->deleteButton->setEnabled(false);
+    this->updateButton->setEnabled(false);
+    this->filterButton->setEnabled(false);
+    this->saveButton->setEnabled(false);
+    this->nextButton->setEnabled(false);
+    this->openButton->setEnabled(false);
+}
+
+void GUI::enableButtons(const int mode){
+  //  qDebug() << "mode changed: " << mode << "\n";
+    switch(mode){
+        case 1:
+            this->enableModeA();
+            break;
+        case 2:
+            this->enableModeB();
+            break;
+        case 0:
+            this->enableModeDefault();
+            break;
+        default:
+            break;
+    }
+
+}
+
+
 
 void GUI::updateVictimFileButtonHandler()
 {
@@ -307,12 +355,16 @@ void GUI::initGUI()
     QHBoxLayout* buttonsLeftLayout = new QHBoxLayout{ buttonsLeftWidget };
     this->addButton = new QPushButton("Add");
     this->addButton->setFont(f);
+
     this->deleteButton = new QPushButton("Delete");
     this->deleteButton->setFont(f);
+
     this->updateButton = new QPushButton("Update");
     this->updateButton->setFont(f);
+
     this->filterButton = new QPushButton("Filter");
     this->filterButton->setFont(f);
+
     buttonsLeftLayout->addWidget(this->addButton);
     buttonsLeftLayout->addWidget(this->deleteButton);
     buttonsLeftLayout->addWidget(this->updateButton);
@@ -324,7 +376,13 @@ void GUI::initGUI()
     QVBoxLayout* middleLayout = new QVBoxLayout{ middleSide };
     this->saveButton = new QPushButton(">");
     this->saveButton->setFont(f);
+
+    this->modeComboBox = new QComboBox();
+    this->modeComboBox->addItem("Default (none)");
+    this->modeComboBox->addItem("Mode A");
+    this->modeComboBox->addItem("Mode B");
     middleLayout->addWidget(this->saveButton);
+    middleLayout->addWidget(this->modeComboBox);
 
     QWidget* rightSide = new QWidget{};
     QVBoxLayout* rightLayout = new QVBoxLayout{ rightSide };
@@ -337,8 +395,10 @@ void GUI::initGUI()
     this->nextButton = new QPushButton("Next");
     this->nextButton->setFont(f);
 
+
     this->openButton = new QPushButton("Open");
     this->openButton->setFont(f);
+
     buttonsRightLayout->addWidget(this->nextButton);
   //  buttonsRightLayout->addWidget(this->filterButton);
     buttonsRightLayout->addWidget(this->openButton);
@@ -349,4 +409,5 @@ void GUI::initGUI()
     layout->addWidget(leftSide);
     layout->addWidget(middleSide);
     layout->addWidget(rightSide);
+    this->enableModeDefault();
 }
