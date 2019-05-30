@@ -1,5 +1,5 @@
 Dani Pop, Cluj-Napoca, 20, dani.jpg
-name3 surname3, origin3, 3, photo3
+name3 surname3, Origin3, 3, photo3
 name4 surname4, origin4, 4, photo4
 name5 surname5, origin5, 5, photo5
 name6 surname6, origin66, 6, photo6
